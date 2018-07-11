@@ -1,0 +1,1096 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="daac950a-f094-4f7b-af61-213e310a5c46" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AddedSectionTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/AddedSectionTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="501" column="8" selection-start-line="501" selection-start-column="8" selection-end-line="501" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#boid#0;class#AddedSectionTest#0" />
+                <element signature="method#italic#0;class#AddedSectionTest#0" />
+                <element signature="method#underline#0;class#AddedSectionTest#0" />
+                <element signature="method#quote#0;class#AddedSectionTest#0" />
+                <element signature="method#alignment#0;class#AddedSectionTest#0" />
+                <element signature="method#color#0;class#AddedSectionTest#0" />
+                <element signature="method#changeFontFamily#0;class#AddedSectionTest#0" />
+                <element signature="method#changeFontSize#0;class#AddedSectionTest#0" />
+                <element signature="method#boid_italic#0;class#AddedSectionTest#0" />
+                <element signature="method#boid_italic_underline#0;class#AddedSectionTest#0" />
+                <element signature="method#boid_italic_underline_quote#0;class#AddedSectionTest#0" />
+                <element signature="method#boid_italic_underline_quote_color#0;class#AddedSectionTest#0" />
+                <element signature="method#boid_italic_underline_quote_color_font_family#0;class#AddedSectionTest#0" />
+                <element signature="method#insertLink#0;class#AddedSectionTest#0" />
+                <element signature="method#globalStyles#0;class#AddedSectionTest#0" />
+                <element signature="method#openInNewWindow#0;class#AddedSectionTest#0" />
+                <element signature="method#changeFontSizeForBr_H#0;class#AddedSectionTest#0" />
+                <element signature="method#changeFontFamilyForBr_H#0;class#AddedSectionTest#0" />
+                <element signature="method#colorForBr_H#0;class#AddedSectionTest#0" />
+                <element signature="method#alignmentForBr_H#0;class#AddedSectionTest#0" />
+                <element signature="method#quoteForBr_H#0;class#AddedSectionTest#0" />
+                <element signature="method#underlineForBr_H#0;class#AddedSectionTest#0" />
+                <element signature="method#itaclicForBr_H#0;class#AddedSectionTest#0" />
+                <element signature="method#boldForBr_H#0;class#AddedSectionTest#0" />
+                <element signature="method#insertLink_H#0;class#AddedSectionTest#0" />
+                <element signature="method#boid_italic_H#0;class#AddedSectionTest#0" />
+                <element signature="method#boid_italic_underline_H#0;class#AddedSectionTest#0" />
+                <element signature="method#boid_italic_underline_quote_H#0;class#AddedSectionTest#0" />
+                <element signature="method#boid_italic_underline_quote_color_H#0;class#AddedSectionTest#0" />
+                <element signature="method#boid_italic_underline_quote_color_font_family_H#0;class#AddedSectionTest#0" />
+                <element signature="method#globalStyles_H#0;class#AddedSectionTest#0" />
+                <element signature="method#openInNewWindow_H#0;class#AddedSectionTest#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RemoteWebDriver.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/3.12.0/selenium-remote-driver-3.12.0.jar!/org/openqa/selenium/remote/RemoteWebDriver.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3179">
+              <caret line="274" selection-start-line="274" selection-end-line="274" />
+              <folding>
+                <element signature="e#10963#10964#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SupportMethod.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/SupportMethod.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3076#3077#0" expanded="true" />
+                <element signature="e#3155#3156#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestClass.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TestClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="37" column="57" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Variables.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Variables.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="96" selection-start-line="17" selection-start-column="96" selection-end-line="17" selection-end-column="96" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TinyMCE.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/TinyMCE.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="75" column="124" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="124" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditorPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/EditorPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sidebar.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Sidebar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Factory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Factory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+              <folding>
+                <element signature="e#126#127#0" expanded="true" />
+                <element signature="e#165#166#0" expanded="true" />
+                <element signature="e#199#200#0" expanded="true" />
+                <element signature="e#246#247#0" expanded="true" />
+                <element signature="e#276#277#0" expanded="true" />
+                <element signature="e#321#322#0" expanded="true" />
+                <element signature="e#357#358#0" expanded="true" />
+                <element signature="e#405#406#0" expanded="true" />
+                <element signature="e#435#436#0" expanded="true" />
+                <element signature="e#480#481#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>foll</find>
+      <find>text</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/test/java/TestClass.java" />
+        <option value="$PROJECT_DIR$/src/test/java/WebDriver.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MainPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/WebSite.java" />
+        <option value="$PROJECT_DIR$/src/test/java/LoginPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TinyMCEЗфпу.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TinyMCEPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Factory.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Varriables.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Sidebar.java" />
+        <option value="$PROJECT_DIR$/src/test/java/EditorPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Variables.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/TinyMCE.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SupportMethod.java" />
+        <option value="$PROJECT_DIR$/src/test/java/AddedSectionTest.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Heroic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Heroic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Heroic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Heroic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Heroic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Heroic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Heroic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Heroic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.AddedSectionTest.boid_italic_underline_H">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="AddedSectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Heroic" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AddedSectionTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="AddedSectionTest.boid_italic_underline_H" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Heroic" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AddedSectionTest" />
+      <option name="METHOD_NAME" value="boid_italic_underline_H" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="AddedSectionTest.boid_italic_underline_quote_color" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Heroic" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AddedSectionTest" />
+      <option name="METHOD_NAME" value="boid_italic_underline_quote_color" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="AddedSectionTest.boid_italic_underline_quote_color_font_family" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Heroic" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AddedSectionTest" />
+      <option name="METHOD_NAME" value="boid_italic_underline_quote_color_font_family" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="AddedSectionTest.color" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Heroic" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AddedSectionTest" />
+      <option name="METHOD_NAME" value="color" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.AddedSectionTest.color" />
+      <item itemvalue="JUnit.AddedSectionTest.boid_italic_underline_quote_color" />
+      <item itemvalue="JUnit.AddedSectionTest" />
+      <item itemvalue="JUnit.AddedSectionTest.boid_italic_underline_quote_color_font_family" />
+      <item itemvalue="JUnit.AddedSectionTest.boid_italic_underline_H" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AddedSectionTest.boid_italic_underline_H" />
+        <item itemvalue="JUnit.AddedSectionTest" />
+        <item itemvalue="JUnit.AddedSectionTest.boid_italic_underline_quote_color_font_family" />
+        <item itemvalue="JUnit.AddedSectionTest.boid_italic_underline_quote_color" />
+        <item itemvalue="JUnit.AddedSectionTest.color" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="daac950a-f094-4f7b-af61-213e310a5c46" name="Default" comment="" />
+      <created>1528986229898</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1528986229898</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="AddedSectionTest_boid_italic_underline_quote_color - 2018.07.09 at 15h 54m 15s.xml">
+      <configuration name="AddedSectionTest.boid_italic_underline_quote_color" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AddedSectionTest_boid_italic_underline_quote_color - 2018.07.09 at 15h 57m 30s.xml">
+      <configuration name="AddedSectionTest.boid_italic_underline_quote_color" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AddedSectionTest_boid_italic_underline_quote_color - 2018.07.09 at 15h 58m 29s.xml">
+      <configuration name="AddedSectionTest.boid_italic_underline_quote_color" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AddedSectionTest_boid_italic_underline_quote_color - 2018.07.09 at 16h 02m 35s.xml">
+      <configuration name="AddedSectionTest.boid_italic_underline_quote_color" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AddedSectionTest_boid_italic_underline_quote_color - 2018.07.09 at 16h 06m 50s.xml">
+      <configuration name="AddedSectionTest.boid_italic_underline_quote_color" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AddedSectionTest_boid_italic_underline_quote_color - 2018.07.09 at 16h 09m 42s.xml">
+      <configuration name="AddedSectionTest.boid_italic_underline_quote_color" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AddedSectionTest - 2018.07.09 at 16h 15m 27s.xml">
+      <configuration name="AddedSectionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AddedSectionTest_boid_italic_underline_quote_color_font_family - 2018.07.09 at 16h 21m 50s.xml">
+      <configuration name="AddedSectionTest.boid_italic_underline_quote_color_font_family" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AddedSectionTest - 2018.07.09 at 16h 27m 38s.xml">
+      <configuration name="AddedSectionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AddedSectionTest_boid_italic_underline_H - 2018.07.09 at 16h 28m 27s.xml">
+      <configuration name="AddedSectionTest.boid_italic_underline_H" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32946146" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32946146" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14583333" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/requests/FilterRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/EditorPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Sidebar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding>
+            <element signature="e#126#127#0" expanded="true" />
+            <element signature="e#165#166#0" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
+            <element signature="e#246#247#0" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="e#321#322#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TinyMCE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="32" column="93" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="93" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/AddedSectionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="108" column="71" selection-start-line="108" selection-start-column="71" selection-end-line="108" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#boid#0;class#AddedSectionTest#0" />
+            <element signature="method#italic#0;class#AddedSectionTest#0" />
+            <element signature="method#underline#0;class#AddedSectionTest#0" />
+            <element signature="method#quote#0;class#AddedSectionTest#0" />
+            <element signature="method#alignment#0;class#AddedSectionTest#0" />
+            <element signature="method#color#0;class#AddedSectionTest#0" />
+            <element signature="method#changeFontFamily#0;class#AddedSectionTest#0" />
+            <element signature="method#changeFontSize#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote_color#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote_color_font_family#0;class#AddedSectionTest#0" />
+            <element signature="method#insertLink#0;class#AddedSectionTest#0" />
+            <element signature="method#globalStyles#0;class#AddedSectionTest#0" />
+            <element signature="method#openInNewWindow#0;class#AddedSectionTest#0" />
+            <element signature="method#changeFontSizeForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#changeFontFamilyForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#colorForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#alignmentForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#quoteForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#underlineForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#itaclicForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boldForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#insertLink_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote_color_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote_color_font_family_H#0;class#AddedSectionTest#0" />
+            <element signature="method#globalStyles_H#0;class#AddedSectionTest#0" />
+            <element signature="method#openInNewWindow_H#0;class#AddedSectionTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SupportMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3076#3077#0" expanded="true" />
+            <element signature="e#3155#3156#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/requests/FilterRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/EditorPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Sidebar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding>
+            <element signature="e#126#127#0" expanded="true" />
+            <element signature="e#165#166#0" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
+            <element signature="e#246#247#0" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="e#321#322#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TinyMCE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="32" column="93" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="93" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="57" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TinyMCE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/reflect/Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9571">
+          <caret line="563" selection-start-line="563" selection-end-line="563" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#126#127#0" expanded="true" />
+            <element signature="e#165#166#0" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
+            <element signature="e#246#247#0" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="e#321#322#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="43" lean-forward="true" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Variables.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="132" selection-start-line="5" selection-start-column="128" selection-end-line="5" selection-end-column="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/AddedSectionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="61" column="23" lean-forward="true" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#boid#0;class#AddedSectionTest#0" />
+            <element signature="method#italic#0;class#AddedSectionTest#0" />
+            <element signature="method#underline#0;class#AddedSectionTest#0" />
+            <element signature="method#quote#0;class#AddedSectionTest#0" />
+            <element signature="method#alignment#0;class#AddedSectionTest#0" />
+            <element signature="method#color#0;class#AddedSectionTest#0" />
+            <element signature="method#changeFontFamily#0;class#AddedSectionTest#0" />
+            <element signature="method#changeFontSize#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote_color#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote_color_font_family#0;class#AddedSectionTest#0" />
+            <element signature="method#insertLink#0;class#AddedSectionTest#0" />
+            <element signature="method#globalStyles#0;class#AddedSectionTest#0" />
+            <element signature="method#openInNewWindow#0;class#AddedSectionTest#0" />
+            <element signature="method#changeFontSizeForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#changeFontFamilyForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#colorForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#alignmentForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#quoteForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#underlineForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#itaclicForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boldForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#insertLink_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote_color_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote_color_font_family_H#0;class#AddedSectionTest#0" />
+            <element signature="method#globalStyles_H#0;class#AddedSectionTest#0" />
+            <element signature="method#openInNewWindow_H#0;class#AddedSectionTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="57" lean-forward="true" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding>
+            <element signature="e#126#127#0" expanded="true" />
+            <element signature="e#165#166#0" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
+            <element signature="e#246#247#0" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="e#321#322#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="46" lean-forward="true" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Variables.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1394">
+          <caret line="82" column="166" selection-start-line="82" selection-start-column="166" selection-end-line="82" selection-end-column="166" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/AddedSectionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#boid#0;class#AddedSectionTest#0" />
+            <element signature="method#italic#0;class#AddedSectionTest#0" />
+            <element signature="method#underline#0;class#AddedSectionTest#0" />
+            <element signature="method#quote#0;class#AddedSectionTest#0" />
+            <element signature="method#alignment#0;class#AddedSectionTest#0" />
+            <element signature="method#color#0;class#AddedSectionTest#0" />
+            <element signature="method#changeFontFamily#0;class#AddedSectionTest#0" />
+            <element signature="method#changeFontSize#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote_color#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote_color_font_family#0;class#AddedSectionTest#0" />
+            <element signature="method#insertLink#0;class#AddedSectionTest#0" />
+            <element signature="method#globalStyles#0;class#AddedSectionTest#0" />
+            <element signature="method#openInNewWindow#0;class#AddedSectionTest#0" />
+            <element signature="method#changeFontSizeForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#changeFontFamilyForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#colorForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#alignmentForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#quoteForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#underlineForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#itaclicForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boldForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#insertLink_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote_color_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote_color_font_family_H#0;class#AddedSectionTest#0" />
+            <element signature="method#globalStyles_H#0;class#AddedSectionTest#0" />
+            <element signature="method#openInNewWindow_H#0;class#AddedSectionTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Variables.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1394">
+          <caret line="82" column="166" selection-start-line="82" selection-start-column="166" selection-end-line="82" selection-end-column="166" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="99" selection-start-line="17" selection-start-column="99" selection-end-line="17" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Variables.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1394">
+          <caret line="82" column="166" selection-start-line="82" selection-start-column="166" selection-end-line="82" selection-end-column="166" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Init.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/reflect/Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8381">
+          <caret line="563" selection-start-line="563" selection-end-line="563" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/requests/FilterRequest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.12.0/selenium-api-3.12.0.jar!/org/openqa/selenium/WebElement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.12.0/selenium-api-3.12.0.jar!/org/openqa/selenium/NoSuchSessionException.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Variables.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="71" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding>
+            <element signature="e#126#127#0" expanded="true" />
+            <element signature="e#165#166#0" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
+            <element signature="e#246#247#0" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="e#321#322#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Sidebar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="37" column="57" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/3.12.0/selenium-remote-driver-3.12.0.jar!/org/openqa/selenium/remote/RemoteWebDriver.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3179">
+          <caret line="274" selection-start-line="274" selection-end-line="274" />
+          <folding>
+            <element signature="e#10963#10964#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/EditorPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Variables.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="96" selection-start-line="17" selection-start-column="96" selection-end-line="17" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SupportMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3076#3077#0" expanded="true" />
+            <element signature="e#3155#3156#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TinyMCE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="75" column="124" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="124" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/AddedSectionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="501" column="8" selection-start-line="501" selection-start-column="8" selection-end-line="501" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#boid#0;class#AddedSectionTest#0" />
+            <element signature="method#italic#0;class#AddedSectionTest#0" />
+            <element signature="method#underline#0;class#AddedSectionTest#0" />
+            <element signature="method#quote#0;class#AddedSectionTest#0" />
+            <element signature="method#alignment#0;class#AddedSectionTest#0" />
+            <element signature="method#color#0;class#AddedSectionTest#0" />
+            <element signature="method#changeFontFamily#0;class#AddedSectionTest#0" />
+            <element signature="method#changeFontSize#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote_color#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote_color_font_family#0;class#AddedSectionTest#0" />
+            <element signature="method#insertLink#0;class#AddedSectionTest#0" />
+            <element signature="method#globalStyles#0;class#AddedSectionTest#0" />
+            <element signature="method#openInNewWindow#0;class#AddedSectionTest#0" />
+            <element signature="method#changeFontSizeForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#changeFontFamilyForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#colorForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#alignmentForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#quoteForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#underlineForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#itaclicForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boldForBr_H#0;class#AddedSectionTest#0" />
+            <element signature="method#insertLink_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote_color_H#0;class#AddedSectionTest#0" />
+            <element signature="method#boid_italic_underline_quote_color_font_family_H#0;class#AddedSectionTest#0" />
+            <element signature="method#globalStyles_H#0;class#AddedSectionTest#0" />
+            <element signature="method#openInNewWindow_H#0;class#AddedSectionTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
