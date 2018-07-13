@@ -71,10 +71,22 @@ public class TinyMCE {
     WebElement h5FontSize;
     @FindBy(xpath = "//h6[@class='header-type__tiny']")
     WebElement h6FontSize;
+
+    @FindBy(xpath = "//span[@class='text-type__large']")
+    WebElement p1FontSize;
+    @FindBy(xpath = "//span[@class='text-type__medium']")
+    WebElement p2FontSize;
+    @FindBy(xpath = "//span[@class='text-type__small']")
+    WebElement p3FontSize;
+
+
+
     @FindBy (xpath = "//li[contains(text(), 'BioRhyme Regular')]")
     WebElement fontFamily1;
     @FindBy (xpath = "//div[contains(@id,'rect-tinymce-tmp_headline')]//div//div//span[@class='fontfamily-BioRhyme-Regular']")
     WebElement fontFamilyAssert1;
+    @FindBy (xpath = "//div[contains(@id,'rect-tinymce-tmp_text')]//span[@class='fontfamily-BioRhyme-Regular']")
+    WebElement fontFamilyAssert1_p;
 
     @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//strong")
     WebElement boidAssert;
@@ -92,6 +104,15 @@ public class TinyMCE {
     WebElement rightAlignmentAssert;
     @FindBy (xpath = "//div[@class='mce-full-aligment']")
     WebElement fullAlignmentAssert;
+
+    @FindBy (xpath = "//p[@class='mce-left-aligment']")
+    WebElement leftAlignmentAssert_p;
+    @FindBy (xpath = "//p[@class='mce-center-aligment']")
+    WebElement centerAlignmentAssert_p;
+    @FindBy (xpath = "//p[@class='mce-right-aligment']")
+    WebElement rightAlignmentAssert_p;
+    @FindBy (xpath = "//p[@class='mce-full-aligment']")
+    WebElement fullAlignmentAssert_p;
 
 
 

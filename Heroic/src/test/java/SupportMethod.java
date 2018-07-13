@@ -37,9 +37,19 @@ public class SupportMethod {
         wait.until(ExpectedConditions.elementToBeClickable(editorPage().blankCanvas)).click();
         wait.until(ExpectedConditions.elementToBeClickable(editorPage().fullWidthSection)).click();
         wait.until(ExpectedConditions.elementToBeClickable(editorPage().fullWidthColumn)).click();
-        if ("header".equals(element)) {
-            wait.until(ExpectedConditions.elementToBeClickable(editorPage().elementHeader)).click();
+        switch (element){
+            case "header":
+                wait.until(ExpectedConditions.elementToBeClickable(editorPage().elementHeader)).click();
+                break;
+            case "paragraph":
+                wait.until(ExpectedConditions.elementToBeClickable(editorPage().elementParagraph)).click();
+                break;
         }
+
+
+//        if ("header".equals(element)) {
+//            wait.until(ExpectedConditions.elementToBeClickable(editorPage().elementHeader)).click();
+//        }
     }
 
     public String getRemovelinkSelector(){
@@ -51,7 +61,17 @@ public class SupportMethod {
     public void colorAssert(List<WebElement> colors){
         WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
         String palet = colors.get(1).getAttribute("style");
-        WebElement element = webDriver.findElement(By.xpath("//div[contains(@id,'rect-tinymce-tmp_headline')]//div//div//span"));
+        WebElement element = webDriver.findElement(By.xpath("//div[contains(@id,'rect-tinymce')]//span"));
+        int first = palet.lastIndexOf("(");
+        int last = palet.lastIndexOf(")");
+        String result = "text-decoration: underline; color: rgb"+palet.substring(first,last+1)+";";
+        wait.until(ExpectedConditions.attributeToBe(element, "style", result));
+        Assert.assertEquals(palet.substring(first, last + 1), palet.substring(first, last + 1));
+    }
+    public void colorAssert_p(List<WebElement> colors){
+        WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
+        String palet = colors.get(1).getAttribute("style");
+        WebElement element = webDriver.findElement(By.xpath("//div[contains(@id,'rect-tinymce-tmp_text')]//span"));
         int first = palet.lastIndexOf("(");
         int last = palet.lastIndexOf(")");
         String result = "text-decoration: underline; color: rgb"+palet.substring(first,last+1)+";";
@@ -69,6 +89,14 @@ public class SupportMethod {
         fontSize_H.add(tinyMCE().h6FontSize);
         return fontSize_H;
     }
+    public List getFontSize_p(){
+        List<WebElement> fontSize_p = new ArrayList<WebElement>();
+        fontSize_p.add(tinyMCE().p1FontSize);
+        fontSize_p.add(tinyMCE().p2FontSize);
+        fontSize_p.add(tinyMCE().p3FontSize);
+        return fontSize_p;
+    }
+
     public List getAssertForFontSize_H() {
         List<String> AssertForFontSize_H = new ArrayList<String>();
         AssertForFontSize_H.add(Variables.assert_h1);
@@ -79,6 +107,14 @@ public class SupportMethod {
         AssertForFontSize_H.add(Variables.assert_h6);
         return AssertForFontSize_H;
     }
+    public List getAssertForFontSize_p(){
+        List<String> AssertForFontSize_p = new ArrayList<String>();
+        AssertForFontSize_p.add(Variables.assert_p1);
+        AssertForFontSize_p.add(Variables.assert_p2);
+        AssertForFontSize_p.add(Variables.assert_p3);
+        return AssertForFontSize_p;
+    }
+
     public void createThreeLine(){
         WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
         Actions action = new Actions(webDriver);

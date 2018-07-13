@@ -19,6 +19,8 @@ public class EditorPage {
     WebElement fullWidthColumn;
     @FindBy (xpath = "//span[@class='dropdown-modal__item-title'][contains(text(),'Header')]")
     WebElement elementHeader;
+    @FindBy (xpath = "//span[@class='dropdown-modal__item-title'][contains(text(),'Paragraph')]")
+    WebElement elementParagraph;
     @FindBy (css = ".mce-content-body")
     WebElement headerText;
     @FindBy (xpath = "//div[@class='editorGridPanel element-panel ']//li[@data-panel-type='delete']")

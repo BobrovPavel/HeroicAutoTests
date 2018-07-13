@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
-public class AddedSectionTest {
+public class TinyMCE_HeadlineTest {
     static WebDriver webDriver;
     static WebDriverWait wait;
 
@@ -75,23 +75,23 @@ public class AddedSectionTest {
     @Test
     public void alignment() throws InterruptedException {
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignment)).click();
-        Thread.sleep(1000);
+        Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignmentLeft)).click();
         wait.until(ExpectedConditions.visibilityOf(tinyMCE().leftAlignmentAssert));
         Assert.assertTrue(tinyMCE().leftAlignmentAssert.isDisplayed());
-        Thread.sleep(1000);
+        Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignCenter)).click();
         wait.until(ExpectedConditions.visibilityOf(tinyMCE().centerAlignmentAssert));
         Assert.assertTrue(tinyMCE().centerAlignmentAssert.isDisplayed());
-        Thread.sleep(1000);
+        Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignRight)).click();
         wait.until(ExpectedConditions.visibilityOf(tinyMCE().rightAlignmentAssert));
         Assert.assertTrue(tinyMCE().rightAlignmentAssert.isDisplayed());
-        Thread.sleep(1000);
+        Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignJustify)).click();
         wait.until(ExpectedConditions.visibilityOf(tinyMCE().fullAlignmentAssert));
         Assert.assertTrue(tinyMCE().fullAlignmentAssert.isDisplayed());
-        Thread.sleep(1000);
+        Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignClose)).click();
     }
     @Test
