@@ -1,3 +1,5 @@
+package Pages;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,21 +14,21 @@ public class EditorPage {
     }
 
     @FindBy (xpath = "//h4[@class='cart-element__item-title'][contains(text(),'Blank Canvas')]//preceding::*[contains(@class,'cart-element__image')]")
-    WebElement blankCanvas;
+    public WebElement blankCanvas;
     @FindBy (xpath = "//span[@class='dropdown-modal__item-subtitle'][contains(text(),'Full Width Layout Option')]")
-    WebElement fullWidthSection;
+    public WebElement fullWidthSection;
     @FindBy (xpath = "//span[@class='dropdown-modal__item-title'][contains(text(),'Full Width Column')]")
-    WebElement fullWidthColumn;
+    public WebElement fullWidthColumn;
     @FindBy (xpath = "//span[@class='dropdown-modal__item-title'][contains(text(),'Header')]")
-    WebElement elementHeader;
+    public WebElement elementHeader;
     @FindBy (xpath = "//span[@class='dropdown-modal__item-title'][contains(text(),'Paragraph')]")
-    WebElement elementParagraph;
+    public WebElement elementParagraph;
     @FindBy (css = ".mce-content-body")
-    WebElement headerText;
+    public WebElement headerText;
     @FindBy (xpath = "//div[@class='editorGridPanel element-panel ']//li[@data-panel-type='delete']")
-    WebElement deleteElement;
+    public WebElement deleteElement;
     @FindBy (xpath = "//button[@class='button-add-element button-add-element_without_icon button-add-element_cancel']")
-    WebElement submitDelete;
+    public WebElement submitDelete;
     @FindBy (xpath = "//button[contains(@id,'plus')]")
-    WebElement plusIntoRow;
+    public WebElement plusIntoRow;
 }

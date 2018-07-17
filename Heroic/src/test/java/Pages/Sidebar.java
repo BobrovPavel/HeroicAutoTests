@@ -1,3 +1,5 @@
+package Pages;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,9 +14,9 @@ public class Sidebar {
     }
 
     @FindBy (xpath = "//div[@class='animationSidebar']//button[@class='button-add-element']")
-    WebElement newPageButton;
+    public WebElement newPageButton;
     @FindBy (css = ".page-menu-dropdown")
-    WebElement threeDots;
+    public WebElement threeDots;
 
 
 }

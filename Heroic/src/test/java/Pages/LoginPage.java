@@ -1,3 +1,5 @@
+package Pages;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,32 +15,32 @@ public class LoginPage {
 
 
     @FindBy(id = "user_email")
-    WebElement EmailField;
+    public WebElement EmailField;
     @FindBy (id = "user_password")
-    WebElement PasswordField;
+    public WebElement PasswordField;
     @FindBy (xpath = "//button[@id='submit']")
-    WebElement SignInButton;
+    public WebElement SignInButton;
     @FindBy (css = "#new_user > div.alert")
-    WebElement AllertField;
+    public WebElement AllertField;
 
     @FindBy (id = "tmp_button-98358mainText")
-    WebElement WaitFor;
+    public WebElement WaitFor;
 
     @FindBy (css = "#new_user > div:nth-child(4) > a")
-    WebElement RestoringPassword;
+    public WebElement RestoringPassword;
 
     @FindBy (id = "id_email")
-    WebElement RestPassEmailField;
+    public WebElement RestPassEmailField;
 
     @FindBy (css = "body > div > div > div > div > div > div.login > form > div.login-button.btn-section > button")
-    WebElement RestPassButton;
+    public WebElement RestPassButton;
 
     @FindBy (xpath = "//div[@class='alert']")
-    WebElement RestPassAllerField;
+    public WebElement RestPassAllerField;
 
     @FindBy (css = "body > div > div > div > div > div > div.login > form > div.form-footer-link-section > ul > li > a")
-    WebElement BackToLogin;
+    public WebElement BackToLogin;
 
     @FindBy (css = "#new_user > div:nth-child(5) > a")
-    WebElement DontHaveAccount;
+    public WebElement DontHaveAccount;
 }

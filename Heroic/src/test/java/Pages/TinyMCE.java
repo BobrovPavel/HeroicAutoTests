@@ -1,10 +1,9 @@
+package Pages;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import javax.sql.XAConnection;
-import javax.sql.rowset.CachedRowSet;
 
 public class TinyMCE {
 
@@ -15,104 +14,105 @@ public class TinyMCE {
         PageFactory.initElements(webDriver, this);
     }
 
-
-
-
     @FindBy(xpath = ".mce-tinymce-inline:not([style*=\"display: none\"])")
     WebElement toolBar;
 
-
     @FindBy(css = ".mce-tinymce-inline:not([style*=\"display: none\"]) .mce-ico.mce-i-bold")
-    WebElement bold;
+    public WebElement bold;
     @FindBy(css = ".mce-tinymce-inline:not([style*=\"display: none\"]) .mce-ico.mce-i-italic")
-    WebElement italic;
+    public WebElement italic;
     @FindBy(css = ".mce-tinymce-inline:not([style*=\"display: none\"]) .mce-ico.mce-i-underline")
-    WebElement underLine;
+    public WebElement underLine;
     @FindBy (xpath = "//i[@class='mce-ico mce-i-textquote']/parent::*[@role='presentation']")
-    WebElement quote;
+    public WebElement quote;
     @FindBy (xpath = "//button//i[@class='mce-ico mce-i-unlink']")
-    WebElement removeLink;
+    public WebElement removeLink;
     @FindBy (css = ".mce-tinymce-inline:not([style*=\"display: none\"]) .mce-ico.mce-i-textlink")
-    WebElement insertLink;
+    public WebElement insertLink;
     @FindBy (css = ".mce-tinymce-inline:not([style*=\"display: none\"]) .mce-ico.mce-i-aligncenter")
-    WebElement alignment;
+    public WebElement alignment;
     @FindBy (css = ".mce-tinymce-inline:not([style*=\"display: none\"]) .mce-ico.mce-i-textcolor")
-    WebElement color;
+    public WebElement color;
     @FindBy (xpath = "//i[@class='mce-ico mce-i-textfont']")
-    WebElement size;
+    public WebElement size;
     @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//div[contains(@class,'tinymce-item-text-align__icon')]//i[@class='mce-ico mce-i-alignleft']")
-    WebElement alignmentLeft;
+    public WebElement alignmentLeft;
     @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//div[contains(@class,'tinymce-item-text-align__icon')]//i[@class='mce-ico mce-i-aligncenter']")
-    WebElement alignCenter;
+    public WebElement alignCenter;
     @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//div[contains(@class,'tinymce-item-text-align__icon')]//i[@class='mce-ico mce-i-alignright']")
-    WebElement alignRight;
+    public WebElement alignRight;
     @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//div[contains(@class,'tinymce-item-text-align__icon')]//i[@class='mce-ico mce-i-alignjustify']")
-    WebElement alignJustify;
+    public WebElement alignJustify;
     @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//div[contains(@class,'tinymce-item-text-align__icon')]//i[@class='mce-ico mce-i-textclose']")
-    WebElement alignClose;
+    public WebElement alignClose;
     @FindBy (xpath = "//button[@class='button-close']")
-    WebElement closeButton;
+    public WebElement closeButton;
     @FindBy (css = ".font-toolbar-slider-background__input")
-    WebElement pasteLink;
+    public WebElement pasteLink;
     @FindBy (xpath = "//div[@class='font-toolbar-slider-background__field']//button")
-    WebElement saveLink;
+    public WebElement saveLink;
     @FindBy (xpath = "//div[contains(@class,'toggleElement')]")
-    WebElement openInNewWindow;
+    public WebElement openInNewWindow;
 
     @FindBy(xpath = "//h1[@class='header-type__huge']")
-    WebElement h1FontSize;
+    public WebElement h1FontSize;
     @FindBy(xpath = "//h2[@class='header-type__v_large']")
-    WebElement h2FontSize;
+    public WebElement h2FontSize;
     @FindBy(xpath = "//h3[@class='header-type__large']")
-    WebElement h3FontSize;
+    public WebElement h3FontSize;
     @FindBy(xpath = "//h4[@class='header-type__med']")
-    WebElement h4FontSize;
+    public WebElement h4FontSize;
     @FindBy(xpath = "//h5[@class='header-type__small']")
-    WebElement h5FontSize;
+    public WebElement h5FontSize;
     @FindBy(xpath = "//h6[@class='header-type__tiny']")
-    WebElement h6FontSize;
+    public WebElement h6FontSize;
 
     @FindBy(xpath = "//span[@class='text-type__large']")
-    WebElement p1FontSize;
+    public WebElement p1FontSize;
     @FindBy(xpath = "//span[@class='text-type__medium']")
-    WebElement p2FontSize;
+    public WebElement p2FontSize;
     @FindBy(xpath = "//span[@class='text-type__small']")
-    WebElement p3FontSize;
+    public WebElement p3FontSize;
 
 
 
     @FindBy (xpath = "//li[contains(text(), 'BioRhyme Regular')]")
-    WebElement fontFamily1;
+    public WebElement fontFamily1;
     @FindBy (xpath = "//div[contains(@id,'rect-tinymce-tmp_headline')]//div//div//span[@class='fontfamily-BioRhyme-Regular']")
-    WebElement fontFamilyAssert1;
+    public WebElement fontFamilyAssert1;
     @FindBy (xpath = "//div[contains(@id,'rect-tinymce-tmp_text')]//span[@class='fontfamily-BioRhyme-Regular']")
-    WebElement fontFamilyAssert1_p;
+    public WebElement fontFamilyAssert1_p;
 
     @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//strong")
-    WebElement boidAssert;
+    public WebElement boidAssert;
     @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//em")
-    WebElement italicAssert;
-    @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//span[@style='text-decoration: underline;']")
-    WebElement underLineAssert;
+    public WebElement italicAssert;
+    @FindBy (xpath = "//span[contains(@style,'text-decoration: underline;')]")
+    public WebElement underLineAssert;
     @FindBy (xpath = "//blockquote")
-    WebElement quoteAssert;
+    public WebElement quoteAssert;
     @FindBy (xpath = "//div[@class='mce-left-aligment']")
-    WebElement leftAlignmentAssert;
+    public WebElement leftAlignmentAssert;
     @FindBy (xpath = "//div[@class='mce-center-aligment']")
-    WebElement centerAlignmentAssert;
+    public WebElement centerAlignmentAssert;
     @FindBy (xpath = "//div[@class='mce-right-aligment']")
-    WebElement rightAlignmentAssert;
+    public WebElement rightAlignmentAssert;
     @FindBy (xpath = "//div[@class='mce-full-aligment']")
-    WebElement fullAlignmentAssert;
+    public WebElement fullAlignmentAssert;
+    @FindBy (xpath = "//h2[@class='  font-shadow-none  undefined  headline-item ']")
+    public WebElement h2GlobalAssert;
 
     @FindBy (xpath = "//p[@class='mce-left-aligment']")
-    WebElement leftAlignmentAssert_p;
+    public WebElement leftAlignmentAssert_p;
     @FindBy (xpath = "//p[@class='mce-center-aligment']")
-    WebElement centerAlignmentAssert_p;
+    public WebElement centerAlignmentAssert_p;
     @FindBy (xpath = "//p[@class='mce-right-aligment']")
-    WebElement rightAlignmentAssert_p;
+    public WebElement rightAlignmentAssert_p;
     @FindBy (xpath = "//p[@class='mce-full-aligment']")
-    WebElement fullAlignmentAssert_p;
+    public WebElement fullAlignmentAssert_p;
+    @FindBy (xpath = "//div[@class='custom-color-picker__color']")
+    public WebElement colorpicker;
+
 
 
 

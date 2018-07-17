@@ -1,3 +1,9 @@
+package SupportClasses;
+
+import Pages.EditorPage;
+import Pages.LoginPage;
+import Pages.Sidebar;
+import Pages.TinyMCE;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -50,6 +56,18 @@ public class SupportMethod {
 //        if ("header".equals(element)) {
 //            wait.until(ExpectedConditions.elementToBeClickable(editorPage().elementHeader)).click();
 //        }
+    }
+    public void waitAndClick(WebElement element){
+        WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
+        wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+    }
+    public void waitAndClick_xpath(String element){
+        WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
+        wait.until(ExpectedConditions.elementToBeClickable(webDriver.findElement(By.xpath(element)))).click();
+    }
+    public void waitAndClick_css(String element){
+        WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
+        wait.until(ExpectedConditions.elementToBeClickable(webDriver.findElement(By.xpath(element)))).click();
     }
 
     public String getRemovelinkSelector(){
@@ -127,5 +145,27 @@ public class SupportMethod {
     }
     public void selectAllText(){
         editorPage().headerText.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+    }
+
+    public void changeCapacity() throws InterruptedException {
+        Actions action = new Actions(webDriver);
+        waitAndClick(tinyMCE().color);
+        Thread.sleep(500);
+        action.moveToElement(tinyMCE().colorpicker,-2, 60).click().perform();
+        Thread.sleep(500);
+    }
+    public void changeColorWithColorPicker() throws InterruptedException {
+        Actions action = new Actions(webDriver);
+        waitAndClick(tinyMCE().color);
+        Thread.sleep(500);
+        action.moveToElement(tinyMCE().colorpicker,-30, 60).click().perform();
+        Thread.sleep(500);
+    }
+    public void changeColorWithPalet() throws InterruptedException {
+        waitAndClick(tinyMCE().color);
+        Thread.sleep(500);
+        List<WebElement> colors = webDriver.findElements(By.xpath("//div[@class='color-picker-item__palette']//i"));
+        Thread.sleep(500);
+        waitAndClick(colors.get(1));
     }
 }

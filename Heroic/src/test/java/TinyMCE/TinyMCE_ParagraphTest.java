@@ -1,3 +1,11 @@
+package TinyMCE;
+
+import Pages.EditorPage;
+import Pages.LoginPage;
+import Pages.Sidebar;
+import Pages.TinyMCE;
+import SupportClasses.SupportMethod;
+import SupportClasses.Variables;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
 import org.openqa.selenium.By;

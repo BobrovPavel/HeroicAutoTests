@@ -1,3 +1,9 @@
+package Pages;
+
+import Pages.EditorPage;
+import Pages.LoginPage;
+import Pages.Sidebar;
+import SupportClasses.SupportMethod;
 import org.openqa.selenium.WebDriver;
 
 public class Factory {

@@ -1,8 +1,10 @@
-import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.util.ArrayList;
 import java.util.List;
 
+import Pages.EditorPage;
+import Pages.LoginPage;
+import Pages.Sidebar;
+import Pages.TinyMCE;
+import SupportClasses.SupportMethod;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -12,8 +14,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import javax.swing.*;
 
 public class TestClass{
         static WebDriver webDriver;
@@ -41,9 +41,16 @@ public class TestClass{
         webDriver = new ChromeDriver();
         webDriver.manage().window().maximize();
         wait = new WebDriverWait(webDriver, 45, 300);
-        webDriver.get("https://stg.heroicnow.com/?token=934bcf42fe93b2bef4da86bbcecd98d854231e8b");
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("logger")));
+//        webDriver.get("https://stg.heroicnow.com/?token=934bcf42fe93b2bef4da86bbcecd98d854231e8b");
+//        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("logger")));
         wait = new WebDriverWait(webDriver, 5, 300);
+     }
+
+     @Test
+     public void test() throws InterruptedException {
+        webDriver.get("https://community.pekama.com/login");
+        webDriver.findElement(By.cssSelector("[ng-model=\"vm.email\"]")).sendKeys("qweqwe@mail.ru");
+        Thread.sleep(2000);
      }
 
     @Test
