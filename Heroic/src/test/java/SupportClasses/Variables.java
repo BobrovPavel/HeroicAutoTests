@@ -23,7 +23,8 @@ public class Variables {
     public static String fontFamilyAssert1 = "//span[@class='fontfamily-BioRhyme-Regular']";
     public static String href = "//div[contains(@id,'rect-tinymce-tmp_headline')]//a";
     public static String href_p = "//div[contains(@id,'rect-tinymce-tmp_text')]//a";
-    public static String headlineElement = "//div[contains(@id,'root-block-rect-tinymce-tmp_headline')]//div[contains(@id,'rect-tinymce-tmp_headline')]//span";
+    public static String elementSpan = "//div[contains(@id,'rect-tinymce')]//span";
+    public static String elementStyle = "//div[contains(@id,'rect-tinymce')]//span[@style]";
     public static String startColorValue = "color: rgb(0, 0, 0);";
     public static String JqueryWithText_forButton = ".dropdown-modal__item-title:contains(‘Button’)";
 }

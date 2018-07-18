@@ -145,6 +145,11 @@ public class SupportMethod {
     }
     public void selectAllText(){
         editorPage().headerText.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            System.out.println(e);
+        }
     }
 
     public void changeCapacity() throws InterruptedException {

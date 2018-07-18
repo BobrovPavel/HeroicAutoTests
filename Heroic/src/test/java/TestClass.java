@@ -1,3 +1,6 @@
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.security.Key;
 import java.util.List;
 
 import Pages.EditorPage;
@@ -11,6 +14,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -47,10 +51,21 @@ public class TestClass{
      }
 
      @Test
-     public void test() throws InterruptedException {
-        webDriver.get("https://community.pekama.com/login");
-        webDriver.findElement(By.cssSelector("[ng-model=\"vm.email\"]")).sendKeys("qweqwe@mail.ru");
-        Thread.sleep(2000);
+     public void test() throws InterruptedException, AWTException {
+             Actions action = new Actions(webDriver);
+             webDriver.get("https://community.pekama.com/");
+             Thread.sleep(2000);
+         action.sendKeys(Keys.SPACE).click().perform();
+         Thread.sleep(2000);
+//             action.sendKeys(Keys.HOME).click().perform();
+             Thread.sleep(2000);
+             webDriver.findElement(By.cssSelector(".button.button_size_s ")).click();
+             Thread.sleep(2000);
+
+
+
+         JavascriptExecutor js = (JavascriptExecutor)webDriver;
+         js.executeScript("document.querySelector('.activeSidebar .button-add-element').click()");
      }
 
     @Test

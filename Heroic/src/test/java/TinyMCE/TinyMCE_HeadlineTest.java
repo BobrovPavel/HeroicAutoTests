@@ -109,7 +109,7 @@ public class TinyMCE_HeadlineTest {
         List<WebElement> colors = webDriver.findElements(By.xpath("//div[@class='color-picker-item__palette']//i"));
         Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
-        WebElement element = webDriver.findElement(By.xpath("//div[contains(@id,'rect-tinymce-tmp_headline')]//div//div//span"));
+        WebElement element = webDriver.findElement(By.xpath(Variables.elementSpan));
         String palet = colors.get(1).getAttribute("style");
         int first = palet.lastIndexOf("(");
         int last = palet.lastIndexOf(")");
@@ -191,7 +191,7 @@ public class TinyMCE_HeadlineTest {
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
         Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
         Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
-        Assert.assertTrue(webDriver.findElement(By.xpath("//div[contains(@id,'rect-tinymce')]//span")).getAttribute("style").contains("underline"));
+        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style").contains("underline"));
         Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
     }
     @Test
@@ -217,7 +217,7 @@ public class TinyMCE_HeadlineTest {
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
         Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
         Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
-        Assert.assertTrue(webDriver.findElement(By.xpath("//div[contains(@id,'rect-tinymce')]//span")).getAttribute("style").contains("underline"));
+        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style").contains("underline"));
         Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
         Assert.assertTrue(tinyMCE().fontFamilyAssert1.isDisplayed());
     }
@@ -248,7 +248,7 @@ public class TinyMCE_HeadlineTest {
         Assert.assertTrue(webDriver.findElements(By.xpath("//div[contains(@id,'rect-tinymce')]//strong")).size() == 0);
         Assert.assertTrue(webDriver.findElements(By.xpath("//div[contains(@id,'rect-tinymce')]//em")).size() == 0);
         Assert.assertTrue(webDriver.findElements(By.xpath("//div[contains(@id,'rect-tinymce')]//span[@style='text-decoration: underline;']")).size() == 0);
-        Assert.assertTrue(webDriver.findElements(By.xpath("//div[contains(@id,'rect-tinymce-tmp_headline')]//div//span[@style]")).size() == 0);
+        Assert.assertTrue(webDriver.findElements(By.xpath(Variables.elementStyle)).size() == 0);
     }
     @Test
     public void openInNewWindow(){
@@ -267,7 +267,7 @@ public class TinyMCE_HeadlineTest {
         supportMethod().waitAndClick(tinyMCE().color);
         action.moveToElement(tinyMCE().colorpicker,-30, 60).click().perform();
         Thread.sleep(500);
-        String result = webDriver.findElement(By.xpath(Variables.headlineElement)).getAttribute("style");
+        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         System.out.println(result);
         Assert.assertTrue(!Variables.startColorValue.equals(result));
     }
@@ -277,7 +277,7 @@ public class TinyMCE_HeadlineTest {
         supportMethod().waitAndClick(tinyMCE().color);
         action.moveToElement(tinyMCE().colorpicker,-25, 60).click().perform();
         wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).click();
-        String result = webDriver.findElement(By.xpath(Variables.headlineElement)).getAttribute("style");
+        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         Assert.assertTrue(!result.equals("color: rgb(0, 0, 0);"));
     }
     @Test
@@ -287,20 +287,20 @@ public class TinyMCE_HeadlineTest {
         Thread.sleep(500);
         action.moveToElement(tinyMCE().colorpicker,-2, 60).click().perform();
         Thread.sleep(500);
-        String finish = webDriver.findElement(By.xpath("//div[contains(@id,'rect-tinymce-tmp_headline')]//span[@style]")).getAttribute("data-mce-style");
+        String finish = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("data-mce-style");
         System.out.println(finish);
         Assert.assertEquals(finish,"color: rgba(0, 0, 0, 0.46);");
     }
     @Test
     public void changeColorWithPaletAndCapacity_headline() throws InterruptedException {
         supportMethod().changeColorWithPalet();
-        String result = webDriver.findElement(By.xpath(Variables.headlineElement)).getAttribute("style");
+        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         int first = result.lastIndexOf("(");
         int last = result.lastIndexOf(")");
         String res = result.substring(first,last);
         supportMethod().waitAndClick(tinyMCE().color);
         supportMethod().changeCapacity();
-        String finish = webDriver.findElement(By.xpath("//div[contains(@id,'rect-tinymce-tmp_headline')]//span[@style]")).getAttribute("data-mce-style");
+        String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
         Assert.assertEquals(finish, "color: rgba"+res+", 0.46);");
     }
     @Test
@@ -315,13 +315,13 @@ public class TinyMCE_HeadlineTest {
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
         Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
         supportMethod().changeColorWithColorPicker();
-        String result = webDriver.findElement(By.xpath(Variables.headlineElement)).getAttribute("style");
+        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         int first = result.lastIndexOf("(");
         int last = result.lastIndexOf(")");
         String res = result.substring(first,last);
         supportMethod().waitAndClick(tinyMCE().color);
         supportMethod().changeCapacity();
-        String finish = webDriver.findElement(By.xpath("//div[contains(@id,'rect-tinymce-tmp_headline')]//span[@style]")).getAttribute("data-mce-style");
+        String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
         Assert.assertEquals(finish, "text-decoration: underline; color: rgba"+res+", 0.46);");
         Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
         Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
@@ -330,8 +330,6 @@ public class TinyMCE_HeadlineTest {
     }
     @Test
     public void insertLink_boid_italic_underline_quote_headline(){
-        supportMethod().createThreeLine();
-        supportMethod().selectAllText();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
@@ -381,13 +379,14 @@ public class TinyMCE_HeadlineTest {
     public void colorForBr_H() throws InterruptedException {
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
+        Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().color)).click();
         Thread.sleep(500);
         List<WebElement> colors = webDriver.findElements(By.xpath("//div[@class='color-picker-item__palette']//i"));
         Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
         String palet = colors.get(1).getAttribute("style");
-        WebElement element = webDriver.findElement(By.xpath("//div[contains(@id,'rect-tinymce-tmp_headline')]//div//div//span"));
+        WebElement element = webDriver.findElement(By.xpath(Variables.elementSpan));
         int first = palet.lastIndexOf("(");
         int last = palet.lastIndexOf(")");
         String result = "color: rgb"+palet.substring(first,last+1)+";";
@@ -396,7 +395,7 @@ public class TinyMCE_HeadlineTest {
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
     }
     @Test
-    public void alignmentForBr_H(){
+    public void alignmentForBr_H() throws InterruptedException {
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignment)).click();
@@ -439,9 +438,10 @@ public class TinyMCE_HeadlineTest {
         Assert.assertTrue(webDriver.findElements(By.xpath(Variables.italicAssert)).size() == 3);
     }
     @Test
-    public void boldForBr_H(){
+    public void boldForBr_H() throws InterruptedException {
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
+        Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
         Assert.assertTrue(webDriver.findElements(By.xpath(Variables.boidAssert)).size() == 3);
@@ -466,9 +466,10 @@ public class TinyMCE_HeadlineTest {
 
 
     @Test
-    public void boid_italic_H(){
+    public void boid_italic_H() throws InterruptedException {
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
+        Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
@@ -524,17 +525,18 @@ public class TinyMCE_HeadlineTest {
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
-        wait.until(ExpectedConditions.visibilityOfAllElements(webDriver.findElements(By.xpath("//div[contains(@id,'rect-tinymce')]//span"))));
+        wait.until(ExpectedConditions.visibilityOfAllElements(webDriver.findElements(By.xpath(Variables.elementSpan))));
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
         Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
         Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
-        Assert.assertTrue(webDriver.findElement(By.xpath("//div[contains(@id,'rect-tinymce')]//span")).getAttribute("style").contains("underline"));
+        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style").contains("underline"));
         Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
     }
     @Test
     public void boid_italic_underline_quote_color_font_family_H() throws InterruptedException {
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
+        Thread.sleep(500);
         supportMethod().waitAndClick(tinyMCE().bold);
         supportMethod().waitAndClick(tinyMCE().italic);
         supportMethod().waitAndClick(tinyMCE().underLine);
@@ -556,7 +558,7 @@ public class TinyMCE_HeadlineTest {
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
         Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
         Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
-        Assert.assertTrue(webDriver.findElement(By.xpath("//div[contains(@id,'rect-tinymce')]//span")).getAttribute("style").contains("underline"));
+        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style").contains("underline"));
         Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
         Assert.assertTrue(tinyMCE().fontFamilyAssert1.isDisplayed());
     }
@@ -614,7 +616,7 @@ public class TinyMCE_HeadlineTest {
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         supportMethod().changeColorWithColorPicker();
-        String result = webDriver.findElement(By.xpath(Variables.headlineElement)).getAttribute("style");
+        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         Assert.assertTrue(!Variables.startColorValue.equals(result));
     }
     @Test
@@ -622,10 +624,11 @@ public class TinyMCE_HeadlineTest {
         Actions action = new Actions(webDriver);
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
+        Thread.sleep(500);
         supportMethod().waitAndClick(tinyMCE().color);
         action.moveToElement(tinyMCE().colorpicker,-25, 60).click().perform();
         wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).click();
-        String result = webDriver.findElement(By.xpath(Variables.headlineElement)).getAttribute("style");
+        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         Assert.assertTrue(!result.equals("color: rgb(0, 0, 0);"));
     }
     @Test
@@ -633,7 +636,7 @@ public class TinyMCE_HeadlineTest {
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         supportMethod().changeCapacity();
-        String finish = webDriver.findElement(By.xpath("//div[contains(@id,'rect-tinymce-tmp_headline')]//span[@style]")).getAttribute("data-mce-style");
+        String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
         Assert.assertEquals(finish,"color: rgba(0, 0, 0, 0.46);");
     }
     @Test
@@ -641,19 +644,20 @@ public class TinyMCE_HeadlineTest {
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         supportMethod().changeColorWithPalet();
-        String result = webDriver.findElement(By.xpath(Variables.headlineElement)).getAttribute("style");
+        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         int first = result.lastIndexOf("(");
         int last = result.lastIndexOf(")");
         String res = result.substring(first,last);
         supportMethod().waitAndClick(tinyMCE().color);
         supportMethod().changeCapacity();
-        String finish = webDriver.findElement(By.xpath("//div[contains(@id,'rect-tinymce-tmp_headline')]//span[@style]")).getAttribute("data-mce-style");
+        String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
         Assert.assertEquals(finish, "color: rgba"+res+", 0.46);");
     }
     @Test
     public void boid_italic_underline_quote_changeColorWithColorPicher_changeCapacity_headline_H() throws InterruptedException {
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
+        Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
@@ -664,13 +668,13 @@ public class TinyMCE_HeadlineTest {
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
         Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
         supportMethod().changeColorWithColorPicker();
-        String result = webDriver.findElement(By.xpath(Variables.headlineElement)).getAttribute("style");
+        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         int first = result.lastIndexOf("(");
         int last = result.lastIndexOf(")");
         String res = result.substring(first,last);
         supportMethod().waitAndClick(tinyMCE().color);
         supportMethod().changeCapacity();
-        String finish = webDriver.findElement(By.xpath("//div[contains(@id,'rect-tinymce-tmp_headline')]//span[@style]")).getAttribute("data-mce-style");
+        String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
         Assert.assertEquals(finish, "text-decoration: underline; color: rgba"+res+", 0.46);");
         Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
         Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
@@ -678,7 +682,7 @@ public class TinyMCE_HeadlineTest {
         Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
     }
     @Test
-    public void insertLink_boid_italic_underline_quote_headline_H(){
+    public void insertLink_boid_italic_underline_quote_headline_H() throws InterruptedException {
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
