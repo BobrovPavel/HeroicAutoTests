@@ -137,11 +137,28 @@ public class SupportMethod {
         WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
         Actions action = new Actions(webDriver);
         editorPage().headerText.sendKeys(Keys.BACK_SPACE);
-        wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).sendKeys(Variables.headerValue);
+        wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).sendKeys(Variables.textValue);
         action.keyDown(Keys.SHIFT).sendKeys(Keys.ENTER).keyUp(Keys.SHIFT).perform();
-        wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).sendKeys(Variables.headerValue);
+        wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).sendKeys(Variables.textValue);
         action.sendKeys(Keys.ENTER).perform();
-        wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).sendKeys(Variables.headerValue);
+        wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).sendKeys(Variables.textValue);
+    }
+    public void selectPartText(){
+        WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
+        Actions action = new Actions(webDriver);
+        editorPage().headerText.sendKeys(Keys.BACK_SPACE);
+        wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).sendKeys(Variables.textValue);
+
+        action
+                .sendKeys(Keys.chord(Keys.SHIFT,Keys.LEFT_CONTROL, Keys.LEFT))
+                .sendKeys(Keys.chord(Keys.SHIFT,Keys.LEFT_CONTROL, Keys.LEFT))
+                .sendKeys(Keys.chord(Keys.SHIFT,Keys.LEFT_CONTROL, Keys.LEFT))
+                .perform();
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            System.out.println(e);
+        }
     }
     public void selectAllText(){
         editorPage().headerText.sendKeys(Keys.chord(Keys.CONTROL, "a"));

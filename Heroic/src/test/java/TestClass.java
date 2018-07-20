@@ -1,6 +1,7 @@
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.security.Key;
+import java.util.ArrayList;
 import java.util.List;
 
 import Pages.EditorPage;
@@ -52,7 +53,9 @@ public class TestClass{
 
      @Test
      public void test() throws InterruptedException, AWTException {
-             Actions action = new Actions(webDriver);
+
+      Actions action = new Actions(webDriver);
+
              webDriver.get("https://community.pekama.com/");
              Thread.sleep(2000);
          action.sendKeys(Keys.SPACE).click().perform();
@@ -63,9 +66,12 @@ public class TestClass{
              Thread.sleep(2000);
 
 
-
          JavascriptExecutor js = (JavascriptExecutor)webDriver;
-         js.executeScript("document.querySelector('.activeSidebar .button-add-element').click()");
+         js.executeScript("document.querySelector('.sidebar-integration .sidebar-popup-menu__link')[0].click()");
+     }
+     @Test
+     public void integration(){
+
      }
 
     @Test

@@ -78,19 +78,17 @@ public class TinyMCE {
 
     @FindBy (xpath = "//li[contains(text(), 'BioRhyme Regular')]")
     public WebElement fontFamily1;
-    @FindBy (xpath = "//div[contains(@id,'rect-tinymce-tmp_headline')]//div//div//span[@class='fontfamily-BioRhyme-Regular']")
-    public WebElement fontFamilyAssert1;
-    @FindBy (xpath = "//div[contains(@id,'rect-tinymce-tmp_text')]//span[@class='fontfamily-BioRhyme-Regular']")
-    public WebElement fontFamilyAssert1_p;
+    @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//span[@class='fontfamily-BioRhyme-Regular']")
+    public WebElement fontFamilyAssert;
 
     @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//strong")
     public WebElement boidAssert;
     @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//em")
     public WebElement italicAssert;
+    @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//blockquote")
+    public WebElement quoteAssert;
     @FindBy (xpath = "//span[contains(@style,'text-decoration: underline;')]")
     public WebElement underLineAssert;
-    @FindBy (xpath = "//blockquote")
-    public WebElement quoteAssert;
     @FindBy (xpath = "//div[@class='mce-left-aligment']")
     public WebElement leftAlignmentAssert;
     @FindBy (xpath = "//div[@class='mce-center-aligment']")
@@ -101,6 +99,8 @@ public class TinyMCE {
     public WebElement fullAlignmentAssert;
     @FindBy (xpath = "//h2[@class='  font-shadow-none  undefined  headline-item ']")
     public WebElement h2GlobalAssert;
+    @FindBy (css = ".text-element-p3")
+    public WebElement p3GlobalAssert;
 
     @FindBy (xpath = "//p[@class='mce-left-aligment']")
     public WebElement leftAlignmentAssert_p;
