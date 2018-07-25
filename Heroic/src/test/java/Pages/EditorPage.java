@@ -13,7 +13,7 @@ public class EditorPage {
         PageFactory.initElements(webDriver, this);
     }
 
-    @FindBy (xpath = "//h4[@class='cart-element__item-title'][contains(text(),'Blank Canvas')]//preceding::*[contains(@class,'cart-element__image')]")
+    @FindBy (xpath = "//h4[@class='cart-element__item-title'][contains(text(),'Blank Canvas')]")
     public WebElement blankCanvas;
     @FindBy (xpath = "//span[@class='dropdown-modal__item-subtitle'][contains(text(),'Full Width Layout Option')]")
     public WebElement fullWidthSection;

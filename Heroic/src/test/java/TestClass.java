@@ -11,6 +11,7 @@ import Pages.TinyMCE;
 import SupportClasses.SupportMethod;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.*;
@@ -70,8 +71,13 @@ public class TestClass{
          js.executeScript("document.querySelector('.sidebar-integration .sidebar-popup-menu__link')[0].click()");
      }
      @Test
-     public void integration(){
-
+     public void integration() throws InterruptedException {
+        webDriver.get("https://community.pekama.com/login");
+        webDriver.findElement(By.xpath("//button[contains(text(),'Sign In')]")).click();
+        Thread.sleep(2000);
+        System.out.println(webDriver.findElements(By.xpath("//div[@class='field__error-item'][contains(text(),'This field may not be blank.')]")).size());
+        Thread.sleep(2000);
+        Assert.assertEquals(2, webDriver.findElements(By.xpath("//div[@class='field__error-item'][contains(text(),'This field may not be blank.')]")).size());
      }
 
     @Test

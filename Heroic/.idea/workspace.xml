@@ -13,110 +13,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file leaf-file-name="TinyMCE_HeadlineTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TinyMCE/TinyMCE_HeadlineTest.java">
+        <entry file="file://$USER_HOME$/Git/Heroic/src/test/java/TinyMCE/TinyMCE_HeadlineTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5572">
-              <caret line="605" column="86" selection-start-line="605" selection-start-column="86" selection-end-line="605" selection-end-column="86" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TinyMCE_ParagraphTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TinyMCE/TinyMCE_ParagraphTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5572">
-              <caret line="624" column="86" selection-start-line="624" selection-start-column="86" selection-end-line="624" selection-end-column="86" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SupportMethod.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/SupportMethod.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="162" column="32" lean-forward="true" selection-start-line="162" selection-start-column="32" selection-end-line="162" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TinyMCE.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Pages/TinyMCE.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1404">
-              <caret line="81" column="38" selection-start-line="81" selection-start-column="22" selection-end-line="81" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Variables.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/Variables.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditorPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Pages/EditorPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Pages/LoginPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sidebar.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Pages/Sidebar.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestClass.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestClass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="774">
-              <caret line="73" selection-start-line="73" selection-end-line="73" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SimpleClass.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SimpleClass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="792">
+              <caret line="265" column="62" lean-forward="true" selection-start-line="265" selection-start-column="62" selection-end-line="265" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -138,6 +44,10 @@
       <find>quotefor</find>
       <find>align</find>
       <find>insertLink</find>
+      <find>h2FontSize</find>
+      <find>changeColorWithPalet</find>
+      <find>changefontsizeW</find>
+      <find>changeFontSizeWith</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -154,7 +64,6 @@
         <option value="$PROJECT_DIR$/src/test/java/Sidebar.java" />
         <option value="$PROJECT_DIR$/src/test/java/AddedSectionTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/EditorPage.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/Test.java" />
         <option value="$PROJECT_DIR$/src/test/java/Variables.java" />
         <option value="$PROJECT_DIR$/src/test/java/TinyMCE.java" />
@@ -167,13 +76,16 @@
         <option value="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/Pages/Sidebar.java" />
         <option value="$PROJECT_DIR$/src/main/java/SimpleClass.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Pages/EditorPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ClassTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ClassTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/SupportClasses/SupportMethod.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Pages/TinyMCE.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Pages/EditorPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestClass.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Pages/TinyMCE.java" />
         <option value="$PROJECT_DIR$/src/test/java/SupportClasses/Variables.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TinyMCE/TinyMCE_ParagraphTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/TinyMCE/TinyMCE_HeadlineTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TinyMCE/TinyMCE_ParagraphTest.java" />
       </list>
     </option>
   </component>
@@ -185,7 +97,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="579" />
+    <option name="x" value="117" />
+    <option name="y" value="-18" />
     <option name="width" value="1304" />
     <option name="height" value="1040" />
   </component>
@@ -195,9 +108,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -205,65 +117,11 @@
               <item name="Heroic" type="b2602c69:ProjectViewProjectNode" />
               <item name="Heroic" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Heroic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Heroic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Heroic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Heroic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Heroic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Heroic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Heroic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Heroic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Heroic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Heroic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Heroic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Heroic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Heroic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Heroic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SupportClasses" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Heroic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Heroic" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="TinyMCE" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -290,11 +148,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TinyMCE_HeadlineTest.globalStyles_Paragraph_part">
+  <component name="RunManager" selected="JUnit.TinyMCE_ParagraphTest.insertLinkToUserPage_applyAllStyles_Paragraph_part">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="TinyMCE_HeadlineTest.globalStyles_Paragraph_part" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TinyMCE_HeadlineTest.insertLinkToUserPage_applyAllStyles_Headline_Dib_Br" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Heroic" />
       <extension name="coverage">
         <pattern>
@@ -306,7 +164,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="TinyMCE" />
       <option name="MAIN_CLASS_NAME" value="TinyMCE.TinyMCE_HeadlineTest" />
-      <option name="METHOD_NAME" value="globalStyles_Paragraph_part" />
+      <option name="METHOD_NAME" value="insertLinkToUserPage_applyAllStyles_Headline_Dib_Br" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -317,7 +175,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="TinyMCE_HeadlineTest.inserAndDeleteLink_Headline_part" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TinyMCE_HeadlineTest.insertLinkToUserPage_applyAllStyles_Headline_part" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Heroic" />
       <extension name="coverage">
         <pattern>
@@ -329,7 +187,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="TinyMCE" />
       <option name="MAIN_CLASS_NAME" value="TinyMCE.TinyMCE_HeadlineTest" />
-      <option name="METHOD_NAME" value="inserAndDeleteLink_Headline_part" />
+      <option name="METHOD_NAME" value="insertLinkToUserPage_applyAllStyles_Headline_part" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -340,30 +198,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="TinyMCE_HeadlineTest.insertLink_Headline_part" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Heroic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="TinyMCE.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="TinyMCE" />
-      <option name="MAIN_CLASS_NAME" value="TinyMCE.TinyMCE_HeadlineTest" />
-      <option name="METHOD_NAME" value="insertLink_Headline_part" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="TinyMCE_ParagraphTest.globalStyles_Paragraph_part" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TinyMCE_ParagraphTest.insertLinkToUserPage_applyAllStyles_Paragraph" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Heroic" />
       <extension name="coverage">
         <pattern>
@@ -375,7 +210,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="TinyMCE" />
       <option name="MAIN_CLASS_NAME" value="TinyMCE.TinyMCE_ParagraphTest" />
-      <option name="METHOD_NAME" value="globalStyles_Paragraph_part" />
+      <option name="METHOD_NAME" value="insertLinkToUserPage_applyAllStyles_Paragraph" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -386,7 +221,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="TinyMCE_ParagraphTest.inserAndDeleteLink_Paragraph_part" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TinyMCE_ParagraphTest.insertLinkToUserPage_applyAllStyles_Paragraph_P_Br" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Heroic" />
       <extension name="coverage">
         <pattern>
@@ -398,7 +233,30 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="TinyMCE" />
       <option name="MAIN_CLASS_NAME" value="TinyMCE.TinyMCE_ParagraphTest" />
-      <option name="METHOD_NAME" value="inserAndDeleteLink_Paragraph_part" />
+      <option name="METHOD_NAME" value="insertLinkToUserPage_applyAllStyles_Paragraph_P_Br" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TinyMCE_ParagraphTest.insertLinkToUserPage_applyAllStyles_Paragraph_part" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Heroic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TinyMCE.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="TinyMCE" />
+      <option name="MAIN_CLASS_NAME" value="TinyMCE.TinyMCE_ParagraphTest" />
+      <option name="METHOD_NAME" value="insertLinkToUserPage_applyAllStyles_Paragraph_part" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -448,19 +306,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.TinyMCE_HeadlineTest.insertLink_Headline_part" />
-      <item itemvalue="JUnit.TinyMCE_ParagraphTest.inserAndDeleteLink_Paragraph_part" />
-      <item itemvalue="JUnit.TinyMCE_ParagraphTest.globalStyles_Paragraph_part" />
-      <item itemvalue="JUnit.TinyMCE_HeadlineTest.inserAndDeleteLink_Headline_part" />
-      <item itemvalue="JUnit.TinyMCE_HeadlineTest.globalStyles_Paragraph_part" />
+      <item itemvalue="JUnit.TinyMCE_HeadlineTest.insertLinkToUserPage_applyAllStyles_Headline_Dib_Br" />
+      <item itemvalue="JUnit.TinyMCE_HeadlineTest.insertLinkToUserPage_applyAllStyles_Headline_part" />
+      <item itemvalue="JUnit.TinyMCE_ParagraphTest.insertLinkToUserPage_applyAllStyles_Paragraph" />
+      <item itemvalue="JUnit.TinyMCE_ParagraphTest.insertLinkToUserPage_applyAllStyles_Paragraph_P_Br" />
+      <item itemvalue="JUnit.TinyMCE_ParagraphTest.insertLinkToUserPage_applyAllStyles_Paragraph_part" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TinyMCE_HeadlineTest.globalStyles_Paragraph_part" />
-        <item itemvalue="JUnit.TinyMCE_ParagraphTest.globalStyles_Paragraph_part" />
-        <item itemvalue="JUnit.TinyMCE_HeadlineTest.inserAndDeleteLink_Headline_part" />
-        <item itemvalue="JUnit.TinyMCE_ParagraphTest.inserAndDeleteLink_Paragraph_part" />
-        <item itemvalue="JUnit.TinyMCE_HeadlineTest.insertLink_Headline_part" />
+        <item itemvalue="JUnit.TinyMCE_ParagraphTest.insertLinkToUserPage_applyAllStyles_Paragraph_part" />
+        <item itemvalue="JUnit.TinyMCE_ParagraphTest.insertLinkToUserPage_applyAllStyles_Paragraph_P_Br" />
+        <item itemvalue="JUnit.TinyMCE_ParagraphTest.insertLinkToUserPage_applyAllStyles_Paragraph" />
+        <item itemvalue="JUnit.TinyMCE_HeadlineTest.insertLinkToUserPage_applyAllStyles_Headline_part" />
+        <item itemvalue="JUnit.TinyMCE_HeadlineTest.insertLinkToUserPage_applyAllStyles_Headline_Dib_Br" />
       </list>
     </recent_temporary>
   </component>
@@ -478,40 +336,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TinyMCE_HeadlineTest_insertLink_Headline_part - 2018.07.20 at 13h 57m 24s.xml">
-      <configuration name="TinyMCE_HeadlineTest.insertLink_Headline_part" configurationId="JUnit" />
+    <history-entry file="TinyMCE_HeadlineTest_insertLinkToUserPage_applyAllStyles_Headline_part - 2018.07.25 at 14h 25m 44s.xml">
+      <configuration name="TinyMCE_HeadlineTest.insertLinkToUserPage_applyAllStyles_Headline_part" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TinyMCE_HeadlineTest_insertLink_Headline_part - 2018.07.20 at 13h 59m 52s.xml">
-      <configuration name="TinyMCE_HeadlineTest.insertLink_Headline_part" configurationId="JUnit" />
+    <history-entry file="TinyMCE_HeadlineTest_insertLinkToUserPage_applyAllStyles_Headline_part - 2018.07.25 at 14h 29m 36s.xml">
+      <configuration name="TinyMCE_HeadlineTest.insertLinkToUserPage_applyAllStyles_Headline_part" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TinyMCE_ParagraphTest_inserAndDeleteLink_Paragraph_part - 2018.07.20 at 14h 01m 07s.xml">
-      <configuration name="TinyMCE_ParagraphTest.inserAndDeleteLink_Paragraph_part" configurationId="JUnit" />
+    <history-entry file="TinyMCE_HeadlineTest_insertLinkToUserPage_applyAllStyles_Headline_part - 2018.07.25 at 14h 30m 59s.xml">
+      <configuration name="TinyMCE_HeadlineTest.insertLinkToUserPage_applyAllStyles_Headline_part" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TinyMCE_ParagraphTest_globalStyles_Paragraph_part - 2018.07.20 at 15h 05m 26s.xml">
-      <configuration name="TinyMCE_ParagraphTest.globalStyles_Paragraph_part" configurationId="JUnit" />
+    <history-entry file="TinyMCE_HeadlineTest_insertLinkToUserPage_applyAllStyles_Headline_part - 2018.07.25 at 14h 31m 45s.xml">
+      <configuration name="TinyMCE_HeadlineTest.insertLinkToUserPage_applyAllStyles_Headline_part" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TinyMCE_ParagraphTest_globalStyles_Paragraph_part - 2018.07.20 at 15h 09m 29s.xml">
-      <configuration name="TinyMCE_ParagraphTest.globalStyles_Paragraph_part" configurationId="JUnit" />
+    <history-entry file="TinyMCE_HeadlineTest_insertLinkToUserPage_applyAllStyles_Headline_part - 2018.07.25 at 14h 33m 04s.xml">
+      <configuration name="TinyMCE_HeadlineTest.insertLinkToUserPage_applyAllStyles_Headline_part" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TinyMCE_HeadlineTest_inserAndDeleteLink_Headline_part - 2018.07.20 at 15h 22m 00s.xml">
-      <configuration name="TinyMCE_HeadlineTest.inserAndDeleteLink_Headline_part" configurationId="JUnit" />
+    <history-entry file="TinyMCE_ParagraphTest_insertLinkToUserPage_applyAllStyles_Paragraph - 2018.07.25 at 14h 57m 42s.xml">
+      <configuration name="TinyMCE_ParagraphTest.insertLinkToUserPage_applyAllStyles_Paragraph" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TinyMCE_ParagraphTest_globalStyles_Paragraph_part - 2018.07.20 at 15h 28m 18s.xml">
-      <configuration name="TinyMCE_ParagraphTest.globalStyles_Paragraph_part" configurationId="JUnit" />
+    <history-entry file="TinyMCE_ParagraphTest_insertLinkToUserPage_applyAllStyles_Paragraph - 2018.07.25 at 15h 00m 08s.xml">
+      <configuration name="TinyMCE_ParagraphTest.insertLinkToUserPage_applyAllStyles_Paragraph" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TinyMCE_HeadlineTest_globalStyles_Paragraph_part - 2018.07.20 at 15h 29m 16s.xml">
-      <configuration name="TinyMCE_HeadlineTest.globalStyles_Paragraph_part" configurationId="JUnit" />
+    <history-entry file="TinyMCE_ParagraphTest_insertLinkToUserPage_applyAllStyles_Paragraph_P_Br - 2018.07.25 at 15h 04m 46s.xml">
+      <configuration name="TinyMCE_ParagraphTest.insertLinkToUserPage_applyAllStyles_Paragraph_P_Br" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TinyMCE_HeadlineTest_globalStyles_Paragraph_part - 2018.07.20 at 15h 30m 19s.xml">
-      <configuration name="TinyMCE_HeadlineTest.globalStyles_Paragraph_part" configurationId="JUnit" />
+    <history-entry file="TinyMCE_ParagraphTest_insertLinkToUserPage_applyAllStyles_Paragraph_part - 2018.07.25 at 15h 06m 33s.xml">
+      <configuration name="TinyMCE_ParagraphTest.insertLinkToUserPage_applyAllStyles_Paragraph_part" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TinyMCE_HeadlineTest_globalStyles_Paragraph_part - 2018.07.20 at 15h 35m 17s.xml">
-      <configuration name="TinyMCE_HeadlineTest.globalStyles_Paragraph_part" configurationId="JUnit" />
+    <history-entry file="TinyMCE_ParagraphTest_insertLinkToUserPage_applyAllStyles_Paragraph_part - 2018.07.25 at 15h 07m 35s.xml">
+      <configuration name="TinyMCE_ParagraphTest.insertLinkToUserPage_applyAllStyles_Paragraph_part" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -522,23 +379,44 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32946146" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32946146" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14583333" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info id="Designer" order="2" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32946146" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32946146" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14583333" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -546,7 +424,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="10" />
     </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
@@ -559,26 +437,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/TinyMCE/TinyMCE_HeadlineTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="108" column="71" selection-start-line="108" selection-start-column="71" selection-end-line="108" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/SupportMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/requests/FilterRequest.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -829,13 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/LoginPage.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/TinyMCE/TinyMCE_HeadlineTest1.java" />
@@ -870,20 +721,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/EditorPage.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1044">
+          <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/TinyMCE.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/EditorPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1404">
-          <caret line="81" column="38" selection-start-line="81" selection-start-column="22" selection-end-line="81" selection-end-column="38" />
+        <state relative-caret-position="216">
+          <caret line="15" column="94" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="94" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -892,8 +740,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        <state relative-caret-position="216">
+          <caret line="77" column="59" selection-start-line="77" selection-start-column="59" selection-end-line="77" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Pages/TinyMCE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -902,8 +760,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/SupportMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="162" column="32" lean-forward="true" selection-start-line="162" selection-start-column="32" selection-end-line="162" selection-end-column="32" />
+        <state relative-caret-position="396">
+          <caret line="94" column="18" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -912,25 +770,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/Variables.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TinyMCE/TinyMCE_ParagraphTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5572">
-          <caret line="624" column="86" selection-start-line="624" selection-start-column="86" selection-end-line="624" selection-end-column="86" />
+        <state relative-caret-position="332">
+          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TinyMCE/TinyMCE_HeadlineTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5572">
-          <caret line="605" column="86" selection-start-line="605" selection-start-column="86" selection-end-line="605" selection-end-column="86" />
+        <state relative-caret-position="32">
+          <caret line="1053" column="3" lean-forward="true" selection-start-line="1053" selection-start-column="3" selection-end-line="1070" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TinyMCE/TinyMCE_ParagraphTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="689" column="5" selection-start-line="689" selection-start-column="5" selection-end-line="689" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Git/Heroic/src/test/java/TinyMCE/TinyMCE_HeadlineTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="265" column="62" lean-forward="true" selection-start-line="265" selection-start-column="62" selection-end-line="265" selection-end-column="62" />
         </state>
       </provider>
     </entry>

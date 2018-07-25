@@ -35,6 +35,14 @@ public class TinyMCE {
     public WebElement color;
     @FindBy (xpath = "//i[@class='mce-ico mce-i-textfont']")
     public WebElement size;
+    @FindBy (xpath = "//i[contains(@class,'mce-ico mce-i-textlist')]")
+    public WebElement lists;
+    @FindBy (xpath = "//div[contains(@class,'tinymce-item-text-align__icon')]//i[contains(@class,'mce-ico mce-i-numlist')]")
+    public WebElement numberedList;
+    @FindBy (xpath = "//div[contains(@class,'tinymce-item-text-align__icon')]//i[contains(@class,'mce-ico mce-i-bullist')]")
+    public WebElement bulletedList;
+    @FindBy (xpath = "//div[contains(@class,'tinymce-item-text-align__icon')]//i[contains(@class,'mce-ico mce-i-textclose')]")
+    public WebElement closeLists;
     @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//div[contains(@class,'tinymce-item-text-align__icon')]//i[@class='mce-ico mce-i-alignleft']")
     public WebElement alignmentLeft;
     @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//div[contains(@class,'tinymce-item-text-align__icon')]//i[@class='mce-ico mce-i-aligncenter']")
@@ -53,6 +61,12 @@ public class TinyMCE {
     public WebElement saveLink;
     @FindBy (xpath = "//div[contains(@class,'toggleElement')]")
     public WebElement openInNewWindow;
+    @FindBy (xpath = "//div[contains(@id,'rect-tinymce-tmp_text')]")
+    public WebElement textBody;
+    @FindBy (xpath = "//span[contains(text(),'Or Select Page')]")
+    public WebElement selectLinkPage;
+    @FindBy (xpath = "//div[contains(text(),'Blank Canvas')]")
+    public WebElement selectBlankPage;
 
     @FindBy(xpath = "//h1[@class='header-type__huge']")
     public WebElement h1FontSize;
@@ -112,6 +126,8 @@ public class TinyMCE {
     public WebElement fullAlignmentAssert_p;
     @FindBy (xpath = "//div[@class='custom-color-picker__color']")
     public WebElement colorpicker;
+    @FindBy (xpath = "//div[@class='rc-slider-handle']")
+    public WebElement sizeSlider;
 
 
 

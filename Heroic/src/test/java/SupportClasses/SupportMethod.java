@@ -69,6 +69,28 @@ public class SupportMethod {
         WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
         wait.until(ExpectedConditions.elementToBeClickable(webDriver.findElement(By.xpath(element)))).click();
     }
+    public void wait(int millis){
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            System.out.println(e);
+        }
+    }
+    public void changeFontSizeWithSlider() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
+        Actions action = new Actions(webDriver);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
+        Thread.sleep(500);
+        action.moveToElement(tinyMCE().sizeSlider,-20,0).click().perform();
+        Thread.sleep(500);
+    }
+    public void insertLink(){
+        WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
+        tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
+        tinyMCE().pasteLink.sendKeys("https://www.google.com/");
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().saveLink)).click();
+    }
 
     public String getRemovelinkSelector(){
         StringBuilder builder = new StringBuilder(webDriver.findElement(By.xpath("//i[contains(@class,'mce-ico mce-i-textlink')]/parent::*/parent::*")).getAttribute("id")).delete(0,5);
@@ -137,11 +159,11 @@ public class SupportMethod {
         WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
         Actions action = new Actions(webDriver);
         editorPage().headerText.sendKeys(Keys.BACK_SPACE);
-        wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).sendKeys(Variables.textValue);
+        wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).sendKeys(Variables.oneLine);
         action.keyDown(Keys.SHIFT).sendKeys(Keys.ENTER).keyUp(Keys.SHIFT).perform();
-        wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).sendKeys(Variables.textValue);
+        wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).sendKeys(Variables.oneLine);
         action.sendKeys(Keys.ENTER).perform();
-        wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).sendKeys(Variables.textValue);
+        wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).sendKeys(Variables.oneLine);
     }
     public void selectPartText(){
         WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
