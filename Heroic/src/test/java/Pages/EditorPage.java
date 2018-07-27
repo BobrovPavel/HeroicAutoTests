@@ -31,4 +31,8 @@ public class EditorPage {
     public WebElement submitDelete;
     @FindBy (xpath = "//button[contains(@id,'plus')]")
     public WebElement plusIntoRow;
+    @FindBy (xpath = "//div[@class='dropdown-modal ']")
+    public WebElement newSectionModale;
+    @FindBy (xpath = "//div[@class='insert-new__inner-content']")
+    public WebElement addSectionPlus;
 }

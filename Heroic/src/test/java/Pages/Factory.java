@@ -27,4 +27,7 @@ public class Factory {
     public SupportMethod supportMethod(){
         return new SupportMethod(webDriver);
     }
+    public GlobalStyles globalStyles(){
+        return new GlobalStyles(webDriver);
+    }
 }

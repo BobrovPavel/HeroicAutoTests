@@ -5,6 +5,7 @@ import Pages.LoginPage;
 import Pages.Sidebar;
 import Pages.TinyMCE;
 import SupportClasses.SupportMethod;
+import SupportClasses.TinymceHelper;
 import SupportClasses.Variables;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
@@ -34,6 +35,9 @@ public class TinyMCE_HeadlineTest {
     public static SupportMethod supportMethod(){
         return new SupportMethod(webDriver);
     }
+    public static TinymceHelper tinymceHelper(){
+        return new TinymceHelper(webDriver);
+    }
 
     @BeforeClass
     public static void setupClass() throws InterruptedException {
@@ -42,7 +46,7 @@ public class TinyMCE_HeadlineTest {
         webDriver.manage().window().maximize();
         wait = new WebDriverWait(webDriver, 45, 300);
 //        webDriver.get("https://app.heroicnow.com/?token=66acd0e66964e5dfd488648139148f07e5ea4c4b");
-        webDriver.get("https://stg.heroicnow.com/?token=934bcf42fe93b2bef4da86bbcecd98d854231e8b");
+        webDriver.get("https://stg.heroicnow.com/?token=da575fecf7f892c9c6a20fcaea7a080e3f6c2545");
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("logger")));
         supportMethod().createElement("header");
         wait = new WebDriverWait(webDriver, 5, 300);
@@ -130,22 +134,22 @@ public class TinyMCE_HeadlineTest {
     @Test
     public void changeFontSize_Headline() throws InterruptedException {
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
-        for(int i = 0; i < supportMethod().getFontSize_H().size();i++){
-            wait.until(ExpectedConditions.elementToBeClickable((WebElement) supportMethod().getFontSize_H().get(i))).click();
-            Assert.assertTrue(webDriver.findElement(By.xpath((String) supportMethod().getAssertForFontSize_H().get(i))).isDisplayed());
+        for(int i = 0; i < tinymceHelper().getFontSize_H().size();i++){
+            wait.until(ExpectedConditions.elementToBeClickable((WebElement) tinymceHelper().getFontSize_H().get(i))).click();
+            Assert.assertTrue(webDriver.findElement(By.xpath((String) tinymceHelper().getAssertForFontSize_H().get(i))).isDisplayed());
         }
-        wait.until(ExpectedConditions.elementToBeClickable((WebElement) supportMethod().getFontSize_H().get(0))).click();
+        wait.until(ExpectedConditions.elementToBeClickable((WebElement) tinymceHelper().getFontSize_H().get(0))).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
     }
     @Test
     public void changeFontSizeWithSlider_Paragraph() throws InterruptedException {
-        supportMethod().changeFontSizeWithSlider();
+        tinymceHelper().changeFontSizeWithSlider();
         String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         Assert.assertEquals(Variables.fontSizeWithSliderAssert_h, result);
     }
     @Test
     public void changeFontSizeWithSliderAnd_H1_Headline() throws InterruptedException {
-        supportMethod().changeFontSizeWithSlider();
+        tinymceHelper().changeFontSizeWithSlider();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().h2FontSize)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
         Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.elementSpan)).size());
@@ -173,9 +177,9 @@ public class TinyMCE_HeadlineTest {
         List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
         Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
-        supportMethod().colorAssert(colors);
+        tinymceHelper().colorAssert(colors);
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
-        supportMethod().changeFontSizeWithSlider();
+        tinymceHelper().changeFontSizeWithSlider();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
         String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
@@ -231,7 +235,7 @@ public class TinyMCE_HeadlineTest {
         List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
         Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
-        supportMethod().colorAssert(colors);
+        tinymceHelper().colorAssert(colors);
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
@@ -253,7 +257,7 @@ public class TinyMCE_HeadlineTest {
         List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
         Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
-        supportMethod().colorAssert(colors);
+        tinymceHelper().colorAssert(colors);
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
         Thread.sleep(500);
@@ -277,7 +281,7 @@ public class TinyMCE_HeadlineTest {
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().saveLink)).click();
         String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
         Assert.assertEquals("https://www.google.com/", hrefResult);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(supportMethod().getRemovelinkSelector()))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(tinymceHelper().getRemovelinkSelector()))).click();
         Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.href)).size());
     }
     @Test
@@ -298,8 +302,8 @@ public class TinyMCE_HeadlineTest {
     }
     @Test
     public void insertLink_changeFontSizeWithSlider_Headline() throws InterruptedException {
-        supportMethod().insertLink();
-        supportMethod().changeFontSizeWithSlider();
+        tinymceHelper().insertLink();
+        tinymceHelper().changeFontSizeWithSlider();
         String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
         Assert.assertEquals(Variables.fontSizeWithSliderAssert_h, result);
@@ -331,7 +335,7 @@ public class TinyMCE_HeadlineTest {
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().openInNewWindow)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().saveLink)).click();
         Assert.assertEquals(webDriver.findElement(By.xpath(Variables.href)).getAttribute("target"), "_blank");
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(supportMethod().getRemovelinkSelector()))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(tinymceHelper().getRemovelinkSelector()))).click();
         Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.href)).size());
     }
     @Test
@@ -366,13 +370,13 @@ public class TinyMCE_HeadlineTest {
     }
     @Test
     public void changeColorWithPaletAndCapacity_Headline() throws InterruptedException {
-        supportMethod().changeColorWithPalet();
+        tinymceHelper().changeColorWithPalet();
         String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         int first = result.lastIndexOf("(");
         int last = result.lastIndexOf(")");
         String res = result.substring(first,last);
         supportMethod().waitAndClick(tinyMCE().color);
-        supportMethod().changeCapacity();
+        tinymceHelper().changeCapacity();
         String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
         Assert.assertEquals(finish, "color: rgba"+res+", 0.46);");
     }
@@ -387,13 +391,13 @@ public class TinyMCE_HeadlineTest {
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
         Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
-        supportMethod().changeColorWithColorPicker();
+        tinymceHelper().changeColorWithColorPicker();
         String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         int first = result.lastIndexOf("(");
         int last = result.lastIndexOf(")");
         String res = result.substring(first,last);
         supportMethod().waitAndClick(tinyMCE().color);
-        supportMethod().changeCapacity();
+        tinymceHelper().changeCapacity();
         String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
         Assert.assertEquals(finish, "text-decoration: underline; color: rgba"+res+", 0.46);");
         Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
@@ -433,11 +437,11 @@ public class TinyMCE_HeadlineTest {
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
-        for(int i = 0; i < supportMethod().getFontSize_H().size();i++){
-            wait.until(ExpectedConditions.elementToBeClickable((WebElement) supportMethod().getFontSize_H().get(i))).click();
-            Assert.assertTrue(webDriver.findElement(By.xpath((String) supportMethod().getAssertForFontSize_H().get(i))).isDisplayed());
+        for(int i = 0; i < tinymceHelper().getFontSize_H().size();i++){
+            wait.until(ExpectedConditions.elementToBeClickable((WebElement) tinymceHelper().getFontSize_H().get(i))).click();
+            Assert.assertTrue(webDriver.findElement(By.xpath((String) tinymceHelper().getAssertForFontSize_H().get(i))).isDisplayed());
         }
-        wait.until(ExpectedConditions.elementToBeClickable((WebElement) supportMethod().getFontSize_H().get(0))).click();
+        wait.until(ExpectedConditions.elementToBeClickable((WebElement) tinymceHelper().getFontSize_H().get(0))).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
         Thread.sleep(1000);
     }
@@ -533,7 +537,7 @@ public class TinyMCE_HeadlineTest {
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().saveLink)).click();
         String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
         Assert.assertEquals("https://www.google.com/", hrefResult);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(supportMethod().getRemovelinkSelector()))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(tinymceHelper().getRemovelinkSelector()))).click();
         Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.href)).size());
     }
     @Test
@@ -559,7 +563,7 @@ public class TinyMCE_HeadlineTest {
     public void changeFontSizeWithSlider_Headline_Div_Br() throws InterruptedException {
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
-        supportMethod().changeFontSizeWithSlider();
+        tinymceHelper().changeFontSizeWithSlider();
         String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         Assert.assertEquals(Variables.fontSizeWithSliderAssert_h, result);
         Assert.assertEquals(3 , webDriver.findElements(By.xpath("//span[contains(text(),'"+Variables.oneLine+"')]")).size() );
@@ -568,11 +572,11 @@ public class TinyMCE_HeadlineTest {
     public void changeFontSizeWithSlider_And_H1_Headline_Div_Br() throws InterruptedException {
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
-        supportMethod().changeFontSizeWithSlider();
+        tinymceHelper().changeFontSizeWithSlider();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().h2FontSize)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
         Assert.assertTrue(webDriver.findElement(By.xpath(Variables.assert_h2)).getText().contains(Variables.severalLinesAssert));
-        supportMethod().changeFontSizeWithSlider();
+        tinymceHelper().changeFontSizeWithSlider();
         String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         Assert.assertEquals("font-size: 35px;", result);
         Assert.assertEquals(3 , webDriver.findElements(By.xpath("//span[contains(text(),'"+Variables.oneLine+"')]")).size() );
@@ -633,7 +637,7 @@ public class TinyMCE_HeadlineTest {
         List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
         Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
-        supportMethod().colorAssert(colors);
+        tinymceHelper().colorAssert(colors);
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
@@ -658,7 +662,7 @@ public class TinyMCE_HeadlineTest {
         List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
         Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
-        supportMethod().colorAssert(colors);
+        tinymceHelper().colorAssert(colors);
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
         Thread.sleep(500);
@@ -704,8 +708,8 @@ public class TinyMCE_HeadlineTest {
         supportMethod().waitAndClick(tinyMCE().openInNewWindow);
         supportMethod().waitAndClick(tinyMCE().saveLink);
         Assert.assertEquals(webDriver.findElement(By.xpath(Variables.href)).getAttribute("target"), "_blank");
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(supportMethod().getRemovelinkSelector()))).click();
-        supportMethod().waitAndClick_xpath(supportMethod().getRemovelinkSelector());
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(tinymceHelper().getRemovelinkSelector()))).click();
+        supportMethod().waitAndClickByxpath(tinymceHelper().getRemovelinkSelector());
         Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.href)).size());
     }
     @Test
@@ -727,7 +731,7 @@ public class TinyMCE_HeadlineTest {
     public void changeColorWithColorPicker_Headline_Div_Br() throws InterruptedException {
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
-        supportMethod().changeColorWithColorPicker();
+        tinymceHelper().changeColorWithColorPicker();
         String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         Assert.assertTrue(!Variables.startColorValue.equals(result));
     }
@@ -747,7 +751,7 @@ public class TinyMCE_HeadlineTest {
     public void changeCapacity_Headline_Div_Br() throws InterruptedException {
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
-        supportMethod().changeCapacity();
+        tinymceHelper().changeCapacity();
         String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
         Assert.assertEquals(finish,"color: rgba(0, 0, 0, 0.46);");
     }
@@ -755,13 +759,13 @@ public class TinyMCE_HeadlineTest {
     public void changeColorWithPaletAndCapacity_Headline_Div_Br() throws InterruptedException {
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
-        supportMethod().changeColorWithPalet();
+        tinymceHelper().changeColorWithPalet();
         String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         int first = result.lastIndexOf("(");
         int last = result.lastIndexOf(")");
         String res = result.substring(first,last);
         supportMethod().waitAndClick(tinyMCE().color);
-        supportMethod().changeCapacity();
+        tinymceHelper().changeCapacity();
         String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
         Assert.assertEquals(finish, "color: rgba"+res+", 0.46);");
     }
@@ -779,13 +783,13 @@ public class TinyMCE_HeadlineTest {
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
         Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
-        supportMethod().changeColorWithColorPicker();
+        tinymceHelper().changeColorWithColorPicker();
         String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         int first = result.lastIndexOf("(");
         int last = result.lastIndexOf(")");
         String res = result.substring(first,last);
         supportMethod().waitAndClick(tinyMCE().color);
-        supportMethod().changeCapacity();
+        tinymceHelper().changeCapacity();
         String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
         Assert.assertEquals(finish, "text-decoration: underline; color: rgba"+res+", 0.46);");
         Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
@@ -927,17 +931,17 @@ public class TinyMCE_HeadlineTest {
     public void changeFontSize_Headline_part() throws InterruptedException {
         supportMethod().selectPartText();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
-        for(int i = 0; i < supportMethod().getFontSize_H().size();i++){
-            wait.until(ExpectedConditions.elementToBeClickable((WebElement) supportMethod().getFontSize_H().get(i))).click();
-            Assert.assertTrue(webDriver.findElement(By.xpath((String) supportMethod().getAssertForFontSize_H().get(i))).getText().contains(Variables.textValue));
+        for(int i = 0; i < tinymceHelper().getFontSize_H().size();i++){
+            wait.until(ExpectedConditions.elementToBeClickable((WebElement) tinymceHelper().getFontSize_H().get(i))).click();
+            Assert.assertTrue(webDriver.findElement(By.xpath((String) tinymceHelper().getAssertForFontSize_H().get(i))).getText().contains(Variables.textValue));
         }
-        wait.until(ExpectedConditions.elementToBeClickable((WebElement) supportMethod().getFontSize_H().get(0))).click();
+        wait.until(ExpectedConditions.elementToBeClickable((WebElement) tinymceHelper().getFontSize_H().get(0))).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
     }
     @Test
     public void changeFontSizeWithSlider_Headline_part() throws InterruptedException {
         supportMethod().selectPartText();
-        supportMethod().changeFontSizeWithSlider();
+        tinymceHelper().changeFontSizeWithSlider();
         String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         Assert.assertEquals(Variables.fontSizeWithSliderAssert_h, result);
         Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getText().contains(Variables.THREE_SIMPLE_TEXT));
@@ -945,11 +949,11 @@ public class TinyMCE_HeadlineTest {
     @Test
     public void changeFontSizeWithSlider_And_H1_Headline_part() throws InterruptedException {
         supportMethod().selectPartText();
-        supportMethod().changeFontSizeWithSlider();
+        tinymceHelper().changeFontSizeWithSlider();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().h2FontSize)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
         Assert.assertTrue(webDriver.findElement(By.xpath(Variables.assert_h2)).getText().contains(Variables.THREE_SIMPLE_TEXT));
-        supportMethod().changeFontSizeWithSlider();
+        tinymceHelper().changeFontSizeWithSlider();
         String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         Assert.assertEquals("font-size: 35px;", result);
         Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getText().contains(Variables.THREE_SIMPLE_TEXT));
@@ -982,7 +986,7 @@ public class TinyMCE_HeadlineTest {
         List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
         Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
-        supportMethod().colorAssert(colors);
+        tinymceHelper().colorAssert(colors);
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
@@ -1006,7 +1010,7 @@ public class TinyMCE_HeadlineTest {
         List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
         Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
-        supportMethod().colorAssert(colors);
+        tinymceHelper().colorAssert(colors);
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
         Thread.sleep(500);
@@ -1029,7 +1033,7 @@ public class TinyMCE_HeadlineTest {
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
-        supportMethod().changeCapacity();
+        tinymceHelper().changeCapacity();
         String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
         Assert.assertTrue(tinyMCE().boidAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
         Assert.assertTrue(tinyMCE().italicAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
@@ -1048,7 +1052,7 @@ public class TinyMCE_HeadlineTest {
         String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
         Assert.assertEquals("https://www.google.com/", hrefResult);
         Assert.assertTrue(webDriver.findElement(By.xpath(Variables.href)).getText().contains(Variables.THREE_SIMPLE_TEXT));
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(supportMethod().getRemovelinkSelector()))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(tinymceHelper().getRemovelinkSelector()))).click();
         Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.href)).size());
     }
     @Test

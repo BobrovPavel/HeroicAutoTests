@@ -17,6 +17,11 @@ public class Sidebar {
     public WebElement newPageButton;
     @FindBy (css = ".page-menu-dropdown")
     public WebElement threeDots;
+    @FindBy (css = ".sidebar-main-menu__item:nth-child(4)")
+    public WebElement globalStyles;
+    @FindBy (xpath = "//a[contains(text(),'Header Styles')]")
+    public WebElement headerStyles;
+
 
 
 }
