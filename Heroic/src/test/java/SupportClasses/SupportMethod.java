@@ -1,9 +1,7 @@
 package SupportClasses;
 
-import Pages.EditorPage;
-import Pages.LoginPage;
-import Pages.Sidebar;
-import Pages.TinyMCE;
+
+import Pages.*;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -43,9 +41,7 @@ public class SupportMethod {
         js.executeScript("document.querySelector('.button-add-element').click()");
 //        wait.until(ExpectedConditions.elementToBeClickable(sidebar().newPageButton)).click();
         wait.until(ExpectedConditions.elementToBeClickable(editorPage().blankCanvas)).click();
-        if(webDriver.findElements(By.xpath(Variables.newSectionModale)).size() < 1){
-            waitAndClick(editorPage().addSectionPlus);
-        }
+        wait.until(ExpectedConditions.elementToBeClickable(editorPage().addSectionPlus)).click();
         wait.until(ExpectedConditions.elementToBeClickable(editorPage().fullWidthSection)).click();
         wait.until(ExpectedConditions.elementToBeClickable(editorPage().fullWidthColumn)).click();
         switch (element){
@@ -63,7 +59,9 @@ public class SupportMethod {
 //        }
     }
     public void waitAndClick(WebElement element){
+        Actions action = new Actions(webDriver);
         WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
+        action.moveToElement(element).perform();
         wait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }
     public void waitAndClickByxpath(String element){
@@ -81,9 +79,13 @@ public class SupportMethod {
             System.out.println(e);
         }
     }
-    public int toInt(String string){
+    public int asInt(String string){
         string = string.replaceAll("[^0-9]", "");
         return Integer.parseInt(string);
+    }
+    public double asDouble (String string){
+        string = string.replaceAll("[a-zA-Zа-яА-Я]*", "");
+        return Double.parseDouble(string);
     }
     public void createThreeLine(){
         WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);

@@ -1,8 +1,10 @@
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.beans.Transient;
 import java.security.Key;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import Pages.EditorPage;
 import Pages.LoginPage;
@@ -51,6 +53,13 @@ public class TestClass{
 //        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("logger")));
         wait = new WebDriverWait(webDriver, 5, 300);
      }
+     @Test
+     public void t1() throws InterruptedException {
+        webDriver.get("https://stg.heroicnow.com/");
+        webDriver.findElement(By.xpath("//input[@id='user_email']")).sendKeys("qqqqqqq");
+        Thread.sleep(2000);
+         System.out.println(webDriver.findElement(By.xpath("//input[@id='user_email']")).getText());
+     }
 
      @Test
      public void test() throws InterruptedException, AWTException {
@@ -83,7 +92,7 @@ public class TestClass{
     @Test
     public void tests() throws InterruptedException {
         Actions action = new Actions(webDriver);
-        
+
         wait.until(ExpectedConditions.elementToBeClickable(sidebar().newPageButton)).click();
         wait.until(ExpectedConditions.elementToBeClickable(editorPage().blankCanvas)).click();
         wait.until(ExpectedConditions.elementToBeClickable(editorPage().fullWidthSection)).click();
@@ -97,6 +106,40 @@ public class TestClass{
             action.moveToElement(webDriver.findElement(By.xpath("//div[contains(@class,'sidebar-properties-item__extra-content_section')]//span[contains(@class,'button-add-element__icon')]"))).perform();
             wait.until(ExpectedConditions.elementToBeClickable(webDriver.findElement(By.xpath("//div[contains(@class,'sidebar-properties-item__extra-content_section')]//span[contains(@class,'button-add-element__icon')]")))).click();
         }
+    }
+
+    @Test
+    public void testReg() throws InterruptedException {
+        webDriver.get("https://heroicnow.com/step1.php?id=1&site=46");
+        webDriver.findElement(By.xpath("//label[@for='checkboxagree']")).click();
+        webDriver.findElement(By.xpath("//button[@id='submit']")).click();
+        System.out.println(webDriver.findElements(By.cssSelector(".valid")).size());
+        Assert.assertTrue(!webDriver.findElement(By.cssSelector(".valid")).isDisplayed());
+        Assert.assertTrue(webDriver.findElements(By.cssSelector(".valid")).size() > 0);
+        Assert.assertEquals(1, webDriver.findElements(By.cssSelector(".valid")).size());
+    }
+
+    private void handleMultipleWindows(String windowTitle) {
+        Set<String> windows = webDriver.getWindowHandles();
+
+        for (String window : windows) {
+            webDriver.switchTo().window(window);
+            if (webDriver.getTitle().contains(windowTitle)) {
+                return;
+            }
+        }
+    }
+
+
+    @Test
+    public void termOfUseWorks() throws InterruptedException {
+        webDriver.get("https://heroicnow.com/step1.php?id=1&site=46");
+        wait.until(ExpectedConditions.elementToBeClickable(webDriver.findElement(By.xpath("//span[contains(text(),'terms of service')]")))).click();
+        ArrayList<String> tabs = new ArrayList<String>(webDriver.getWindowHandles());
+        webDriver.switchTo().window(tabs.get(1));
+        System.out.println(webDriver.getTitle());
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".header__form")));
+        Assert.assertTrue(webDriver.findElement(By.cssSelector(".header__form")).isDisplayed());
     }
 
     @AfterClass

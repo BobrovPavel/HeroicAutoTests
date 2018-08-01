@@ -1,14 +1,9 @@
-package TinyMCE;
-import Pages.EditorPage;
-import Pages.LoginPage;
-import Pages.Sidebar;
-import Pages.TinyMCE;
+package Tests.TinyMCE;
+
+import Pages.*;
 import SupportClasses.SupportMethod;
 import SupportClasses.TinymceHelper;
 import SupportClasses.Variables;
-import com.google.errorprone.annotations.Var;
-import com.sun.org.apache.xpath.internal.operations.Variable;
-import com.sun.xml.internal.ws.policy.AssertionSet;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
 import org.openqa.selenium.*;
@@ -21,24 +16,24 @@ import java.beans.Transient;
 import java.util.List;
 
 public class TinyMCE_ParagraphTest {
-    static WebDriver webDriver;
-    static WebDriverWait wait;
-    static LoginPage loginPage(){
+    private static WebDriver webDriver;
+    private static WebDriverWait wait;
+    private static LoginPage loginPage(){
         return new LoginPage(webDriver);
     }
-    static TinyMCE tinyMCE(){
+    private static TinyMCE tinyMCE(){
         return new TinyMCE(webDriver);
     }
-    static Sidebar sidebar(){
+    private static Sidebar sidebar(){
         return new Sidebar(webDriver);
     }
-    static EditorPage editorPage(){
+    private static EditorPage editorPage(){
         return new EditorPage(webDriver);
     }
-    static SupportMethod supportMethod(){
+    private static SupportMethod supportMethod(){
         return new SupportMethod(webDriver);
     }
-    static TinymceHelper tinymceHelper(){
+    private static TinymceHelper tinymceHelper(){
         return new TinymceHelper(webDriver);
     }
 

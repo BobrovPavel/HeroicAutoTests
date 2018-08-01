@@ -50,6 +50,30 @@ public class Variables {
     public static String fontFamilyAssert1 = "//span[@class='fontfamily-BioRhyme-Regular']";
     public static String startColorValue = "color: rgb(0, 0, 0);";
 
+    public static String pageView_H1fontFamilyAssert = "//div[contains(@class,'fontfamily-Abril-Fatface-H1')]";
+    public static String pageView_H2fontFamilyAssert = "//div[contains(@class,'fontfamily-Abril-Fatface-H2')]";
+    public static String pageView_H3fontFamilyAssert = "//div[contains(@class,'fontfamily-Abril-Fatface-H3')]";
+    public static String pageView_H4fontFamilyAssert = "//div[contains(@class,'fontfamily-Abril-Fatface-H4')]";
+    public static String pageView_H5fontFamilyAssert = "//div[contains(@class,'fontfamily-Abril-Fatface-H5')]";
+    public static String pageView_H6fontFamilyAssert = "//div[contains(@class,'fontfamily-Abril-Fatface-H6')]";
+
+
+    public String getFontSize_PageView(){
+        return webDriver.findElement(By.xpath("//div[contains(@id,'rect-tinymce')]")).getCssValue("font-size");
+    }
+    public String getLineHeight_PageView(){
+        return webDriver.findElement(By.xpath("//div[@class='line-height-element-style']")).getCssValue("font-size");
+    }
+    public String getLetterSpacing_PageView(){
+        return webDriver.findElement(By.xpath("//div[contains(@id,'rect-tinymce')]")).getCssValue("letter-spacing");
+    }
+    public String getParagraphSpacing_PageView(){
+        return webDriver.findElement(By.xpath("//div[contains(@class,'font-size-element-style')]")).getCssValue("margin-bottom");
+    }
+
+
+
+
     public static String newSectionModale = "//div[@class='dropdown-modal ']";
 
     public String getH1GlobalFontSize(){
@@ -62,29 +86,5 @@ public class Variables {
         return webDriver.findElement(By.xpath("//h1[@class='headline-item']")).getCssValue("font-weight");
     }
 
-    public String getHeadlineGlobalValue(int headlineType, String value){
-        String result = null;
-        switch (value.toLowerCase()){
-            case "font family":
-                result = webDriver.findElement(By.xpath("//h"+headlineType+"[@class='headline-item']")).getCssValue("font-family");
-                break;
-            case "font size":
-                result = webDriver.findElement(By.xpath("//h"+headlineType+"[@class='headline-item']")).getCssValue("font-size");
-                break;
-            case "line height":
-                result = webDriver.findElement(By.xpath("//h"+headlineType+"[@class='headline-item']")).getCssValue("line-height");
-                break;
-            case "letter spacing":
-                result = webDriver.findElement(By.xpath("//h"+headlineType+"[@class='headline-item']")).getCssValue("letter-spacing");
-                break;
-            case "paragraph spacing":
-                result = webDriver.findElement(By.xpath("//h"+headlineType+"[@class='headline-item']")).getCssValue("margin-bottom");
-                break;
-            case "dark color":
-                result = webDriver.findElement(By.xpath("//h"+headlineType+"[@class='headline-item']")).getCssValue("color");
-                break;
-        }
-        return result;
-    }
 //    public static String JqueryWithText_forButton = ".dropdown-modal__item-title:contains(‘Button’)";
 }

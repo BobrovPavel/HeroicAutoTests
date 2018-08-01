@@ -1,9 +1,6 @@
-package TinyMCE;
+package Tests.TinyMCE;
 
-import Pages.EditorPage;
-import Pages.LoginPage;
-import Pages.Sidebar;
-import Pages.TinyMCE;
+import Pages.*;
 import SupportClasses.SupportMethod;
 import SupportClasses.TinymceHelper;
 import SupportClasses.Variables;
@@ -17,25 +14,24 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 public class TinyMCE_HeadlineTest {
-    static WebDriver webDriver;
-    static WebDriverWait wait;
-
-    public LoginPage loginPage(){
+    private static WebDriver webDriver;
+    private static WebDriverWait wait;
+    private static LoginPage loginPage(){
         return new LoginPage(webDriver);
     }
-    public TinyMCE tinyMCE(){
+    private static TinyMCE tinyMCE(){
         return new TinyMCE(webDriver);
     }
-    public Sidebar sidebar(){
+    private static Sidebar sidebar(){
         return new Sidebar(webDriver);
     }
-    public static EditorPage editorPage(){
+    private static EditorPage editorPage(){
         return new EditorPage(webDriver);
     }
-    public static SupportMethod supportMethod(){
+    private static SupportMethod supportMethod(){
         return new SupportMethod(webDriver);
     }
-    public static TinymceHelper tinymceHelper(){
+    private static TinymceHelper tinymceHelper(){
         return new TinymceHelper(webDriver);
     }
 
@@ -57,7 +53,7 @@ public class TinyMCE_HeadlineTest {
     public void preCondition() throws InterruptedException {
         wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).click();
         editorPage().headerText.sendKeys(Keys.chord(Keys.CONTROL, "a"));
-        Thread.sleep(1000);
+        Thread.sleep(500);
     }
 
 
@@ -345,7 +341,6 @@ public class TinyMCE_HeadlineTest {
         action.moveToElement(tinyMCE().colorpicker,-30, 60).click().perform();
         Thread.sleep(500);
         String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
-        System.out.println(result);
         Assert.assertTrue(!Variables.startColorValue.equals(result));
     }
     @Test
@@ -365,7 +360,6 @@ public class TinyMCE_HeadlineTest {
         action.moveToElement(tinyMCE().colorpicker,-2, 60).click().perform();
         Thread.sleep(500);
         String finish = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("data-mce-style");
-        System.out.println(finish);
         Assert.assertEquals(finish,"color: rgba(0, 0, 0, 0.46);");
     }
     @Test
