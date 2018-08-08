@@ -1,9 +1,7 @@
 package Tests.TinyMCE;
 
-import Pages.*;
-import SupportClasses.SupportMethod;
-import SupportClasses.TinymceHelper;
-import SupportClasses.Variables;
+import Components.*;
+import SupportClasses.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
 import org.openqa.selenium.*;
@@ -42,7 +40,7 @@ public class TinyMCE_HeadlineTest {
         webDriver.manage().window().maximize();
         wait = new WebDriverWait(webDriver, 45, 300);
 //        webDriver.get("https://app.heroicnow.com/?token=66acd0e66964e5dfd488648139148f07e5ea4c4b");
-        webDriver.get("https://stg.heroicnow.com/?token=da575fecf7f892c9c6a20fcaea7a080e3f6c2545");
+        webDriver.get("https://stg.heroicnow.com/?token=94802aacb5765ea3743930b37d2323358af50b75");
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("logger")));
         supportMethod().createElement("header");
         wait = new WebDriverWait(webDriver, 5, 300);
@@ -270,7 +268,7 @@ public class TinyMCE_HeadlineTest {
         Assert.assertTrue(tinyMCE().fontFamilyAssert.isDisplayed());
     }
     @Test
-    public void insertLink_Headline() throws InterruptedException {
+    public void insertLink_Headline(){
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
         tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
         tinyMCE().pasteLink.sendKeys("https://www.google.com/");
@@ -281,7 +279,7 @@ public class TinyMCE_HeadlineTest {
         Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.href)).size());
     }
     @Test
-    public void insertLinkToUserPage_applyAllStyles_Headline() throws InterruptedException {
+    public void insertLinkToUserPage_applyAllStyles_Headline(){
         supportMethod().waitAndClick(tinyMCE().bold);
         supportMethod().waitAndClick(tinyMCE().italic);
         supportMethod().waitAndClick(tinyMCE().underLine);
@@ -297,7 +295,7 @@ public class TinyMCE_HeadlineTest {
         Assert.assertTrue(hrefResult.contains("/blank-canvas"));
     }
     @Test
-    public void insertLink_changeFontSizeWithSlider_Headline() throws InterruptedException {
+    public void insertLink_changeFontSizeWithSlider_Headline(){
         tinymceHelper().insertLink();
         tinymceHelper().changeFontSizeWithSlider();
         String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
@@ -344,7 +342,7 @@ public class TinyMCE_HeadlineTest {
         Assert.assertTrue(!Variables.startColorValue.equals(result));
     }
     @Test
-    public void changeColorWithSlider_Headline() throws InterruptedException {
+    public void changeColorWithSlider_Headline(){
         Actions action = new Actions(webDriver);
         supportMethod().waitAndClick(tinyMCE().color);
         action.moveToElement(tinyMCE().colorpicker,-25, 60).click().perform();
@@ -363,7 +361,7 @@ public class TinyMCE_HeadlineTest {
         Assert.assertEquals(finish,"color: rgba(0, 0, 0, 0.46);");
     }
     @Test
-    public void changeColorWithPaletAndCapacity_Headline() throws InterruptedException {
+    public void changeColorWithPaletAndCapacity_Headline(){
         tinymceHelper().changeColorWithPalet();
         String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         int first = result.lastIndexOf("(");
@@ -422,10 +420,6 @@ public class TinyMCE_HeadlineTest {
     }
 
 
-
-
-
-
     @Test
     public void changeFontSize_Headline_Div_Br() throws InterruptedException {
         supportMethod().createThreeLine();
@@ -444,7 +438,7 @@ public class TinyMCE_HeadlineTest {
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().fontFamily1)).click();
         wait.until(ExpectedConditions.visibilityOf(webDriver.findElement(By.xpath(Variables.fontFamilyAssert1))));
         Assert.assertEquals(3, webDriver.findElements(By.xpath(Variables.fontFamilyAssert1)).size());
@@ -470,7 +464,7 @@ public class TinyMCE_HeadlineTest {
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
     }
     @Test
-    public void alignment_Headline_Div_Br() throws InterruptedException {
+    public void alignment_Headline_Div_Br(){
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignment)).click();
@@ -535,7 +529,7 @@ public class TinyMCE_HeadlineTest {
         Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.href)).size());
     }
     @Test
-    public void insertLinkToUserPage_applyAllStyles_Headline_Dib_Br() throws InterruptedException {
+    public void insertLinkToUserPage_applyAllStyles_Headline_Dib_Br(){
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         supportMethod().waitAndClick(tinyMCE().bold);
@@ -554,7 +548,7 @@ public class TinyMCE_HeadlineTest {
         Assert.assertEquals(3, webDriver.findElements(By.xpath(Variables.underLineAssert)).size());
     }
     @Test
-    public void changeFontSizeWithSlider_Headline_Div_Br() throws InterruptedException {
+    public void changeFontSizeWithSlider_Headline_Div_Br(){
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         tinymceHelper().changeFontSizeWithSlider();
@@ -563,7 +557,7 @@ public class TinyMCE_HeadlineTest {
         Assert.assertEquals(3 , webDriver.findElements(By.xpath("//span[contains(text(),'"+Variables.oneLine+"')]")).size() );
     }
     @Test
-    public void changeFontSizeWithSlider_And_H1_Headline_Div_Br() throws InterruptedException {
+    public void changeFontSizeWithSlider_And_H1_Headline_Div_Br(){
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         tinymceHelper().changeFontSizeWithSlider();
@@ -720,9 +714,8 @@ public class TinyMCE_HeadlineTest {
         Assert.assertTrue(tinyMCE().h2GlobalAssert.isDisplayed());
         Assert.assertEquals("https://www.google.com/", hrefResult);
     }
-
     @Test
-    public void changeColorWithColorPicker_Headline_Div_Br() throws InterruptedException {
+    public void changeColorWithColorPicker_Headline_Div_Br(){
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         tinymceHelper().changeColorWithColorPicker();
@@ -742,7 +735,7 @@ public class TinyMCE_HeadlineTest {
         Assert.assertTrue(!result.equals("color: rgb(0, 0, 0);"));
     }
     @Test
-    public void changeCapacity_Headline_Div_Br() throws InterruptedException {
+    public void changeCapacity_Headline_Div_Br(){
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         tinymceHelper().changeCapacity();
@@ -750,7 +743,7 @@ public class TinyMCE_HeadlineTest {
         Assert.assertEquals(finish,"color: rgba(0, 0, 0, 0.46);");
     }
     @Test
-    public void changeColorWithPaletAndCapacity_Headline_Div_Br() throws InterruptedException {
+    public void changeColorWithPaletAndCapacity_Headline_Div_Br(){
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         tinymceHelper().changeColorWithPalet();
@@ -792,7 +785,7 @@ public class TinyMCE_HeadlineTest {
         Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
     }
     @Test
-    public void insertLink_boid_italic_underline_quote_Headline_Div_Br() throws InterruptedException {
+    public void insertLink_boid_italic_underline_quote_Headline_Div_Br(){
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
@@ -815,7 +808,7 @@ public class TinyMCE_HeadlineTest {
         Assert.assertEquals("https://www.google.com/", hrefResult);
     }
     @Test
-    public void insertEmptyLink_boid_italic_underline_quote_Headline_Div_Br() throws InterruptedException {
+    public void insertEmptyLink_boid_italic_underline_quote_Headline_Div_Br(){
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
@@ -838,18 +831,8 @@ public class TinyMCE_HeadlineTest {
     }
 
 
-
-
-
-
-
-
-
-
-
-
     @Test
-    public void boid_Headline_part() throws InterruptedException {
+    public void boid_Headline_part(){
         supportMethod().selectPartText();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
         Assert.assertTrue(tinyMCE().boidAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
@@ -922,7 +905,7 @@ public class TinyMCE_HeadlineTest {
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
     }
     @Test
-    public void changeFontSize_Headline_part() throws InterruptedException {
+    public void changeFontSize_Headline_part(){
         supportMethod().selectPartText();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
         for(int i = 0; i < tinymceHelper().getFontSize_H().size();i++){
@@ -933,7 +916,7 @@ public class TinyMCE_HeadlineTest {
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
     }
     @Test
-    public void changeFontSizeWithSlider_Headline_part() throws InterruptedException {
+    public void changeFontSizeWithSlider_Headline_part(){
         supportMethod().selectPartText();
         tinymceHelper().changeFontSizeWithSlider();
         String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
@@ -941,7 +924,7 @@ public class TinyMCE_HeadlineTest {
         Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getText().contains(Variables.THREE_SIMPLE_TEXT));
     }
     @Test
-    public void changeFontSizeWithSlider_And_H1_Headline_part() throws InterruptedException {
+    public void changeFontSizeWithSlider_And_H1_Headline_part(){
         supportMethod().selectPartText();
         tinymceHelper().changeFontSizeWithSlider();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().h2FontSize)).click();
@@ -1021,7 +1004,7 @@ public class TinyMCE_HeadlineTest {
         Assert.assertTrue(tinyMCE().fontFamilyAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
     }
     @Test
-    public void boid_italic_underline_quote_capacity_Headline_part() throws InterruptedException {
+    public void boid_italic_underline_quote_capacity_Headline_part(){
         supportMethod().selectPartText();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
@@ -1037,7 +1020,7 @@ public class TinyMCE_HeadlineTest {
         Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getText().contains(Variables.THREE_SIMPLE_TEXT));
     }
     @Test
-    public void inserAndDeleteLink_Headline_part() throws InterruptedException {
+    public void inserAndDeleteLink_Headline_part(){
         supportMethod().selectPartText();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
         tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
@@ -1116,14 +1099,13 @@ public class TinyMCE_HeadlineTest {
 
 
     @After
-    public void postCondition() throws InterruptedException {
+    public void postCondition(){
         supportMethod().waitAndClick(editorPage().headerText);
         supportMethod().waitAndClick(editorPage().deleteElement);
         supportMethod().waitAndClick(editorPage().submitDelete);
         supportMethod().waitAndClick(editorPage().plusIntoRow);
         supportMethod().waitAndClick(editorPage().elementHeader);
     }
-
     @AfterClass
     public static void post(){
         if (webDriver != null) {

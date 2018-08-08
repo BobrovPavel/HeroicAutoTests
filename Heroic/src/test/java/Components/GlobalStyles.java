@@ -1,4 +1,4 @@
-package Pages;
+package Components;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class GlobalStyles {
-    WebDriver webDriver;
+    private WebDriver webDriver;
 
     public GlobalStyles (WebDriver driver){
         webDriver = driver;
@@ -28,6 +28,10 @@ public class GlobalStyles {
 
     @FindBy (xpath = "//div[contains(text(),'P1')]")
     public WebElement globalP1;
+    @FindBy (xpath = "//div[contains(text(),'P2')]")
+    public WebElement globalP2;
+    @FindBy (xpath = "//div[contains(text(),'P3')]")
+    public WebElement globalP3;
 
     @FindBy (xpath = "//span[contains(text(),'Overview Mode')]")
     public WebElement overViewMode;
@@ -58,8 +62,12 @@ public class GlobalStyles {
     @FindBy (css = ".editorSectionsWripper .handle-size-headline-h6 .line-height-element-style:not(.not-global-element)")
     public WebElement h6lineHeight;
 
-    @FindBy (xpath = "//div[contains(@class,'text-block-element text-element-p1')]//div[@class='line-height-element-style']")
+    @FindBy (xpath = "//div[contains(@class,'text-element-p1')]//div[@class='line-height-element-style']")
     public WebElement p1LineHeight;
+    @FindBy (xpath = "//div[contains(@class,'text-element-p2')]//div[@class='line-height-element-style']")
+    public WebElement p2LineHeight;
+    @FindBy (xpath = "//div[contains(@class,'text-element-p3')]//div[@class='line-height-element-style']")
+    public WebElement p3LineHeight;
 
     @FindBy (xpath = "//h1[@class='headline-item']")
     public WebElement h1Item;
@@ -74,8 +82,26 @@ public class GlobalStyles {
     @FindBy (xpath = "//h6[@class='headline-item']")
     public WebElement h6Item;
 
-    @FindBy (xpath = "//div[contains(@class,'text-block-element text-element-p1')]//p")
+    @FindBy (xpath = "//div[contains(@class,'text-element-p1')]//p")
     public WebElement p1Item;
+    @FindBy (xpath = "//div[contains(@class,'text-element-p2')]//p")
+    public WebElement p2Item;
+    @FindBy (xpath = "//div[contains(@class,'text-element-p3')]//p")
+    public WebElement p3Item;
+
+    @FindBy (xpath = "//div[contains(@class,'text-element-p1')]//ul/li")
+    public WebElement p1bullet;
+    @FindBy (xpath = "//div[contains(@class,'text-element-p2')]//ul/li")
+    public WebElement p2bullet;
+    @FindBy (xpath = "//div[contains(@class,'text-element-p3')]//ul/li")
+    public WebElement p3bullet;
+
+    @FindBy (css = ".editorSectionsWripper .text-element-p1")
+    public WebElement darkColor_p1;
+    @FindBy (css = ".editorSectionsWripper .text-element-p2")
+    public WebElement darkColor_p2;
+    @FindBy (css = ".editorSectionsWripper .text-element-p3")
+    public WebElement darkColor_p3;
 
     @FindBy (xpath = "//div[contains(@class,'insert-elements handle-size-headline-h1 headline-element')]//div[contains(@class,'dark-color font-size-element-style')]")
     public WebElement h1Paragraph;

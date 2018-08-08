@@ -1,15 +1,12 @@
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.beans.Transient;
-import java.security.Key;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import Pages.EditorPage;
-import Pages.LoginPage;
-import Pages.Sidebar;
-import Pages.TinyMCE;
+import Components.EditorPage;
+import Components.LoginPage;
+import Components.Sidebar;
+import Components.TinyMCE;
 import SupportClasses.SupportMethod;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.AfterClass;
@@ -18,7 +15,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -55,7 +51,9 @@ public class TestClass{
      }
      @Test
      public void t1() throws InterruptedException {
-        webDriver.get("https://stg.heroicnow.com/");
+        webDriver.get("https://community.pekama.com/login");
+        wait.until(ExpectedConditions.elementToBeClickable(webDriver.findElement(By.xpath("//button[contains(text(),'Sign In')]")))).click();
+         System.out.println(webDriver.findElements(By.xpath("//div[@class='field__error-item']")));
         webDriver.findElement(By.xpath("//input[@id='user_email']")).sendKeys("qqqqqqq");
         Thread.sleep(2000);
          System.out.println(webDriver.findElement(By.xpath("//input[@id='user_email']")).getText());
@@ -82,7 +80,7 @@ public class TestClass{
      @Test
      public void integration() throws InterruptedException {
         webDriver.get("https://community.pekama.com/login");
-        webDriver.findElement(By.xpath("//button[contains(text(),'Sign In')]")).click();
+        webDriver.findElement(By.cssSelector(".login-checkbox .checkbox__icon")).click();
         Thread.sleep(2000);
         System.out.println(webDriver.findElements(By.xpath("//div[@class='field__error-item'][contains(text(),'This field may not be blank.')]")).size());
         Thread.sleep(2000);

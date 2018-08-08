@@ -1,4 +1,4 @@
-package Pages;
+package Components;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class EditorPage {
-    WebDriver webDriver;
+    private WebDriver webDriver;
 
     public EditorPage(WebDriver driver){
         webDriver = driver;

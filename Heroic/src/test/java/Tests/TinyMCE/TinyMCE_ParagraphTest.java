@@ -1,18 +1,18 @@
 package Tests.TinyMCE;
 
-import Pages.*;
-import SupportClasses.SupportMethod;
-import SupportClasses.TinymceHelper;
-import SupportClasses.Variables;
+import Components.*;
+import SupportClasses.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.beans.Transient;
 import java.util.List;
 
 public class TinyMCE_ParagraphTest {
@@ -38,13 +38,13 @@ public class TinyMCE_ParagraphTest {
     }
 
     @BeforeClass
-    public static void setupClass() throws InterruptedException {
+    public static void setupClass(){
         WebDriverManager.chromedriver().setup();
         webDriver = new ChromeDriver();
         webDriver.manage().window().maximize();
         wait = new WebDriverWait(webDriver, 45, 300);
 //        webDriver.get("https://app.heroicnow.com/?token=66acd0e66964e5dfd488648139148f07e5ea4c4b");
-        webDriver.get("https://stg.heroicnow.com/?token=da4512690ee37b100884e3edb781e7969014eb59");
+        webDriver.get("https://stg.heroicnow.com/?token=d726772f03c38c32e9243d60c3c82f38dff0b82d");
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("logger")));
         supportMethod().createElement("paragraph");
         wait = new WebDriverWait(webDriver, 5, 300);
@@ -58,25 +58,25 @@ public class TinyMCE_ParagraphTest {
     }
 
     @Test
-    public void boid_Paragraph() throws InterruptedException {
+    public void boid_Paragraph(){
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
         Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
     }
     @Test
-    public void italic_Paragraph() throws InterruptedException {
+    public void italic_Paragraph(){
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
         Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
     }
     @Test
-    public void underline_Paragraph() throws InterruptedException {
+    public void underline_Paragraph(){
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
         Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
     }
     @Test
-    public void quote_Paragraph() throws InterruptedException {
+    public void quote_Paragraph(){
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
         Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
@@ -94,7 +94,7 @@ public class TinyMCE_ParagraphTest {
         Assert.assertTrue(webDriver.findElement(By.xpath(Variables.bulletedListAssert)).isDisplayed());
     }
     @Test
-    public void applyList_changeFontSizeWithSlider_Paragraph() throws InterruptedException {
+    public void applyList_changeFontSizeWithSlider_Paragraph(){
         supportMethod().waitAndClick(tinyMCE().lists);
         supportMethod().waitAndClick(tinyMCE().bulletedList);
         supportMethod().waitAndClick(tinyMCE().closeLists);
@@ -148,7 +148,7 @@ public class TinyMCE_ParagraphTest {
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
     }
     @Test
-    public void changeFontSize_Paragraph() throws InterruptedException {
+    public void changeFontSize_Paragraph(){
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
         for(int i = 0; i < tinymceHelper().getFontSize_p().size();i++){
             wait.until(ExpectedConditions.elementToBeClickable((WebElement) tinymceHelper().getFontSize_p().get(i))).click();
@@ -158,13 +158,13 @@ public class TinyMCE_ParagraphTest {
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
     }
     @Test
-    public void changeFontSizeWithSlider_Paragraph() throws InterruptedException {
+    public void changeFontSizeWithSlider_Paragraph(){
         tinymceHelper().changeFontSizeWithSlider();
         String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         Assert.assertEquals(Variables.fontSizeWithSliderAssert_p, result);
     }
     @Test
-    public void changeFontSizeWithSlider_AndH1_Paragraph() throws InterruptedException {
+    public void changeFontSizeWithSlider_AndH1_Paragraph(){
         tinymceHelper().changeFontSizeWithSlider();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().p3FontSize)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
@@ -290,7 +290,7 @@ public class TinyMCE_ParagraphTest {
         Assert.assertTrue(tinyMCE().fontFamilyAssert.isDisplayed());
     }
     @Test
-    public void insertLink_Paragraph() throws InterruptedException {
+    public void insertLink_Paragraph(){
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
         tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
         tinyMCE().pasteLink.sendKeys("https://www.google.com/");
@@ -324,7 +324,7 @@ public class TinyMCE_ParagraphTest {
         Assert.assertTrue(hrefResult.contains("/blank-canvas"));
     }
     @Test
-    public void insertLink_changeFontSizeWithSlider_Paragraph() throws InterruptedException {
+    public void insertLink_changeFontSizeWithSlider_Paragraph(){
         tinymceHelper().insertLink();
         tinymceHelper().changeFontSizeWithSlider();
         String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
@@ -371,7 +371,7 @@ public class TinyMCE_ParagraphTest {
         Assert.assertTrue(!Variables.startColorValue.equals(result));
     }
     @Test
-    public void changeColorWithSlider_Paragraph() throws InterruptedException {
+    public void changeColorWithSlider_Paragraph(){
         Actions action = new Actions(webDriver);
         supportMethod().waitAndClick(tinyMCE().color);
         action.moveToElement(tinyMCE().colorpicker,-25, 60).click().perform();
@@ -390,7 +390,7 @@ public class TinyMCE_ParagraphTest {
         Assert.assertEquals(finish,"color: rgba(0, 0, 0, 0.46);");
     }
     @Test
-    public void changeColorWithPaletAndCapacity_Paragraph() throws InterruptedException {
+    public void changeColorWithPaletAndCapacity_Paragraph(){
         tinymceHelper().changeColorWithPalet();
         String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
         int first = result.lastIndexOf("(");
@@ -402,7 +402,7 @@ public class TinyMCE_ParagraphTest {
         Assert.assertEquals(finish, "color: rgba"+res+", 0.46);");
     }
     @Test
-    public void boid_italic_underline_quote_changeColorWithColorPicher_changeCapacity_Paragraph() throws InterruptedException {
+    public void boid_italic_underline_quote_changeColorWithColorPicher_changeCapacity_Paragraph(){
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
@@ -448,7 +448,7 @@ public class TinyMCE_ParagraphTest {
         Assert.assertEquals("https://www.google.com/", hrefResult);
     }
     @Test
-    public void boid_italic_underline_quote_capacity_numberedList_Paragraph() throws InterruptedException {
+    public void boid_italic_underline_quote_capacity_numberedList_Paragraph(){
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
@@ -492,10 +492,8 @@ public class TinyMCE_ParagraphTest {
     }
 
 
-
-
     @Test
-    public void changeFontSize_Paragraph_P_Br() throws InterruptedException {
+    public void changeFontSize_Paragraph_P_Br(){
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
@@ -610,7 +608,7 @@ public class TinyMCE_ParagraphTest {
         Assert.assertEquals(Variables.severalLinesAssert, tinyMCE().textBody.getText());
     }
     @Test
-    public void applyList_changeFontSizeWithSlider_Paragraph_P_Br() throws InterruptedException {
+    public void applyList_changeFontSizeWithSlider_Paragraph_P_Br(){
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         supportMethod().waitAndClick(tinyMCE().lists);
@@ -665,7 +663,7 @@ public class TinyMCE_ParagraphTest {
         Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.href)).size());
     }
     @Test
-    public void insertLinkToUserPage_applyAllStyles_Paragraph_P_Br() throws InterruptedException {
+    public void insertLinkToUserPage_applyAllStyles_Paragraph_P_Br(){
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         supportMethod().waitAndClick(tinyMCE().bold);
@@ -782,7 +780,7 @@ public class TinyMCE_ParagraphTest {
         Assert.assertTrue(tinyMCE().fontFamilyAssert.isDisplayed());
     }
     @Test
-    public void boid_italic_underline_quote_capacity_numberedList_Paragraph_P_Br() throws InterruptedException {
+    public void boid_italic_underline_quote_capacity_numberedList_Paragraph_P_Br(){
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
@@ -876,7 +874,7 @@ public class TinyMCE_ParagraphTest {
         Assert.assertEquals("https://www.google.com/", hrefResult);
     }
     @Test
-    public void changeColorWithColorPicker_Paragraph_P_Br() throws InterruptedException {
+    public void changeColorWithColorPicker_Paragraph_P_Br(){
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         tinymceHelper().changeColorWithColorPicker();
@@ -895,7 +893,7 @@ public class TinyMCE_ParagraphTest {
         Assert.assertTrue(!result.equals("color: rgb(0, 0, 0);"));
     }
     @Test
-    public void changeCapacity_Paragraph_P_Br() throws InterruptedException {
+    public void changeCapacity_Paragraph_P_Br(){
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         tinymceHelper().changeCapacity();
@@ -903,7 +901,7 @@ public class TinyMCE_ParagraphTest {
         Assert.assertEquals(finish,"color: rgba(0, 0, 0, 0.46);");
     }
     @Test
-    public void changeColorWithPaletAndCapacity_Paragraph_P_Br() throws InterruptedException {
+    public void changeColorWithPaletAndCapacity_Paragraph_P_Br(){
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         tinymceHelper().changeColorWithPalet();
@@ -945,7 +943,7 @@ public class TinyMCE_ParagraphTest {
         Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
     }
     @Test
-    public void insertLink_boid_italic_underline_quote_Paragraph_P_Br() throws InterruptedException {
+    public void insertLink_boid_italic_underline_quote_Paragraph_P_Br(){
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
@@ -968,7 +966,7 @@ public class TinyMCE_ParagraphTest {
         Assert.assertEquals("https://www.google.com/", hrefResult);
     }
     @Test
-    public void insertEmptyLink_boid_italic_underline_quote_Paragraph_P_Br() throws InterruptedException {
+    public void insertEmptyLink_boid_italic_underline_quote_Paragraph_P_Br(){
         supportMethod().createThreeLine();
         supportMethod().selectAllText();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
@@ -989,12 +987,6 @@ public class TinyMCE_ParagraphTest {
         Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
         Assert.assertEquals(webDriver.findElements(By.xpath(Variables.href)).size(), 0);
     }
-
-
-
-
-
-
 
 
     @Test
@@ -1078,7 +1070,7 @@ public class TinyMCE_ParagraphTest {
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
     }
     @Test
-    public void changeFontSize_Paragraph_part() throws InterruptedException {
+    public void changeFontSize_Paragraph_part(){
         supportMethod().selectPartText();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
         for(int i = 0; i < tinymceHelper().getFontSize_p().size();i++){
@@ -1089,7 +1081,7 @@ public class TinyMCE_ParagraphTest {
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
     }
     @Test
-    public void changeFontSizeWithSlider_Paragraph_part() throws InterruptedException {
+    public void changeFontSizeWithSlider_Paragraph_part(){
         supportMethod().selectPartText();
         tinymceHelper().changeFontSizeWithSlider();
         String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
@@ -1097,7 +1089,7 @@ public class TinyMCE_ParagraphTest {
         Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getText().contains(Variables.THREE_SIMPLE_TEXT));
     }
     @Test
-    public void changeFontSizeWithSlider_AndH1_Paragraph_part() throws InterruptedException {
+    public void changeFontSizeWithSlider_AndH1_Paragraph_part(){
         supportMethod().selectPartText();
         tinymceHelper().changeFontSizeWithSlider();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().p3FontSize)).click();
@@ -1176,7 +1168,7 @@ public class TinyMCE_ParagraphTest {
         Assert.assertTrue(tinyMCE().fontFamilyAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
     }
     @Test
-    public void boid_italic_underline_quote_capacity_Paragraph_part() throws InterruptedException {
+    public void boid_italic_underline_quote_capacity_Paragraph_part(){
         supportMethod().selectPartText();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
@@ -1192,7 +1184,7 @@ public class TinyMCE_ParagraphTest {
         Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getText().contains(Variables.THREE_SIMPLE_TEXT));
     }
     @Test
-    public void boid_italic_underline_quote_capacity_numberedList_Paragraph_part() throws InterruptedException {
+    public void boid_italic_underline_quote_capacity_numberedList_Paragraph_part(){
         supportMethod().selectPartText();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
@@ -1211,7 +1203,7 @@ public class TinyMCE_ParagraphTest {
         Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getText().contains(Variables.THREE_SIMPLE_TEXT));
     }
     @Test
-    public void boid_italic_underline_quote_capacity_bulletedList_Paragraph_part() throws InterruptedException {
+    public void boid_italic_underline_quote_capacity_bulletedList_Paragraph_part(){
         supportMethod().selectPartText();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
@@ -1230,7 +1222,7 @@ public class TinyMCE_ParagraphTest {
         Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getText().contains(Variables.THREE_SIMPLE_TEXT));
     }
     @Test
-    public void inserAndDeleteLink_Paragraph_part() throws InterruptedException {
+    public void inserAndDeleteLink_Paragraph_part(){
         supportMethod().selectPartText();
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
         tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
@@ -1313,7 +1305,7 @@ public class TinyMCE_ParagraphTest {
 
 
     @After
-    public void postCondition() throws InterruptedException {
+    public void postCondition(){
         Actions action = new Actions(webDriver);
         action.click(editorPage().headerText).perform();
         wait.until(ExpectedConditions.elementToBeClickable(editorPage().deleteElement)).click();
@@ -1321,7 +1313,6 @@ public class TinyMCE_ParagraphTest {
         wait.until(ExpectedConditions.elementToBeClickable(editorPage().plusIntoRow)).click();
         wait.until(ExpectedConditions.elementToBeClickable(editorPage().elementParagraph)).click();
     }
-
     @AfterClass
     public static void post(){
         if (webDriver != null) {

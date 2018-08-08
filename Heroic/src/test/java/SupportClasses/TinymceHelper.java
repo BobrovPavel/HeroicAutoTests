@@ -1,9 +1,9 @@
 package SupportClasses;
 
-import Pages.EditorPage;
-import Pages.LoginPage;
-import Pages.Sidebar;
-import Pages.TinyMCE;
+import Components.EditorPage;
+import Components.LoginPage;
+import Components.Sidebar;
+import Components.TinyMCE;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -42,13 +42,18 @@ public class TinymceHelper {
     }
 
 
-    public void changeFontSizeWithSlider() throws InterruptedException {
+    public void changeFontSizeWithSlider(){
         WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
         Actions action = new Actions(webDriver);
-        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
-        Thread.sleep(500);
-        action.moveToElement(tinyMCE().sizeSlider,-20,0).click().perform();
-        Thread.sleep(500);
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
+            Thread.sleep(500);
+            action.moveToElement(tinyMCE().sizeSlider,-20,0).click().perform();
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
     }
     public void insertLink(){
         WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
@@ -117,25 +122,37 @@ public class TinymceHelper {
         AssertForFontSize_p.add(Variables.assert_p3);
         return AssertForFontSize_p;
     }
-    public void changeCapacity() throws InterruptedException {
-        Actions action = new Actions(webDriver);
-        supportMethod().waitAndClick(tinyMCE().color);
-        Thread.sleep(500);
-        action.moveToElement(tinyMCE().colorpicker,-2, 60).click().perform();
-        Thread.sleep(500);
+    public void changeCapacity(){
+        try {
+            Actions action = new Actions(webDriver);
+            supportMethod().waitAndClick(tinyMCE().color);
+            Thread.sleep(500);
+            action.moveToElement(tinyMCE().colorpicker,-2, 60).click().perform();
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
-    public void changeColorWithColorPicker() throws InterruptedException {
-        Actions action = new Actions(webDriver);
-        supportMethod().waitAndClick(tinyMCE().color);
-        Thread.sleep(500);
-        action.moveToElement(tinyMCE().colorpicker,-30, 60).click().perform();
-        Thread.sleep(500);
+    public void changeColorWithColorPicker(){
+        try {
+            Actions action = new Actions(webDriver);
+            supportMethod().waitAndClick(tinyMCE().color);
+            Thread.sleep(500);
+            action.moveToElement(tinyMCE().colorpicker,-30, 60).click().perform();
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
-    public void changeColorWithPalet() throws InterruptedException {
-        supportMethod().waitAndClick(tinyMCE().color);
-        Thread.sleep(500);
-        List<WebElement> colors = webDriver.findElements(By.xpath("//div[@class='color-picker-item__palette']//i"));
-        Thread.sleep(500);
-        supportMethod().waitAndClick(colors.get(1));
+    public void changeColorWithPalet(){
+        try {
+            supportMethod().waitAndClick(tinyMCE().color);
+            Thread.sleep(500);
+            List<WebElement> colors = webDriver.findElements(By.xpath("//div[@class='color-picker-item__palette']//i"));
+            Thread.sleep(500);
+            supportMethod().waitAndClick(colors.get(1));
+        }catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -1,19 +1,21 @@
 package SupportClasses;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 public class Variables {
-    WebDriver webDriver;
+    private WebDriver webDriver;
 
     public Variables (WebDriver driver){
         webDriver = driver;
         PageFactory.initElements(webDriver, this);
     }
+    public static final String THREE_SIMPLE_TEXT = "Three Simple Text";
+    
     public static String textValue = "One Simple Text Two Simple Text Three Simple Text ";
     public static String oneLine = "One simple line of text";
-    public static final String THREE_SIMPLE_TEXT = "Three Simple Text";
     public static String severalLinesAssert = "One simple line of text\n" +
                                               "One simple line of text\n" +
                                               "One simple line of text";
@@ -57,18 +59,130 @@ public class Variables {
     public static String pageView_H5fontFamilyAssert = "//div[contains(@class,'fontfamily-Abril-Fatface-H5')]";
     public static String pageView_H6fontFamilyAssert = "//div[contains(@class,'fontfamily-Abril-Fatface-H6')]";
 
+    public static String pageView_P1FontFamilyAssert = "//div[contains(@class,'fontfamily-Abril-Fatface-P1')]";
+    public static String pageView_P2FontFamilyAssert = "//div[contains(@class,'fontfamily-Abril-Fatface-P2')]";
+    public static String pageView_P3FontFamilyAssert = "//div[contains(@class,'fontfamily-Abril-Fatface-P3')]";
 
     public String getFontSize_PageView(){
-        return webDriver.findElement(By.xpath("//div[contains(@id,'rect-tinymce')]")).getCssValue("font-size");
+        return webDriver.findElement(By.xpath("//div[contains(@class,'font-size-element-style')]")).getCssValue("font-size");
     }
     public String getLineHeight_PageView(){
         return webDriver.findElement(By.xpath("//div[@class='line-height-element-style']")).getCssValue("font-size");
+    }
+    public String getBulletSpacing_PageView(){
+        return webDriver.findElement(By.xpath("//div[@class='mce-content-body']//ul//li")).getCssValue("padding-bottom");
     }
     public String getLetterSpacing_PageView(){
         return webDriver.findElement(By.xpath("//div[contains(@id,'rect-tinymce')]")).getCssValue("letter-spacing");
     }
     public String getParagraphSpacing_PageView(){
         return webDriver.findElement(By.xpath("//div[contains(@class,'font-size-element-style')]")).getCssValue("margin-bottom");
+    }
+    public String getParagraphSpacing_P(){
+        return webDriver.findElement(By.xpath("//div[contains(@id,'rect-tinymce-tmp_text')]//p")).getCssValue("padding-bottom");
+    }
+    public String getParagraphSpacing_ol(){
+        return webDriver.findElement(By.xpath("//div[contains(@id,'rect-tinymce-tmp_text')]//ol")).getCssValue("padding-bottom");
+    }
+
+
+    public String getBulletSize_P1_PageView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p1 ul li'),':before').getPropertyValue('font-size')");
+    }
+    public String getBulletSize_P1_OverView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p1 ul li'),':before').getPropertyValue('font-size')");
+    }
+    public String getBulletSize_P2_PageView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p2 ul li'),':before').getPropertyValue('font-size')");
+    }
+    public String getBulletSize_P2_OverView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p2 ul li'),':before').getPropertyValue('font-size')");
+    }
+    public String getBulletSize_P3_PageView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p3 ul li'),':before').getPropertyValue('font-size')");
+    }
+    public String getBulletSize_P3_OverView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p3 ul li'),':before').getPropertyValue('font-size')");
+    }
+    public String getNumberBulletSize_P1_PageView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p1 ol li'),':before').getPropertyValue('font-size')");
+    }
+    public String getNumberBulletSize_P1_OverView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p1 ol li'),':before').getPropertyValue('font-size')");
+    }
+    public String getNumberBulletSize_P2_PageView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p2 ol li'),':before').getPropertyValue('font-size')");
+    }
+    public String getNumberBulletSize_P2_OverView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p2 ol li'),':before').getPropertyValue('font-size')");
+    }
+    public String getNumberBulletSize_P3_PageView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p3 ol li'),':before').getPropertyValue('font-size')");
+    }
+    public String getNumberBulletSize_P3_OverView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p3 ol li'),':before').getPropertyValue('font-size')");
+    }
+
+    public String getBulletColor_P1_OverView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p1 ul li'),':before').getPropertyValue('color')");
+    }
+    public String getBulletColor_P1_PageView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p1 ul li'),':before').getPropertyValue('color')");
+    }
+    public String getBulletColor_P2_OverView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p2 ul li'),':before').getPropertyValue('color')");
+    }
+    public String getBulletColor_P2_PageView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p2 ul li'),':before').getPropertyValue('color')");
+    }
+    public String getBulletColor_P3_OverView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p3 ul li'),':before').getPropertyValue('color')");
+    }
+    public String getBulletColor_P3_PageView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p3 ul li'),':before').getPropertyValue('color')");
+    }
+
+    public String getNumberBulletColor_P1_OverView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p1 ol li'),':before').getPropertyValue('color')");
+    }
+    public String getNumberBulletColor_P1_PageView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p1 ol li'),':before').getPropertyValue('color')");
+    }
+    public String getNumberBulletColor_P2_OverView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p2 ol li'),':before').getPropertyValue('color')");
+    }
+    public String getNumberBulletColor_P2_PageView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p2 ol li'),':before').getPropertyValue('color')");
+    }
+    public String getNumberBulletColor_P3_OverView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p3 ol li'),':before').getPropertyValue('color')");
+    }
+    public String getNumberBulletColor_P3_PageView(){
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.text-element-p3 ol li'),':before').getPropertyValue('color')");
     }
 
 

@@ -1,4 +1,4 @@
-package Pages;
+package Components;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class TinyMCE {
 
-    WebDriver webDriver;
+    private WebDriver webDriver;
 
     public TinyMCE(WebDriver driver){
         webDriver = driver;
@@ -43,6 +43,8 @@ public class TinyMCE {
     public WebElement bulletedList;
     @FindBy (xpath = "//div[contains(@class,'tinymce-item-text-align__icon')]//i[contains(@class,'mce-ico mce-i-textclose')]")
     public WebElement closeLists;
+    @FindBy (xpath = "//div[@class='modal-extra__btn-close']")
+    public WebElement closeFontSize;
     @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//div[contains(@class,'tinymce-item-text-align__icon')]//i[@class='mce-ico mce-i-alignleft']")
     public WebElement alignmentLeft;
     @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//div[contains(@class,'tinymce-item-text-align__icon')]//i[@class='mce-ico mce-i-aligncenter']")

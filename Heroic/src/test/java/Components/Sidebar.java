@@ -1,4 +1,4 @@
-package Pages;
+package Components;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,8 +8,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Sidebar {
-    WebDriver webDriver;
-    WebDriverWait wait;
+    private WebDriver webDriver;
+    private WebDriverWait wait;
 
     public Sidebar(WebDriver driver){
         webDriver = driver;
@@ -26,6 +26,8 @@ public class Sidebar {
     public WebElement headerStyles;
     @FindBy (xpath = "//a[contains(text(),'Paragraph Styles')]")
     public WebElement paragraphStyles;
+    @FindBy (xpath = "//div[contains(@class,'sidebarSettingsContainer SIDEBAR_TEXT_GLOBAL_BODY')]//div//div[contains(@class,'sidebar-helper-wrapper')]")
+    public WebElement sidebarBottom;
 
 
     public void ParagraphStylesClick(){
