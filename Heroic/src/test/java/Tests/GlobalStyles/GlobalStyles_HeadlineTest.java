@@ -58,13 +58,14 @@ public class GlobalStyles_HeadlineTest {
         action = new Actions(webDriver);
         webDriver.get(constants().QA_GLOBALSTYLES_HEADLINE);
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("logger")));
-        supportMethod().createElement("header");
+        supportMethod().createElements("header",6);
+        supportMethod().changeFontSize(variables().getHeadlineFontSize());
         supportMethod().waitAndClick(sidebar().globalStyles);
         supportMethod().waitAndClick(sidebar().headerStyles);
         wait = new WebDriverWait(webDriver, 10, 300);
     }
     @Test
-    public void stageA1_changeFontFamily_H1_OverView(){
+    public void stageA1_changeFontFamily_H1(){
         supportMethod().waitAndClick(globalStyles().globalH1);
         supportMethod().waitAndClick((WebElement) globalHelper().getFontFamilyDropdown().get(0));
         supportMethod().waitAndClick(globalStyles().asap_font);
@@ -79,7 +80,7 @@ public class GlobalStyles_HeadlineTest {
         supportMethod().waitAndClick(globalStyles().asap_font);
     }
     @Test
-    public void stageA2_changeFontSize_H1_OverView(){
+    public void stageA2_changeFontSize_H1(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(0), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h1Item,"font-size","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(0).getAttribute("value");
@@ -88,10 +89,10 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(1, "font size");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        Assert.assertEquals(newValue, variables().getFontSize_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineFontSize_PageView(1));
     }
     @Test
-    public void stageA3_changeLineHeight_H1_OverView(){
+    public void stageA3_changeLineHeight_H1(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(1), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h1lineHeight, "font-size","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(1).getAttribute("value");
@@ -100,10 +101,10 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(1, "line height");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        Assert.assertEquals(newValue, variables().getLineHeight_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineLineHeight_PageView(1));
     }
     @Test
-    public void stageA4_changLetterSpacing_H1_OverView(){
+    public void stageA4_changLetterSpacing_H1(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(2), "1.5");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h1Item, "letter-spacing","1.5px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(2).getAttribute("value");
@@ -112,10 +113,10 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(1, "letter spacing");
         Assert.assertEquals(String.valueOf(supportMethod().asDouble(defaultValue)-0.5), String.valueOf(supportMethod().asDouble(newValue)));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        Assert.assertEquals(newValue, variables().getLetterSpacing_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineLetterSpacing_PageView(1));
     }
     @Test
-    public void stageA5_changeParagraphSpacing_H1_OverView(){
+    public void stageA5_changeParagraphSpacing_H1(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(3), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h1Paragraph,"margin-bottom","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(3).getAttribute("value");
@@ -124,12 +125,12 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(1, "paragraph spacing");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        Assert.assertEquals(newValue, variables().getParagraphSpacing_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineParagraphSpacing_PageView(1));
     }
 
 
     @Test
-    public void stageB1_changeFontFamily_H2_OverView(){
+    public void stageB1_changeFontFamily_H2(){
         supportMethod().waitAndClick(globalStyles().globalH2);
         supportMethod().waitAndClick((WebElement) globalHelper().getFontFamilyDropdown().get(1));
         supportMethod().waitAndClick(globalStyles().asap_font);
@@ -144,7 +145,7 @@ public class GlobalStyles_HeadlineTest {
         supportMethod().waitAndClick(globalStyles().asap_font);
     }
     @Test
-    public void stageB2_changeFontSize_H2_OverView(){
+    public void stageB2_changeFontSize_H2(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(0), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h2Item,"font-size","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(0).getAttribute("value");
@@ -153,11 +154,10 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(2, "font size");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().h2FontSize);
-        Assert.assertEquals(newValue, variables().getFontSize_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineFontSize_PageView(2));
     }
     @Test
-    public void stageB3_changeLineHeight_H2_OverView(){
+    public void stageB3_changeLineHeight_H2(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(1), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h2lineHeight, "font-size","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(1).getAttribute("value");
@@ -166,11 +166,10 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(2, "line height");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().h2FontSize);
-        Assert.assertEquals(newValue, variables().getLineHeight_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineLineHeight_PageView(2));
     }
     @Test
-    public void stageB4_changLetterSpacing_H2_OverView(){
+    public void stageB4_changLetterSpacing_H2(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(2), "1.5");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h2Item, "letter-spacing","1.5px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(2).getAttribute("value");
@@ -179,11 +178,10 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(2, "letter spacing");
         Assert.assertEquals(String.valueOf(supportMethod().asDouble(defaultValue)-0.5), String.valueOf(supportMethod().asDouble(newValue)));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().h2FontSize);
-        Assert.assertEquals(newValue, variables().getLetterSpacing_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineLetterSpacing_PageView(2));
     }
     @Test
-    public void stageB5_changeParagraphSpacing_H2_OverView(){
+    public void stageB5_changeParagraphSpacing_H2(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(3), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h2Paragraph,"margin-bottom","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(3).getAttribute("value");
@@ -192,13 +190,12 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(2, "paragraph spacing");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().h2FontSize);
-        Assert.assertEquals(newValue, variables().getParagraphSpacing_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineParagraphSpacing_PageView(2));
     }
 
 
     @Test
-    public void stageC1_changeFontFamily_H3_OverView(){
+    public void stageC1_changeFontFamily_H3(){
         supportMethod().waitAndClick(globalStyles().globalH3);
         supportMethod().waitAndClick((WebElement) globalHelper().getFontFamilyDropdown().get(2));
         supportMethod().waitAndClick(globalStyles().asap_font);
@@ -213,7 +210,7 @@ public class GlobalStyles_HeadlineTest {
         supportMethod().waitAndClick(globalStyles().asap_font);
     }
     @Test
-    public void stageC2_changeFontSize_H3_OverView(){
+    public void stageC2_changeFontSize_H3(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(0), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h3Item,"font-size","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(0).getAttribute("value");
@@ -222,11 +219,10 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(3, "font size");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().h3FontSize);
-        Assert.assertEquals(newValue, variables().getFontSize_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineFontSize_PageView(3));
     }
     @Test
-    public void stageC3_changeLineHeight_H3_OverView(){
+    public void stageC3_changeLineHeight_H3(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(1), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h3lineHeight, "font-size","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(1).getAttribute("value");
@@ -235,11 +231,10 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(3, "line height");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().h3FontSize);
-        Assert.assertEquals(newValue, variables().getLineHeight_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineLineHeight_PageView(3));
     }
     @Test
-    public void stageC4_changLetterSpacing_H3_OverView(){
+    public void stageC4_changLetterSpacing_H3(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(2), "1.5");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h3Item, "letter-spacing","1.5px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(2).getAttribute("value");
@@ -248,11 +243,10 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(3, "letter spacing");
         Assert.assertEquals(String.valueOf(supportMethod().asDouble(defaultValue)-0.5), String.valueOf(supportMethod().asDouble(newValue)));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().h3FontSize);
-        Assert.assertEquals(newValue, variables().getLetterSpacing_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineLetterSpacing_PageView(3));
     }
     @Test
-    public void stageC5_changeParagraphSpacing_H3_OverView(){
+    public void stageC5_changeParagraphSpacing_H3(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(3), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h3Paragraph,"margin-bottom","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(3).getAttribute("value");
@@ -261,13 +255,12 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(3, "paragraph spacing");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().h3FontSize);
-        Assert.assertEquals(newValue, variables().getParagraphSpacing_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineParagraphSpacing_PageView(3));
     }
 
 
     @Test
-    public void stageD1_changeFontFamily_H4_OverView(){
+    public void stageD1_changeFontFamily_H4(){
         supportMethod().waitAndClick(globalStyles().globalH4);
         supportMethod().waitAndClick((WebElement) globalHelper().getFontFamilyDropdown().get(3));
         supportMethod().waitAndClick(globalStyles().asap_font);
@@ -282,7 +275,7 @@ public class GlobalStyles_HeadlineTest {
         supportMethod().waitAndClick(globalStyles().asap_font);
     }
     @Test
-    public void stageD2_changeFontSize_H4_OverView(){
+    public void stageD2_changeFontSize_H4(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(0), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h4Item,"font-size","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(0).getAttribute("value");
@@ -291,11 +284,10 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(4, "font size");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().h4FontSize);
-        Assert.assertEquals(newValue, variables().getFontSize_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineFontSize_PageView(4));
     }
     @Test
-    public void stageD3_changeLineHeight_H4_OverView(){
+    public void stageD3_changeLineHeight_H4(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(1), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h4lineHeight, "font-size","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(1).getAttribute("value");
@@ -304,11 +296,10 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(4, "line height");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().h4FontSize);
-        Assert.assertEquals(newValue, variables().getLineHeight_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineLineHeight_PageView(4));
     }
     @Test
-    public void stageD4_changLetterSpacing_H4_OverView(){
+    public void stageD4_changLetterSpacing_H4(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(2), "1.5");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h4Item, "letter-spacing","1.5px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(2).getAttribute("value");
@@ -317,11 +308,10 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(4, "letter spacing");
         Assert.assertEquals(String.valueOf(supportMethod().asDouble(defaultValue)-0.5), String.valueOf(supportMethod().asDouble(newValue)));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().h4FontSize);
-        Assert.assertEquals(newValue, variables().getLetterSpacing_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineLetterSpacing_PageView(4));
     }
     @Test
-    public void stageD5_changeParagraphSpacing_H4_OverView(){
+    public void stageD5_changeParagraphSpacing_H4(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(3), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h4Paragraph,"margin-bottom","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(3).getAttribute("value");
@@ -330,13 +320,12 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(4, "paragraph spacing");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().h4FontSize);
-        Assert.assertEquals(newValue, variables().getParagraphSpacing_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineParagraphSpacing_PageView(4));
     }
 
 
     @Test
-    public void stageE1_changeFontFamily_H5_OverView() throws InterruptedException {
+    public void stageE1_changeFontFamily_H5() throws InterruptedException {
         supportMethod().waitAndClick(globalStyles().globalH5);
         Thread.sleep(500);
         List<WebElement> list = webDriver.findElements(By.xpath("//div[@class='select-panel-list__inner']"));
@@ -353,7 +342,7 @@ public class GlobalStyles_HeadlineTest {
         supportMethod().waitAndClick(globalStyles().asap_font);
     }
     @Test
-    public void stageE2_changeFontSize_H5_OverView(){
+    public void stageE2_changeFontSize_H5(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(0), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h5Item,"font-size","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(0).getAttribute("value");
@@ -362,11 +351,10 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(5, "font size");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().h5FontSize);
-        Assert.assertEquals(newValue, variables().getFontSize_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineFontSize_PageView(5));
     }
     @Test
-    public void stageE3_changeLineHeight_H5_OverView(){
+    public void stageE3_changeLineHeight_H5(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(1), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h5lineHeight, "font-size","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(1).getAttribute("value");
@@ -375,11 +363,10 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(5, "line height");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().h5FontSize);
-        Assert.assertEquals(newValue, variables().getLineHeight_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineLineHeight_PageView(5));
     }
     @Test
-    public void stageE4_changLetterSpacing_H5_OverView(){
+    public void stageE4_changLetterSpacing_H5(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(2), "1.5");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h5Item, "letter-spacing","1.5px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(2).getAttribute("value");
@@ -388,11 +375,10 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(5, "letter spacing");
         Assert.assertEquals(String.valueOf(supportMethod().asDouble(defaultValue)-0.5), String.valueOf(supportMethod().asDouble(newValue)));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().h5FontSize);
-        Assert.assertEquals(newValue, variables().getLetterSpacing_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineLetterSpacing_PageView(5));
     }
     @Test
-    public void stageE5_changeParagraphSpacing_H5_OverView(){
+    public void stageE5_changeParagraphSpacing_H5(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(3), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h5Paragraph,"margin-bottom","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(3).getAttribute("value");
@@ -401,13 +387,12 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(5, "paragraph spacing");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().h5FontSize);
-        Assert.assertEquals(newValue, variables().getParagraphSpacing_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineParagraphSpacing_PageView(5));
     }
 
 
     @Test
-    public void stageF1_changeFontFamily_H6_OverView() throws InterruptedException {
+    public void stageF1_changeFontFamily_H6() throws InterruptedException {
         supportMethod().waitAndClick(globalStyles().globalH6);
         Thread.sleep(500);
         List<WebElement> list = webDriver.findElements(By.xpath("//div[@class='select-panel-list__inner']"));
@@ -424,7 +409,7 @@ public class GlobalStyles_HeadlineTest {
         supportMethod().waitAndClick(globalStyles().asap_font);
     }
     @Test
-    public void stageF2_changeFontSize_H6_OverView(){
+    public void stageF2_changeFontSize_H6(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(0), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h6Item,"font-size","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(0).getAttribute("value");
@@ -433,12 +418,10 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(6, "font size");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().h6FontSize);
-        Assert.assertEquals(newValue, variables().getFontSize_PageView());
-        supportMethod().waitAndClick(globalStyles().overViewMode);
+        Assert.assertEquals(newValue, variables().getHeadlineFontSize_PageView(6));
     }
     @Test
-    public void stageF3_changeLineHeight_H6_OverView(){
+    public void stageF3_changeLineHeight_H6(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(1), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h6lineHeight, "font-size","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(1).getAttribute("value");
@@ -447,11 +430,10 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(6, "line height");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().h6FontSize);
-        Assert.assertEquals(newValue, variables().getLineHeight_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineLineHeight_PageView(6));
     }
     @Test
-    public void stageF4_changLetterSpacing_H6_OverView(){
+    public void stageF4_changLetterSpacing_H6(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(2), "1.5");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h6Item, "letter-spacing","1.5px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(2).getAttribute("value");
@@ -460,11 +442,10 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(6, "letter spacing");
         Assert.assertEquals(String.valueOf(supportMethod().asDouble(defaultValue)-0.5), String.valueOf(supportMethod().asDouble(newValue)));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().h6FontSize);
-        Assert.assertEquals(newValue, variables().getLetterSpacing_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineLetterSpacing_PageView(6));
     }
     @Test
-    public void stageF5_changeParagraphSpacing_H6_OverView(){
+    public void stageF5_changeParagraphSpacing_H6(){
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(3), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h6Paragraph,"margin-bottom","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(3).getAttribute("value");
@@ -473,13 +454,11 @@ public class GlobalStyles_HeadlineTest {
         String newValue = globalHelper().getHeadlineGlobalValue(6, "paragraph spacing");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().h6FontSize);
-        Assert.assertEquals(newValue, variables().getParagraphSpacing_PageView());
+        Assert.assertEquals(newValue, variables().getHeadlineParagraphSpacing_PageView(6));
     }
 
-
     @After
-    public void beforeTests(){
+    public void afterTests(){
         supportMethod().waitAndClick(globalStyles().overViewMode);
     }
     @AfterClass

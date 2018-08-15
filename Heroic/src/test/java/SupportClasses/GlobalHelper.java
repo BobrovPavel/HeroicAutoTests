@@ -2,24 +2,23 @@ package SupportClasses;
 
 import Components.*;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class GlobalHelper {
     private WebDriver webDriver;
-
+    private Actions action;
+    private WebDriverWait wait;
 
     public GlobalHelper (WebDriver driver){
         webDriver = driver;
+        action = new Actions(webDriver);
+        wait = new WebDriverWait(webDriver,10,300);
         PageFactory.initElements(webDriver, this);
     }
     private LoginPage loginPage(){
@@ -61,7 +60,7 @@ public class GlobalHelper {
     }
 
     public WebElement getColors(String value){
-        List<WebElement> colors = webDriver.findElements(By.xpath("//div[@class='accordion-panel__inner accordion-panel__inner_open']//span[@class='select-color-section__color']"));
+        List<WebElement> colors = webDriver.findElements(By.xpath("//div[contains(@class,'accordion-panel__inner_open')]//span[@class='select-color-section__color']"));
         WebElement element = null;
         switch (value.toLowerCase()){
             case "light color":
@@ -79,9 +78,24 @@ public class GlobalHelper {
         }
         return element;
     }
+    public WebElement getFieldColors (String value){
+        List<WebElement> colors = webDriver.findElements(By.xpath("//div[contains(@class,'accordion-panel__inner_open')]//span[@class='select-color-section__color']"));
+        WebElement element = null;
+        switch (value.toLowerCase()){
+            case "fill color":
+                element = colors.get(0);
+                break;
+            case "font color":
+                element = colors.get(1);
+                break;
+            case "border color":
+                element = colors.get(2);
+                break;
+        }
+        return element;
+    }
 
     public void setDefaultValue (WebElement webElement, String value){
-        WebDriverWait wait = new WebDriverWait(webDriver, 10, 300);
         value = value.replaceAll("[a-zA-Zа-яА-Я]*", "");
         wait.until(ExpectedConditions.elementToBeClickable(webElement)).click();
         webElement.sendKeys(Keys.chord(Keys.CONTROL,"a"));
@@ -91,11 +105,9 @@ public class GlobalHelper {
         }catch (InterruptedException ignored){
         }
     }
+
     public void changeFontSize(WebElement element){
-        WebDriverWait wait = new WebDriverWait(webDriver, 20, 300);
-        Actions action = new Actions(webDriver);
         action.click(editorPage().headerText);
-//        wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).click();
         editorPage().headerText.sendKeys(Keys.chord(Keys.CONTROL, "a"));
         try {
             Thread.sleep(500);
@@ -110,34 +122,46 @@ public class GlobalHelper {
         }
     }
 
-    public void applyBullet(){
-        Actions action = new Actions(webDriver);
-        if(webDriver.findElements(By.xpath("//div[contains(@id,'rect-tinymce-tmp_text')]//ul//li")).size() == 0) {
-            action.click(editorPage().headerText);
-            editorPage().headerText.sendKeys(Keys.chord(Keys.CONTROL, "a"));
-            supportMethod().waitAndClick(tinyMCE().lists);
+    public void applyBullet(int index, int paragraphType){
+        if(webDriver.findElements(By.xpath("//div[contains(@class,'text-element-p"+paragraphType+"')]//ul//li")).size() == 0) {
+            action.click(supportMethod().getTextElements().get(index));
+            supportMethod().getTextElements().get(index).sendKeys(Keys.chord(Keys.CONTROL, "a"));
+            supportMethod().waitAndClick(tinyMCE().getListsButtons().get(index));
             supportMethod().waitAndClick(tinyMCE().bulletedList);
             supportMethod().waitAndClick(tinyMCE().closeLists);
         }
     }
-    public void applyNumberBullet(){
-        Actions action = new Actions(webDriver);
-        if(webDriver.findElements(By.xpath("//div[contains(@id,'rect-tinymce-tmp_text')]//ol//li")).size() == 0) {
-            action.click(editorPage().headerText);
-            editorPage().headerText.sendKeys(Keys.chord(Keys.CONTROL, "a"));
-            supportMethod().waitAndClick(tinyMCE().lists);
+
+    public void applyNumberBullet(int index, int paragraphType){
+        if(webDriver.findElements(By.xpath("//div[contains(@class,'text-element-p"+paragraphType+"')]//ol//li")).size() == 0) {
+            action.click(supportMethod().getTextElements().get(index));
+            supportMethod().getTextElements().get(index).sendKeys(Keys.chord(Keys.CONTROL, "a"));
+            supportMethod().waitAndClick(tinyMCE().getListsButtons().get(index));
             supportMethod().waitAndClick(tinyMCE().numberedList);
             supportMethod().waitAndClick(tinyMCE().closeLists);
         }
     }
 
     public void setDefaultColorValue(){
-        WebDriverWait wait = new WebDriverWait(webDriver, 20, 300);
-        Actions action = new Actions(webDriver);
-        action.moveToElement(globalStyles().colorInput,0,-100).perform();
-        wait.until(ExpectedConditions.elementToBeClickable(globalStyles().colorInput)).click();
-        globalStyles().colorInput.sendKeys(Keys.chord(Keys.CONTROL,"a"));
-        globalStyles().colorInput.sendKeys("#00000");
+        try {
+            action.moveToElement(globalStyles().colorInput,0,-100).perform();
+            wait.until(ExpectedConditions.elementToBeClickable(globalStyles().colorInput)).click();
+            globalStyles().colorInput.sendKeys(Keys.chord(Keys.CONTROL,"a"));
+            globalStyles().colorInput.sendKeys("#00000");
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+    public void changeCapacity(){
+        try {
+            Actions action = new Actions(webDriver);
+            Thread.sleep(500);
+            action.moveToElement(tinyMCE().colorpicker,-2, 60).click().perform();
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public String getHeadlineGlobalValue(int headlineType, String value){
@@ -166,19 +190,9 @@ public class GlobalHelper {
     }
 
 
-    public void checkInPageViewMode(WebElement fontSize,String newValue, String verifiedValue){
+    public void checkInPageViewMode(String newValue, String verifiedValue){
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(fontSize);
         Assert.assertEquals(newValue, verifiedValue);
-    }
-
-    public void enterText(){
-        Actions action = new Actions(webDriver);
-        WebDriverWait wait = new WebDriverWait(webDriver, 20, 300);
-        editorPage().headerText.sendKeys(Keys.BACK_SPACE);
-        wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).sendKeys(Variables.oneLine);
-        action.sendKeys(Keys.ENTER).perform();
-        wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).sendKeys(Variables.oneLine);
     }
 
     public String getParagraphGlobalValue(int paragraphType, String value){
@@ -188,7 +202,7 @@ public class GlobalHelper {
                 result = webDriver.findElement(By.xpath("//div[contains(@class,'text-block-element text-element-p"+paragraphType+"')]//p")).getCssValue("font-family");
                 break;
             case "font size":
-                result = webDriver.findElement(By.xpath("//div[contains(@class,'text-block-element text-element-p"+paragraphType+"')]//div[@class='no-change-item font-size-element-style']")).getCssValue("font-size");
+                result = webDriver.findElement(By.xpath("//div[contains(@class,'text-block-element text-element-p"+paragraphType+"')]//div[contains(@class,'font-size-element-style')]")).getCssValue("font-size");
                 break;
             case "line height":
                 result = webDriver.findElement(By.xpath("//div[contains(@class,'text-element-p"+paragraphType+"')]//div[@class='line-height-element-style']")).getCssValue("font-size");
@@ -210,10 +224,11 @@ public class GlobalHelper {
     }
 
     public List getFontFamilyDropdown(){
-        List<WebElement> headerFontDropdown = new ArrayList<>();
-        headerFontDropdown = webDriver.findElements(By.xpath("//div[@class='select-panel-list__inner']"));
-        return headerFontDropdown;
+        List<WebElement> dropdown = new ArrayList<>();
+        dropdown = webDriver.findElements(By.xpath("//div[@class='select-panel-list__inner']"));
+        return dropdown;
     }
+
     public void changeColorWithColorPicker(){
         Actions action = new Actions(webDriver);
         try {
@@ -223,17 +238,130 @@ public class GlobalHelper {
         }
         action.moveToElement(tinyMCE().colorpicker,-30, 60).click().perform();
     }
-    public void changeColorWithPalette() throws InterruptedException {
-        Thread.sleep(500);
-        List<WebElement> colors = webDriver.findElements(By.xpath("//div[@class='color-picker-item__palette']//i"));
-        Thread.sleep(500);
-        supportMethod().waitAndClick(colors.get(1));
+
+    public void changeColorWithPalette(){
+        try {
+            Thread.sleep(500);
+            List<WebElement> colors = webDriver.findElements(By.xpath("//div[@class='color-picker-item__palette']//i"));
+            Thread.sleep(500);
+            supportMethod().waitAndClick(colors.get(1));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
+
     public String getColorPalette(int index){
         List<WebElement> colors = webDriver.findElements(By.xpath("//div[@class='color-picker-item__palette']//i"));
         String color = colors.get(index).getCssValue("background-color");
         int first = color.lastIndexOf("(");
         int last = color.lastIndexOf(")");
         return "rgb"+color.substring(first,last-3)+")";
+    }
+    public List <WebElement> getPaletteColors(){
+        return webDriver.findElements(By.xpath(variables().colorPalette));
+    }
+    public String getDefaultColorValue(){
+        String color = globalStyles().inputColorLable.getCssValue("background-color");
+        int first = color.lastIndexOf("(");
+        int last = color.lastIndexOf(")");
+        return "rgb"+color.substring(first,last-3)+")";
+    }
+
+    public void setLarge_Input(){
+        supportMethod().waitAndClick(sidebar().designTab);
+        supportMethod().waitAndClick(sidebar().largeField);
+    }
+    public void setMedium_Input(){
+        supportMethod().waitAndClick(sidebar().designTab);
+        supportMethod().waitAndClick(sidebar().mediumField);
+    }
+    public void setSmall_Input(){
+        supportMethod().waitAndClick(sidebar().designTab);
+        supportMethod().waitAndClick(sidebar().smallField);
+    }
+
+
+    public void setLarge_fromDropDown(){
+        supportMethod().waitAndClick(sidebar().sizeDropDown);
+        supportMethod().waitAndClick(sidebar().largeSize);
+    }
+    public void setMedium_fromDropDown(){
+        supportMethod().waitAndClick(sidebar().sizeDropDown);
+        supportMethod().waitAndClick(sidebar().mediumSize);
+    }
+    public void setSmall_fromDropDown(){
+        supportMethod().waitAndClick(sidebar().sizeDropDown);
+        supportMethod().waitAndClick(sidebar().smallSize);
+    }
+
+    public void setElementsType(){
+        supportMethod().waitAndClick(globalStyles().getDropListElements().get(0));
+        setLarge_fromDropDown();
+        supportMethod().waitAndClick(globalStyles().getDropListElements().get(1));
+        setMedium_fromDropDown();
+        supportMethod().waitAndClick(globalStyles().getDropListElements().get(2));
+        setSmall_fromDropDown();
+
+        action.click(globalStyles().getCheckRadioElements().get(0)).perform();
+        setLarge_fromDropDown();
+        action.click(globalStyles().getCheckRadioElements().get(1)).perform();
+        setMedium_fromDropDown();
+        action.click(globalStyles().getCheckRadioElements().get(2)).perform();
+        setSmall_fromDropDown();
+        action.click(globalStyles().getCheckRadioElements().get(3)).perform();
+        setLarge_fromDropDown();
+        action.click(globalStyles().getCheckRadioElements().get(4)).perform();
+        setMedium_fromDropDown();
+        action.click(globalStyles().getCheckRadioElements().get(5)).perform();
+        setSmall_fromDropDown();
+
+    }
+
+    public void setInputFieldsType(){
+        supportMethod().waitAndClick(globalStyles().getInputElements().get(0));
+        setLarge_Input();
+        supportMethod().waitAndClick(globalStyles().getInputElements().get(1));
+        setMedium_Input();
+        supportMethod().waitAndClick(globalStyles().getInputElements().get(2));
+        setSmall_Input();
+        supportMethod().waitAndClick(globalStyles().getInputElements().get(3));
+        setLarge_Input();
+        supportMethod().waitAndClick(globalStyles().getInputElements().get(4));
+        setMedium_Input();
+        supportMethod().waitAndClick(globalStyles().getInputElements().get(5));
+        setSmall_Input();
+    }
+
+
+
+    public void createElements (String element, int quantity){
+        WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
+        JavascriptExecutor js = (JavascriptExecutor)webDriver;
+        try {
+            js.executeScript("document.querySelector('.button-add-element').click()");
+            wait.until(ExpectedConditions.elementToBeClickable(editorPage().blankCanvas)).click();
+            wait.until(ExpectedConditions.elementToBeClickable(editorPage().addSectionPlus)).click();
+            wait.until(ExpectedConditions.elementToBeClickable(editorPage().fullWidthSection)).click();
+            wait.until(ExpectedConditions.elementToBeClickable(editorPage().fullWidthColumn)).click();
+            switch (element) {
+                case "header":
+                    wait.until(ExpectedConditions.elementToBeClickable(editorPage().elementHeader)).click();
+                    for (int i = 0; i < quantity-1; i++) {
+                        Thread.sleep(500);
+                        js.executeScript("document.querySelector('.button-add-new_dark').click()");
+                        wait.until(ExpectedConditions.elementToBeClickable(editorPage().elementHeader)).click();
+                    }
+                    break;
+                case "paragraph":
+                    wait.until(ExpectedConditions.elementToBeClickable(editorPage().elementParagraph)).click();
+                    for (int i = 0; i < quantity-1; i++) {
+                        Thread.sleep(500);
+                        js.executeScript("document.querySelector('.button-add-new_dark').click()");
+                        wait.until(ExpectedConditions.elementToBeClickable(editorPage().elementParagraph)).click();
+                    }
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

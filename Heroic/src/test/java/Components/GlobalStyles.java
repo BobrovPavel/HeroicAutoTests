@@ -1,9 +1,13 @@
 package Components;
 
+import com.sun.org.apache.regexp.internal.RE;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 public class GlobalStyles {
     private WebDriver webDriver;
@@ -48,6 +52,8 @@ public class GlobalStyles {
     public WebElement darkTextColor;
     @FindBy (xpath = "//div[@class='custom-color-picker']//input")
     public WebElement colorInput;
+    @FindBy (xpath = "//span[contains(@class,'custom-choosed-color__col')]")
+    public WebElement inputColorLable;
 
     @FindBy (css = ".editorSectionsWripper .handle-size-headline-h1 .line-height-element-style:not(.not-global-element)")
     public WebElement h1lineHeight;
@@ -128,4 +134,35 @@ public class GlobalStyles {
     public WebElement pageView_H5fontFamilyAssert;
     @FindBy (xpath = "//div[contains(@class,'fontfamily-Abril-Fatface-H6')]")
     public WebElement pageView_H6fontFamilyAssert;
+
+    @FindBy (xpath = "//div[contains(@class,'accordion-panel__inner_open')]//span[contains(text(),'P1 Large')]")
+    public WebElement fields_FontStyle_P1;
+    @FindBy (xpath = "//div[contains(@class,'accordion-panel__inner_open')]//span[contains(text(),'P2 Medium')]")
+    public WebElement fields_FontStyle_P2;
+    @FindBy (xpath = "//div[contains(@class,'accordion-panel__inner_open')]//span[contains(text(),'P3 Small')]")
+    public WebElement fields_FontStyle_P3;
+
+    @FindBy (xpath = "//div[contains(@class,'accordion-panel__inner_open')]//button[contains(text(),'Edit Regular')]")
+    public WebElement editRegular;
+    @FindBy (xpath = "//div[contains(@class,'accordion-panel__inner_open')]//button[contains(text(),'Edit Hover')]")
+    public WebElement editHover;
+
+    @FindBy (xpath = "//h4[contains(text(),'Large Field')]/parent::*//span[contains(text(),'Normal')]/parent::*")
+    public WebElement normalLargeField;
+    @FindBy (xpath = "//h4[contains(text(),'Large Field')]/parent::*//span[contains(text(),'Normal')]/parent::*//input")
+    public WebElement normalLargeFieldInput;
+    @FindBy (xpath = "//h4[contains(text(),'Large Field')]/parent::*//span[contains(text(),'Selected')]/parent::*")
+    public WebElement selectedLargeField;
+    @FindBy (xpath = "//h4[contains(text(),'Large Field')]/parent::*//span[contains(text(),'Selected')]/parent::*//input")
+    public WebElement selectedLargeFieldSInput;
+
+    public List<WebElement> getInputElements(){
+        return webDriver.findElements(By.xpath("//div[contains(@class,'de-input-block')]"));
+    }
+    public List<WebElement> getDropListElements(){
+        return webDriver.findElements(By.xpath("//div[contains(@class,'tmp_droplist')]"));
+    }
+    public List<WebElement> getCheckRadioElements(){
+        return webDriver.findElements(By.xpath("//div[contains(@class,'check-radio-element')]"));
+    }
 }

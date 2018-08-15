@@ -8,14 +8,21 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 
 public class SupportMethod {
 
     private WebDriver webDriver;
-
+    private WebDriverWait wait;
+    private Actions action;
+    private JavascriptExecutor js;
 
     public SupportMethod(WebDriver driver){
         webDriver = driver;
+        action = new Actions(webDriver);
+        js = (JavascriptExecutor)webDriver;
+        wait = new WebDriverWait(webDriver, 45, 300);
         PageFactory.initElements(webDriver, this);
     }
     public LoginPage loginPage(){
@@ -30,13 +37,13 @@ public class SupportMethod {
     public EditorPage editorPage(){
         return new EditorPage(webDriver);
     }
+    public Variables variables(){
+        return new Variables(webDriver);
+    }
 
 
     public void createElement (String element){
-        WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
-        JavascriptExecutor js = (JavascriptExecutor)webDriver;
         js.executeScript("document.querySelector('.button-add-element').click()");
-//        wait.until(ExpectedConditions.elementToBeClickable(sidebar().newPageButton)).click();
         wait.until(ExpectedConditions.elementToBeClickable(editorPage().blankCanvas)).click();
         wait.until(ExpectedConditions.elementToBeClickable(editorPage().addSectionPlus)).click();
         wait.until(ExpectedConditions.elementToBeClickable(editorPage().fullWidthSection)).click();
@@ -49,24 +56,81 @@ public class SupportMethod {
                 wait.until(ExpectedConditions.elementToBeClickable(editorPage().elementParagraph)).click();
                 break;
         }
-
-
-//        if ("header".equals(element)) {
-//            wait.until(ExpectedConditions.elementToBeClickable(editorPage().elementHeader)).click();
-//        }
     }
+    public void createElements (String element, int quantity){
+        try {
+            js.executeScript("document.querySelector('.button-add-element').click()");
+            wait.until(ExpectedConditions.elementToBeClickable(editorPage().blankCanvas)).click();
+            wait.until(ExpectedConditions.elementToBeClickable(editorPage().addSectionPlus)).click();
+            wait.until(ExpectedConditions.elementToBeClickable(editorPage().fullWidthSection)).click();
+            wait.until(ExpectedConditions.elementToBeClickable(editorPage().fullWidthColumn)).click();
+            switch (element) {
+                case "header":
+                    wait.until(ExpectedConditions.elementToBeClickable(editorPage().elementHeader)).click();
+                    for (int i = 0; i < quantity-1; i++) {
+                        Thread.sleep(500);
+                        js.executeScript("document.querySelector('.button-add-new_dark').click()");
+                        wait.until(ExpectedConditions.elementToBeClickable(editorPage().elementHeader)).click();
+                    }
+                    break;
+                case "paragraph":
+                    wait.until(ExpectedConditions.elementToBeClickable(editorPage().elementParagraph)).click();
+                    for (int i = 0; i < quantity-1; i++) {
+                        Thread.sleep(500);
+                        js.executeScript("document.querySelector('.button-add-new_dark').click()");
+                        wait.until(ExpectedConditions.elementToBeClickable(editorPage().elementParagraph)).click();
+                    }
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+    public void changeFontSize(List<WebElement> element){
+        try {
+            for (int i = 0; i < getTextElements().size(); i++) {
+                action.click(getTextElements().get(i));
+                getTextElements().get(i).sendKeys(Keys.chord(Keys.CONTROL, "a"));
+                Thread.sleep(500);
+                wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().getTinyMCEFontSizeButtons().get(i))).click();
+                Thread.sleep(500);
+                wait.until(ExpectedConditions.elementToBeClickable(element.get(i))).click();
+                Thread.sleep(500);
+                wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeFontSize)).click();
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void enterText(){
+        for (int i = 0; i < getTextElements().size(); i++){
+            getTextElements().get(i).sendKeys(Keys.BACK_SPACE);
+            getTextElements().get(i).sendKeys(Keys.BACK_SPACE);
+            wait.until(ExpectedConditions.elementToBeClickable(getTextElements().get(i))).sendKeys(Variables.oneLine);
+            action.sendKeys(Keys.ENTER).perform();
+            wait.until(ExpectedConditions.elementToBeClickable(getTextElements().get(i))).sendKeys(Variables.oneLine);
+        }
+    }
+
+    public List<WebElement> getTextElements(){
+        return webDriver.findElements(By.cssSelector(".mce-content-body"));
+    }
+
+
     public void waitAndClick(WebElement element){
-        Actions action = new Actions(webDriver);
-        WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
-        action.moveToElement(element).perform();
-        wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+        try {
+            Thread.sleep(500);
+            action.moveToElement(element).perform();
+            wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
     }
     public void waitAndClickByxpath(String element){
-        WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
         wait.until(ExpectedConditions.elementToBeClickable(webDriver.findElement(By.xpath(element)))).click();
     }
     public void waitAndClickBycss(String element){
-        WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
         wait.until(ExpectedConditions.elementToBeClickable(webDriver.findElement(By.xpath(element)))).click();
     }
     public void wait(int millis){
@@ -85,8 +149,6 @@ public class SupportMethod {
         return Double.parseDouble(string);
     }
     public void createThreeLine(){
-        WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
-        Actions action = new Actions(webDriver);
         editorPage().headerText.sendKeys(Keys.BACK_SPACE);
         wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).sendKeys(Variables.oneLine);
         action.keyDown(Keys.SHIFT).sendKeys(Keys.ENTER).keyUp(Keys.SHIFT).perform();
@@ -95,8 +157,6 @@ public class SupportMethod {
         wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).sendKeys(Variables.oneLine);
     }
     public void selectPartText(){
-        WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
-        Actions action = new Actions(webDriver);
         editorPage().headerText.sendKeys(Keys.BACK_SPACE);
         wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).sendKeys(Variables.textValue);
 
@@ -117,6 +177,28 @@ public class SupportMethod {
             Thread.sleep(500);
         } catch (InterruptedException e) {
             System.out.println(e);
+        }
+    }
+
+    public void createThreeColumnRowAndAddElements_firstSection(WebElement element){
+        js.executeScript("document.querySelector('.button-add-element').click()");
+        wait.until(ExpectedConditions.elementToBeClickable(editorPage().blankCanvas)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(editorPage().addSectionPlus)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(editorPage().fullWidthSection)).click();
+        editorPage().threeColumnRowClick();
+        for(int i = 0; i < 3; i++){
+            wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+        }
+    }
+    public void createThreeColumnRowAndAddElements_anySection(WebElement element, int index) throws InterruptedException {
+        Thread.sleep(500);
+        waitAndClick(editorPage().getPlusAddNewRow().get(index));
+        Thread.sleep(500);
+        waitAndClick(editorPage().getThreeColumnsRow().get(index));
+        for(int i = 0; i < 3; i++){
+            Thread.sleep(500);
+//            wait.until(ExpectedConditions.elementToBeClickable(element));
+            action.moveToElement(element).click().perform();
         }
     }
 }

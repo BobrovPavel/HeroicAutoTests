@@ -13,46 +13,62 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="GlobalStyles_FieldsTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Tests/GlobalStyles/GlobalStyles_FieldsTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="270" column="61" selection-start-line="270" selection-start-column="61" selection-end-line="270" selection-end-column="61" />
+              <folding>
+                <element signature="e#7146#7147#0" expanded="true" />
+                <element signature="e#7219#7220#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="GlobalStyles_ParagraphTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Tests/GlobalStyles/GlobalStyles_ParagraphTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" selection-start-line="2" selection-end-line="11" selection-end-column="52" />
+            <state relative-caret-position="454">
+              <caret line="271" column="88" lean-forward="true" selection-start-line="271" selection-start-column="88" selection-end-line="271" selection-end-column="88" />
               <folding>
-                <element signature="e#33288#33289#0" expanded="true" />
-                <element signature="e#33361#33362#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/Constants.java">
+      <file leaf-file-name="TinymceHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/TinymceHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="125" selection-start-line="8" selection-start-column="125" selection-end-line="8" selection-end-column="125" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GlobalStyles_HeadlineTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Tests/GlobalStyles/GlobalStyles_HeadlineTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+            <state relative-caret-position="248">
+              <caret line="124" column="4" lean-forward="true" selection-start-line="124" selection-start-column="4" selection-end-line="134" selection-end-column="5" />
               <folding>
-                <element signature="e#45493#45494#0" expanded="true" />
-                <element signature="e#45566#45567#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TinyMCE_HeadlineTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Tests/TinyMCE/TinyMCE_HeadlineTest.java">
+      <file leaf-file-name="GlobalHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/GlobalHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" selection-start-line="2" selection-end-line="11" selection-end-column="22" />
+            <state relative-caret-position="292">
+              <caret line="58" column="121" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="121" />
+              <folding>
+                <element signature="method#globalStyles#0;class#GlobalHelper#0" />
+                <element signature="e#11294#11295#0" expanded="true" />
+                <element signature="e#11375#11376#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sidebar.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Components/Sidebar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="58" column="125" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="125" />
             </state>
           </provider>
         </entry>
@@ -60,8 +76,8 @@
       <file leaf-file-name="Variables.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/Variables.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="178" column="18" selection-start-line="178" selection-start-column="18" selection-end-line="178" selection-end-column="18" />
+            <state relative-caret-position="396">
+              <caret line="63" column="86" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="86" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,8 +88,8 @@
       <file leaf-file-name="GlobalStyles.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Components/GlobalStyles.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1620">
-              <caret line="99" column="22" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
+            <state relative-caret-position="418">
+              <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,135 +97,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TinyMCE_ParagraphTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Tests/TinyMCE/TinyMCE_ParagraphTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-              <folding>
-                <element signature="e#1154#1822#0" />
-                <element signature="e#1827#2098#0" />
-                <element signature="e#2104#2412#0" />
-                <element signature="e#2417#2733#0" />
-                <element signature="e#2738#3066#0" />
-                <element signature="e#3159#3442#0" />
-                <element signature="e#3388#3662#0" />
-                <element signature="e#3667#3941#0" />
-                <element signature="e#3946#4466#0" />
-                <element signature="e#4471#5882#0" />
-                <element signature="e#5887#6827#0" />
-                <element signature="e#6832#7283#0" />
-                <element signature="e#7288#8021#0" />
-                <element signature="e#8026#8349#0" />
-                <element signature="e#8354#8785#0" />
-                <element signature="e#8790#9495#0" />
-                <element signature="e#9500#11073#0" />
-                <element signature="e#11078#11604#0" />
-                <element signature="e#11609#12394#0" />
-                <element signature="e#12399#13427#0" />
-                <element signature="e#13432#15040#0" />
-                <element signature="e#15045#17030#0" />
-                <element signature="e#17035#17790#0" />
-                <element signature="e#17795#19472#0" />
-                <element signature="e#19477#20015#0" />
-                <element signature="e#20020#21334#0" />
-                <element signature="e#21339#22111#0" />
-                <element signature="e#22116#22594#0" />
-                <element signature="e#22599#23042#0" />
-                <element signature="e#23047#23592#0" />
-                <element signature="e#23597#24264#0" />
-                <element signature="e#24269#26036#0" />
-                <element signature="e#26041#27546#0" />
-                <element signature="e#27551#28728#0" />
-                <element signature="e#28733#30506#0" />
-                <element signature="e#30515#31337#0" />
-                <element signature="e#31342#32030#0" />
-                <element signature="e#32035#33091#0" />
-                <element signature="e#33096#34596#0" />
-                <element signature="e#34601#34962#0" />
-                <element signature="e#34967#35376#0" />
-                <element signature="e#35381#35790#0" />
-                <element signature="e#35795#36195#0" />
-                <element signature="e#36200#36651#0" />
-                <element signature="e#36656#37107#0" />
-                <element signature="e#37112#37974#0" />
-                <element signature="e#37979#39755#0" />
-                <element signature="e#39760#40876#0" />
-                <element signature="e#40881#42471#0" />
-                <element signature="e#42476#43091#0" />
-                <element signature="e#43096#43970#0" />
-                <element signature="e#43975#45092#0" />
-                <element signature="e#45097#46799#0" />
-                <element signature="e#46804#48759#0" />
-                <element signature="e#48764#50030#0" />
-                <element signature="e#50035#51897#0" />
-                <element signature="e#51902#53305#0" />
-                <element signature="e#53310#54171#0" />
-                <element signature="e#54176#54982#0" />
-                <element signature="e#54987#55398#0" />
-                <element signature="e#55403#55962#0" />
-                <element signature="e#55967#56361#0" />
-                <element signature="e#56366#57122#0" />
-                <element signature="e#57127#59010#0" />
-                <element signature="e#59015#60638#0" />
-                <element signature="e#60643#62171#0" />
-                <element signature="e#62184#62458#0" />
-                <element signature="e#62463#62743#0" />
-                <element signature="e#62748#63017#0" />
-                <element signature="e#63022#63311#0" />
-                <element signature="e#63316#63680#0" />
-                <element signature="e#63685#65247#0" />
-                <element signature="e#65252#66293#0" />
-                <element signature="e#66298#66830#0" />
-                <element signature="e#66835#67641#0" />
-                <element signature="e#67646#68147#0" />
-                <element signature="e#68152#68875#0" />
-                <element signature="e#68880#70083#0" />
-                <element signature="e#70088#71943#0" />
-                <element signature="e#71948#74083#0" />
-                <element signature="e#74088#75337#0" />
-                <element signature="e#75342#76799#0" />
-                <element signature="e#76804#78261#0" />
-                <element signature="e#78266#79200#0" />
-                <element signature="e#79205#80801#0" />
-                <element signature="e#80806#82708#0" />
-                <element signature="e#82713#84393#0" />
-                <element signature="e#84400#84968#0" />
-                <element signature="e#84974#85095#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TinymceHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/TinymceHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1444">
-              <caret line="134" column="5" lean-forward="true" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TinyMCE.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Components/TinyMCE.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-216">
-              <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GlobalHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/GlobalHelper.java">
+      <file leaf-file-name="SupportMethod.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/SupportMethod.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="194">
-              <caret line="62" column="22" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
+              <caret line="123" selection-start-line="123" selection-end-line="123" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#770#771#0" expanded="true" />
+                <element signature="e#817#818#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GlobalStyles_HeadlineTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Tests/GlobalStyles/GlobalStyles_HeadlineTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-6454">
+              <caret line="83" column="29" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="29" />
+              <folding>
+                <element signature="e#1215#1216#0" expanded="true" />
+                <element signature="e#1262#1263#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -225,9 +144,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>foll</find>
-      <find>text</find>
-      <find>quote_H</find>
       <find>quotefor</find>
       <find>align</find>
       <find>insertLink</find>
@@ -248,6 +164,16 @@
       <find>close</find>
       <find>globalP</find>
       <find>changeCol</find>
+      <find>setDef</find>
+      <find>changeCapa</find>
+      <find>changeCapacity</find>
+      <find>globalHelper</find>
+      <find>//div[contains(@id,'rect-tinymce')]//span</find>
+      <find>setDefa</find>
+      <find>globalStyles_Paragraph_part</find>
+      <find>changeColorW</find>
+      <find>setDefaultC</find>
+      <find>changeFontS</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -287,20 +213,23 @@
         <option value="$PROJECT_DIR$/src/test/java/TestClass.java" />
         <option value="$PROJECT_DIR$/src/test/java/Pages/GlobalStyles.java" />
         <option value="$PROJECT_DIR$/src/test/java/Pages/Factory.java" />
-        <option value="$PROJECT_DIR$/src/test/java/SupportClasses/SupportMethod.java" />
         <option value="$PROJECT_DIR$/src/test/java/Pages/Sidebar.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Components/EditorPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Components/GlobalStyles.java" />
         <option value="$PROJECT_DIR$/src/test/java/Components/LoginPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Components/TinyMCE.java" />
-        <option value="$PROJECT_DIR$/src/test/java/SupportClasses/Variables.java" />
-        <option value="$PROJECT_DIR$/src/test/java/SupportClasses/GlobalHelper.java" />
-        <option value="$PROJECT_DIR$/src/test/java/SupportClasses/Constants.java" />
         <option value="$PROJECT_DIR$/src/test/java/SupportClasses/TinymceHelper.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Tests/TinyMCE/TinyMCE_ParagraphTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Tests/TinyMCE/TinyMCE_HeadlineTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Components/EditorPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SupportClasses/SupportMethod.java" />
         <option value="$PROJECT_DIR$/src/test/java/Tests/GlobalStyles/GlobalStyles_ParagraphTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Tests/GlobalStyles/GlobalStyles_HeadlineTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SupportClasses/Constants.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests/TinyMCE/TinyMCE_ParagraphTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/InitTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Components/TinyMCE.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests/TinyMCE/TinyMCE_HeadlineTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Components/Sidebar.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Components/GlobalStyles.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SupportClasses/Variables.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SupportClasses/GlobalHelper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests/GlobalStyles/GlobalStyles_FieldsTest.java" />
       </list>
     </option>
   </component>
@@ -311,8 +240,8 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="579" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-4" />
     <option name="width" value="1304" />
     <option name="height" value="1040" />
   </component>
@@ -323,8 +252,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -401,6 +328,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -428,11 +357,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.GlobalStyles_HeadlineTest">
+  <component name="RunManager" selected="JUnit.GlobalStyles_FieldsTest.stageAB7_changeBorderRadius_Large_OverView_Hover">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="GlobalStyles_HeadlineTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GlobalStyles_FieldsTest.stageAB4_changeBorderThickness_Large_OverView" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Heroic" />
       <extension name="coverage">
         <pattern>
@@ -443,9 +372,78 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="Tests.GlobalStyles" />
-      <option name="MAIN_CLASS_NAME" value="Tests.GlobalStyles.GlobalStyles_HeadlineTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="Tests.GlobalStyles.GlobalStyles_FieldsTest" />
+      <option name="METHOD_NAME" value="stageAB4_changeBorderThickness_Large_OverView" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="GlobalStyles_FieldsTest.stageAB4_changeBorderThickness_Large_OverView_Hover" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Heroic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.GlobalStyles.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Tests.GlobalStyles" />
+      <option name="MAIN_CLASS_NAME" value="Tests.GlobalStyles.GlobalStyles_FieldsTest" />
+      <option name="METHOD_NAME" value="stageAB4_changeBorderThickness_Large_OverView_Hover" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="GlobalStyles_FieldsTest.stageAB6_changeBorderRadius_Large_OverView" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Heroic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.GlobalStyles.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Tests.GlobalStyles" />
+      <option name="MAIN_CLASS_NAME" value="Tests.GlobalStyles.GlobalStyles_FieldsTest" />
+      <option name="METHOD_NAME" value="stageAB6_changeBorderRadius_Large_OverView" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="GlobalStyles_FieldsTest.stageAB7_changeBorderRadius_Large_OverView_Hover" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Heroic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.GlobalStyles.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Tests.GlobalStyles" />
+      <option name="MAIN_CLASS_NAME" value="Tests.GlobalStyles.GlobalStyles_FieldsTest" />
+      <option name="METHOD_NAME" value="stageAB7_changeBorderRadius_Large_OverView_Hover" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -469,75 +467,6 @@
       <option name="MAIN_CLASS_NAME" value="Tests.GlobalStyles.GlobalStyles_ParagraphTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="GlobalStyles_ParagraphTest.stageAB3_changeNumberBulletColorWithPalette_P2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Heroic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.GlobalStyles.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Tests.GlobalStyles" />
-      <option name="MAIN_CLASS_NAME" value="Tests.GlobalStyles.GlobalStyles_ParagraphTest" />
-      <option name="METHOD_NAME" value="stageAB3_changeNumberBulletColorWithPalette_P2" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="GlobalStyles_ParagraphTest.stageBC3_changeBulletColorWithPalette_P2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Heroic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.GlobalStyles.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Tests.GlobalStyles" />
-      <option name="MAIN_CLASS_NAME" value="Tests.GlobalStyles.GlobalStyles_ParagraphTest" />
-      <option name="METHOD_NAME" value="stageBC3_changeBulletColorWithPalette_P2" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="GlobalStyles_ParagraphTest.stageCD3_changeNumberBulletColorWithPalette_P3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Heroic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tests.GlobalStyles.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Tests.GlobalStyles" />
-      <option name="MAIN_CLASS_NAME" value="Tests.GlobalStyles.GlobalStyles_ParagraphTest" />
-      <option name="METHOD_NAME" value="stageCD3_changeNumberBulletColorWithPalette_P3" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -586,19 +515,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.GlobalStyles_ParagraphTest.stageBC3_changeBulletColorWithPalette_P2" />
-      <item itemvalue="JUnit.GlobalStyles_ParagraphTest.stageCD3_changeNumberBulletColorWithPalette_P3" />
-      <item itemvalue="JUnit.GlobalStyles_ParagraphTest.stageAB3_changeNumberBulletColorWithPalette_P2" />
       <item itemvalue="JUnit.GlobalStyles_ParagraphTest" />
-      <item itemvalue="JUnit.GlobalStyles_HeadlineTest" />
+      <item itemvalue="JUnit.GlobalStyles_FieldsTest.stageAB4_changeBorderThickness_Large_OverView" />
+      <item itemvalue="JUnit.GlobalStyles_FieldsTest.stageAB4_changeBorderThickness_Large_OverView_Hover" />
+      <item itemvalue="JUnit.GlobalStyles_FieldsTest.stageAB6_changeBorderRadius_Large_OverView" />
+      <item itemvalue="JUnit.GlobalStyles_FieldsTest.stageAB7_changeBorderRadius_Large_OverView_Hover" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GlobalStyles_HeadlineTest" />
+        <item itemvalue="JUnit.GlobalStyles_FieldsTest.stageAB7_changeBorderRadius_Large_OverView_Hover" />
+        <item itemvalue="JUnit.GlobalStyles_FieldsTest.stageAB6_changeBorderRadius_Large_OverView" />
+        <item itemvalue="JUnit.GlobalStyles_FieldsTest.stageAB4_changeBorderThickness_Large_OverView_Hover" />
+        <item itemvalue="JUnit.GlobalStyles_FieldsTest.stageAB4_changeBorderThickness_Large_OverView" />
         <item itemvalue="JUnit.GlobalStyles_ParagraphTest" />
-        <item itemvalue="JUnit.GlobalStyles_ParagraphTest.stageAB3_changeNumberBulletColorWithPalette_P2" />
-        <item itemvalue="JUnit.GlobalStyles_ParagraphTest.stageBC3_changeBulletColorWithPalette_P2" />
-        <item itemvalue="JUnit.GlobalStyles_ParagraphTest.stageCD3_changeNumberBulletColorWithPalette_P3" />
       </list>
     </recent_temporary>
   </component>
@@ -616,39 +545,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GlobalStyles_ParagraphTest_stageBC3_changeBulletColorWithPalette_P2 - 2018.08.08 at 14h 27m 41s.xml">
-      <configuration name="GlobalStyles_ParagraphTest.stageBC3_changeBulletColorWithPalette_P2" configurationId="JUnit" />
+    <history-entry file="GlobalStyles_HeadlineTest - 2018.08.15 at 13h 37m 28s.xml">
+      <configuration name="GlobalStyles_HeadlineTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GlobalStyles_ParagraphTest_stageBC3_changeBulletColorWithPalette_P2 - 2018.08.08 at 14h 28m 55s.xml">
-      <configuration name="GlobalStyles_ParagraphTest.stageBC3_changeBulletColorWithPalette_P2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GlobalStyles_ParagraphTest_stageCD3_changeNumberBulletColorWithPalette_P3 - 2018.08.08 at 14h 30m 52s.xml">
-      <configuration name="GlobalStyles_ParagraphTest.stageCD3_changeNumberBulletColorWithPalette_P3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GlobalStyles_ParagraphTest_stageCD3_changeNumberBulletColorWithPalette_P3 - 2018.08.08 at 14h 31m 41s.xml">
-      <configuration name="GlobalStyles_ParagraphTest.stageCD3_changeNumberBulletColorWithPalette_P3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GlobalStyles_ParagraphTest_stageBC3_changeBulletColorWithPalette_P2 - 2018.08.08 at 14h 32m 49s.xml">
-      <configuration name="GlobalStyles_ParagraphTest.stageBC3_changeBulletColorWithPalette_P2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GlobalStyles_ParagraphTest_stageAB3_changeNumberBulletColorWithPalette_P2 - 2018.08.08 at 14h 34m 56s.xml">
-      <configuration name="GlobalStyles_ParagraphTest.stageAB3_changeNumberBulletColorWithPalette_P2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GlobalStyles_ParagraphTest - 2018.08.08 at 14h 40m 38s.xml">
+    <history-entry file="GlobalStyles_ParagraphTest - 2018.08.15 at 13h 52m 46s.xml">
       <configuration name="GlobalStyles_ParagraphTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GlobalStyles_HeadlineTest - 2018.08.08 at 14h 49m 22s.xml">
-      <configuration name="GlobalStyles_HeadlineTest" configurationId="JUnit" />
+    <history-entry file="GlobalStyles_FieldsTest_stageAB4_changeBorderThickness_Large_OverView - 2018.08.15 at 14h 15m 18s.xml">
+      <configuration name="GlobalStyles_FieldsTest.stageAB4_changeBorderThickness_Large_OverView" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GlobalStyles_HeadlineTest - 2018.08.08 at 14h 54m 40s.xml">
-      <configuration name="GlobalStyles_HeadlineTest" configurationId="JUnit" />
+    <history-entry file="GlobalStyles_FieldsTest_stageAB4_changeBorderThickness_Large_OverView - 2018.08.15 at 14h 17m 26s.xml">
+      <configuration name="GlobalStyles_FieldsTest.stageAB4_changeBorderThickness_Large_OverView" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GlobalStyles_HeadlineTest - 2018.08.08 at 14h 58m 02s.xml">
-      <configuration name="GlobalStyles_HeadlineTest" configurationId="JUnit" />
+    <history-entry file="GlobalStyles_FieldsTest_stageAB4_changeBorderThickness_Large_OverView_Hover - 2018.08.15 at 14h 18m 36s.xml">
+      <configuration name="GlobalStyles_FieldsTest.stageAB4_changeBorderThickness_Large_OverView_Hover" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GlobalStyles_FieldsTest_stageAB4_changeBorderThickness_Large_OverView_Hover - 2018.08.15 at 14h 19m 13s.xml">
+      <configuration name="GlobalStyles_FieldsTest.stageAB4_changeBorderThickness_Large_OverView_Hover" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GlobalStyles_FieldsTest_stageAB4_changeBorderThickness_Large_OverView_Hover - 2018.08.15 at 14h 19m 15s.xml">
+      <configuration name="GlobalStyles_FieldsTest.stageAB4_changeBorderThickness_Large_OverView_Hover" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GlobalStyles_FieldsTest_stageAB6_changeBorderRadius_Large_OverView - 2018.08.15 at 14h 21m 50s.xml">
+      <configuration name="GlobalStyles_FieldsTest.stageAB6_changeBorderRadius_Large_OverView" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GlobalStyles_FieldsTest_stageAB6_changeBorderRadius_Large_OverView - 2018.08.15 at 14h 22m 44s.xml">
+      <configuration name="GlobalStyles_FieldsTest.stageAB6_changeBorderRadius_Large_OverView" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GlobalStyles_FieldsTest_stageAB7_changeBorderRadius_Large_OverView_Hover - 2018.08.15 at 14h 23m 54s.xml">
+      <configuration name="GlobalStyles_FieldsTest.stageAB7_changeBorderRadius_Large_OverView_Hover" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -660,12 +589,11 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32946146" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32946146" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32946146" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1640625" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32946146" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1640625" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -677,6 +605,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32946146" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -684,7 +613,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="17" />
+      <option name="time" value="25" />
     </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
@@ -697,34 +626,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/Components/LoginPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="43" lean-forward="true" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/Variables.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="132" selection-start-line="5" selection-start-column="128" selection-end-line="5" selection-end-column="132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/TinyMCE/TinyMCE_HeadlineTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" column="23" lean-forward="true" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -850,13 +751,6 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/TinyMCE/TinyMCE_HeadlineTest1.java" />
     <entry file="file://$USER_HOME$/Git/Heroic/src/test/java/TinyMCE/TinyMCE_HeadlineTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/GlobalStyles/Headline_GlobalStylesTest.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/3.12.0/selenium-remote-driver-3.12.0.jar!/org/openqa/selenium/remote/RemoteWebDriver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="274" selection-start-line="274" selection-end-line="274" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Tests/qweqweqe.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/Assert.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -887,34 +781,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="954">
-          <caret line="86" column="89" selection-start-line="85" selection-start-column="8" selection-end-line="86" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Heroic/src/test/java/Components/EditorPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Components/EditorPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Heroic/src/test/java/Components/EditorPage.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/Components/Factory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -925,71 +796,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Components/Sidebar.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/3.12.0/selenium-remote-driver-3.12.0.jar!/org/openqa/selenium/remote/RemoteWebDriver.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        <state relative-caret-position="5688">
+          <caret line="439" selection-start-line="439" selection-end-line="439" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/SupportMethod.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/3.12.0/selenium-support-3.12.0.jar!/org/openqa/selenium/support/ui/FluentWait.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1800">
+          <caret line="117" selection-start-line="117" selection-end-line="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Components/EditorPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="96" column="43" selection-start-line="96" selection-start-column="43" selection-end-line="96" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/3.12.0/selenium-remote-driver-3.12.0.jar!/org/openqa/selenium/interactions/Actions.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="381" selection-start-line="381" selection-end-line="381" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="147" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/InitTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
+          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Components/GlobalStyles.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/TinyMCE/TinyMCE_HeadlineTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="99" column="22" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
+        <state relative-caret-position="76">
+          <caret line="1078" column="43" selection-start-line="1078" selection-start-column="16" selection-end-line="1078" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1147#1148#0" expanded="true" />
+            <element signature="e#1172#1173#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Components/TinyMCE.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/Variables.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="178" column="18" selection-start-line="178" selection-start-column="18" selection-end-line="178" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/GlobalHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="62" column="22" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="125" selection-start-line="8" selection-start-column="125" selection-end-line="8" selection-end-column="125" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/TinymceHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1444">
-          <caret line="134" column="5" lean-forward="true" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
+        <state relative-caret-position="148">
+          <caret line="106" column="34" selection-start-line="106" selection-start-column="34" selection-end-line="106" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -998,127 +864,107 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Tests/TinyMCE/TinyMCE_ParagraphTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="396">
+          <caret line="47" column="85" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Components/Sidebar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="58" column="125" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/SupportMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
           <folding>
-            <element signature="e#1154#1822#0" />
-            <element signature="e#1827#2098#0" />
-            <element signature="e#2104#2412#0" />
-            <element signature="e#2417#2733#0" />
-            <element signature="e#2738#3066#0" />
-            <element signature="e#3159#3442#0" />
-            <element signature="e#3388#3662#0" />
-            <element signature="e#3667#3941#0" />
-            <element signature="e#3946#4466#0" />
-            <element signature="e#4471#5882#0" />
-            <element signature="e#5887#6827#0" />
-            <element signature="e#6832#7283#0" />
-            <element signature="e#7288#8021#0" />
-            <element signature="e#8026#8349#0" />
-            <element signature="e#8354#8785#0" />
-            <element signature="e#8790#9495#0" />
-            <element signature="e#9500#11073#0" />
-            <element signature="e#11078#11604#0" />
-            <element signature="e#11609#12394#0" />
-            <element signature="e#12399#13427#0" />
-            <element signature="e#13432#15040#0" />
-            <element signature="e#15045#17030#0" />
-            <element signature="e#17035#17790#0" />
-            <element signature="e#17795#19472#0" />
-            <element signature="e#19477#20015#0" />
-            <element signature="e#20020#21334#0" />
-            <element signature="e#21339#22111#0" />
-            <element signature="e#22116#22594#0" />
-            <element signature="e#22599#23042#0" />
-            <element signature="e#23047#23592#0" />
-            <element signature="e#23597#24264#0" />
-            <element signature="e#24269#26036#0" />
-            <element signature="e#26041#27546#0" />
-            <element signature="e#27551#28728#0" />
-            <element signature="e#28733#30506#0" />
-            <element signature="e#30515#31337#0" />
-            <element signature="e#31342#32030#0" />
-            <element signature="e#32035#33091#0" />
-            <element signature="e#33096#34596#0" />
-            <element signature="e#34601#34962#0" />
-            <element signature="e#34967#35376#0" />
-            <element signature="e#35381#35790#0" />
-            <element signature="e#35795#36195#0" />
-            <element signature="e#36200#36651#0" />
-            <element signature="e#36656#37107#0" />
-            <element signature="e#37112#37974#0" />
-            <element signature="e#37979#39755#0" />
-            <element signature="e#39760#40876#0" />
-            <element signature="e#40881#42471#0" />
-            <element signature="e#42476#43091#0" />
-            <element signature="e#43096#43970#0" />
-            <element signature="e#43975#45092#0" />
-            <element signature="e#45097#46799#0" />
-            <element signature="e#46804#48759#0" />
-            <element signature="e#48764#50030#0" />
-            <element signature="e#50035#51897#0" />
-            <element signature="e#51902#53305#0" />
-            <element signature="e#53310#54171#0" />
-            <element signature="e#54176#54982#0" />
-            <element signature="e#54987#55398#0" />
-            <element signature="e#55403#55962#0" />
-            <element signature="e#55967#56361#0" />
-            <element signature="e#56366#57122#0" />
-            <element signature="e#57127#59010#0" />
-            <element signature="e#59015#60638#0" />
-            <element signature="e#60643#62171#0" />
-            <element signature="e#62184#62458#0" />
-            <element signature="e#62463#62743#0" />
-            <element signature="e#62748#63017#0" />
-            <element signature="e#63022#63311#0" />
-            <element signature="e#63316#63680#0" />
-            <element signature="e#63685#65247#0" />
-            <element signature="e#65252#66293#0" />
-            <element signature="e#66298#66830#0" />
-            <element signature="e#66835#67641#0" />
-            <element signature="e#67646#68147#0" />
-            <element signature="e#68152#68875#0" />
-            <element signature="e#68880#70083#0" />
-            <element signature="e#70088#71943#0" />
-            <element signature="e#71948#74083#0" />
-            <element signature="e#74088#75337#0" />
-            <element signature="e#75342#76799#0" />
-            <element signature="e#76804#78261#0" />
-            <element signature="e#78266#79200#0" />
-            <element signature="e#79205#80801#0" />
-            <element signature="e#80806#82708#0" />
-            <element signature="e#82713#84393#0" />
-            <element signature="e#84400#84968#0" />
-            <element signature="e#84974#85095#0" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#770#771#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/TinyMCE/TinyMCE_HeadlineTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Components/GlobalStyles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" selection-start-line="2" selection-end-line="11" selection-end-column="22" />
+        <state relative-caret-position="418">
+          <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/GlobalStyles/GlobalStyles_ParagraphTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/Variables.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" selection-start-line="2" selection-end-line="11" selection-end-column="52" />
+        <state relative-caret-position="396">
+          <caret line="63" column="86" selection-start-line="63" selection-start-column="41" selection-end-line="63" selection-end-column="86" />
           <folding>
-            <element signature="e#33288#33289#0" expanded="true" />
-            <element signature="e#33361#33362#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/TinymceHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="124" column="4" lean-forward="true" selection-start-line="124" selection-start-column="4" selection-end-line="134" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Tests/GlobalStyles/GlobalStyles_HeadlineTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+        <state relative-caret-position="-6454">
+          <caret line="83" column="29" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="29" />
           <folding>
-            <element signature="e#45493#45494#0" expanded="true" />
-            <element signature="e#45566#45567#0" expanded="true" />
+            <element signature="e#1215#1216#0" expanded="true" />
+            <element signature="e#1262#1263#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/GlobalHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="58" column="121" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="121" />
+          <folding>
+            <element signature="method#globalStyles#0;class#GlobalHelper#0" />
+            <element signature="e#11294#11295#0" expanded="true" />
+            <element signature="e#11375#11376#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/GlobalStyles/GlobalStyles_ParagraphTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="271" column="88" lean-forward="true" selection-start-line="271" selection-start-column="88" selection-end-line="271" selection-end-column="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/GlobalStyles/GlobalStyles_FieldsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="270" column="61" selection-start-line="270" selection-start-column="61" selection-end-line="270" selection-end-column="61" />
+          <folding>
+            <element signature="e#7146#7147#0" expanded="true" />
+            <element signature="e#7219#7220#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,17 +1,27 @@
 package Components;
 
+import SupportClasses.*;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 public class TinyMCE {
 
     private WebDriver webDriver;
+    private Actions action;
 
     public TinyMCE(WebDriver driver){
         webDriver = driver;
+        action = new Actions(webDriver);
         PageFactory.initElements(webDriver, this);
+    }
+    private Variables variables(){;
+        return new Variables(webDriver);
     }
 
     @FindBy(xpath = ".mce-tinymce-inline:not([style*=\"display: none\"])")
@@ -19,6 +29,8 @@ public class TinyMCE {
 
     @FindBy(css = ".mce-tinymce-inline:not([style*=\"display: none\"]) .mce-ico.mce-i-bold")
     public WebElement bold;
+
+
     @FindBy(css = ".mce-tinymce-inline:not([style*=\"display: none\"]) .mce-ico.mce-i-italic")
     public WebElement italic;
     @FindBy(css = ".mce-tinymce-inline:not([style*=\"display: none\"]) .mce-ico.mce-i-underline")
@@ -68,7 +80,7 @@ public class TinyMCE {
     @FindBy (xpath = "//span[contains(text(),'Or Select Page')]")
     public WebElement selectLinkPage;
     @FindBy (xpath = "//div[contains(text(),'Blank Canvas')]")
-    public WebElement selectBlankPage;
+    public WebElement dropDownBlankPage;
 
     @FindBy(xpath = "//h1[@class='header-type__huge']")
     public WebElement h1FontSize;
@@ -91,7 +103,8 @@ public class TinyMCE {
     public WebElement p3FontSize;
 
 
-
+    @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//span")
+    public WebElement elementSpan;
     @FindBy (xpath = "//li[contains(text(), 'BioRhyme Regular')]")
     public WebElement fontFamily1;
     @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//span[@class='fontfamily-BioRhyme-Regular']")
@@ -132,6 +145,21 @@ public class TinyMCE {
     @FindBy (xpath = "//div[@class='rc-slider-handle']")
     public WebElement sizeSlider;
 
+    public List<WebElement> getTinyMCEFontSizeButtons(){
+        return webDriver.findElements(By.xpath(variables().fontSizeTinyMCE));
+    }
+    public List<WebElement> getListsButtons(){
+        return webDriver.findElements(By.xpath("//i[contains(@class,'mce-ico mce-i-textlist')]"));
+    }
+
+    public void dropDownBlankPageClick(){
+        try {
+            Thread.sleep(500);
+            action.moveToElement(dropDownBlankPage).click().perform();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
 
 

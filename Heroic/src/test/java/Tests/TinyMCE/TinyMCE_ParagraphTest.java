@@ -59,6 +59,7 @@ public class TinyMCE_ParagraphTest {
 
     @Test
     public void boid_Paragraph(){
+
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
         Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
@@ -311,7 +312,7 @@ public class TinyMCE_ParagraphTest {
         supportMethod().waitAndClick(tinyMCE().closeLists);
         supportMethod().waitAndClick(tinyMCE().insertLink);
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().selectLinkPage)).click();
-        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().selectBlankPage)).click();
+        tinyMCE().dropDownBlankPageClick();
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
         wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
@@ -675,7 +676,7 @@ public class TinyMCE_ParagraphTest {
         supportMethod().waitAndClick(tinyMCE().closeLists);
         supportMethod().waitAndClick(tinyMCE().insertLink);
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().selectLinkPage)).click();
-        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().selectBlankPage)).click();
+        tinyMCE().dropDownBlankPageClick();
         String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
         Assert.assertTrue(webDriver.findElement(By.xpath(Variables.quoteAssert)).isDisplayed());
         Assert.assertTrue(hrefResult.contains("/blank-canvas"));
@@ -1246,7 +1247,7 @@ public class TinyMCE_ParagraphTest {
         supportMethod().waitAndClick(tinyMCE().closeLists);
         supportMethod().waitAndClick(tinyMCE().insertLink);
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().selectLinkPage)).click();
-        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().selectBlankPage)).click();
+        tinyMCE().dropDownBlankPageClick();
         String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
         Assert.assertTrue(webDriver.findElement(By.xpath(Variables.quoteAssert)).isDisplayed());
         Assert.assertTrue(hrefResult.contains("/blank-canvas"));

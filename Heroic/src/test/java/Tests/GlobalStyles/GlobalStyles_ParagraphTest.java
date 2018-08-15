@@ -59,10 +59,11 @@ public class GlobalStyles_ParagraphTest {
 //        webDriver.get("https://stg.heroicnow.com/?token=d84dbc4913dc05e5071342c3bee4fb6e5ffe443e");
         webDriver.get("https://app.heroicnow.com/?token=934bcf42fe93b2bef4da86bbcecd98d854231e8b");
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("logger")));
-        supportMethod().createElement("paragraph");
-        globalHelper().enterText();
+        supportMethod().createElements("paragraph",3);
+        supportMethod().enterText();
+        supportMethod().changeFontSize(variables().getParagraphFontSize());
         supportMethod().waitAndClick(sidebar().globalStyles);
-        sidebar().ParagraphStylesClick();
+        sidebar().paragraphStylesClick();
         wait = new WebDriverWait(webDriver, 10, 300);
     }
 
@@ -90,7 +91,7 @@ public class GlobalStyles_ParagraphTest {
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p1Item,"font-size","41px"));
         String newValue = globalHelper().getParagraphGlobalValue(1, "font size");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
-        globalHelper().checkInPageViewMode(tinyMCE().p1FontSize, newValue,variables().getFontSize_PageView());
+        globalHelper().checkInPageViewMode(newValue,variables().getParagraphFontSize_PageView(1));
     }
     @Test
     public void stageA3_changeLineHeight_P1(){
@@ -101,7 +102,7 @@ public class GlobalStyles_ParagraphTest {
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p1LineHeight, "font-size","41px"));
         String newValue = globalHelper().getParagraphGlobalValue(1,"line height");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
-        globalHelper().checkInPageViewMode(tinyMCE().p1FontSize, newValue,variables().getLineHeight_PageView());
+        globalHelper().checkInPageViewMode(newValue,variables().getParagraphLineHeight_PageView(1));
     }
     @Test
     public void stageA4_changLetterSpacing_P1(){
@@ -113,7 +114,7 @@ public class GlobalStyles_ParagraphTest {
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p1Item, "letter-spacing","1px"));
         String newValue = globalHelper().getParagraphGlobalValue(1, "letter spacing");
         Assert.assertEquals(String.valueOf(supportMethod().asDouble(defaultValue)-0.5), String.valueOf(supportMethod().asDouble(newValue)));
-        globalHelper().checkInPageViewMode(tinyMCE().p1FontSize, newValue,variables().getLetterSpacing_PageView());
+        globalHelper().checkInPageViewMode(newValue,variables().getParagraphLetterSpacing_PageView(1));
     }
     @Test
     public void stageA5_changeParagraphSpacing_P1(){
@@ -124,7 +125,7 @@ public class GlobalStyles_ParagraphTest {
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p1Item,"padding-bottom","41px"));
         String newValue = globalHelper().getParagraphGlobalValue(1,"paragraph spacing");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
-        globalHelper().checkInPageViewMode(tinyMCE().p1FontSize, newValue,variables().getParagraphSpacing_P());
+        globalHelper().checkInPageViewMode(newValue,variables().getParagraphSpacing_P(1));
     }
     @Test
     public void stageA6_changeFontColor_P1() throws InterruptedException {
@@ -136,7 +137,6 @@ public class GlobalStyles_ParagraphTest {
         String newValue = globalHelper().getParagraphGlobalValue(1, "dark color");
         action.click(globalHelper().getColors("dark color")).perform();
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().p1FontSize);
         String pageViewValue = globalHelper().getParagraphGlobalValue(1, "dark color");
         Assert.assertEquals(newValue, pageViewValue);
     }
@@ -150,9 +150,8 @@ public class GlobalStyles_ParagraphTest {
         String newValue = globalHelper().getParagraphGlobalValue(1,"bullet spacing");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().applyBullet();
-        globalHelper().changeFontSize(tinyMCE().p1FontSize);
-        Assert.assertEquals(newValue, variables().getBulletSpacing_PageView());
+        globalHelper().applyBullet(0, 1);
+        Assert.assertEquals(newValue, variables().getParagraphBulletSpacing_PageView(1));
     }
     @Test
     public void stageA8_changeBulletColor_P1() throws InterruptedException {
@@ -164,14 +163,12 @@ public class GlobalStyles_ParagraphTest {
         String newValue = variables().getBulletColor_P1_OverView();
         action.click(globalHelper().getColors("bullet color")).perform();
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().applyBullet();
-        globalHelper().changeFontSize(tinyMCE().p1FontSize);
+        globalHelper().applyBullet(0, 1);
         String pageViewValue = variables().getBulletColor_P1_PageView();
         Assert.assertEquals(newValue, pageViewValue);
     }
     @Test
     public void stageA9_changeBulletColorWithPalette_P1() throws InterruptedException {
-        supportMethod().waitAndClick(globalStyles().globalP1);
         supportMethod().waitAndClick(globalHelper().getColors("bullet color"));
         globalHelper().setDefaultColorValue();
         Thread.sleep(500);
@@ -181,8 +178,7 @@ public class GlobalStyles_ParagraphTest {
         String newValue = variables().getBulletColor_P1_OverView();
         action.click(globalHelper().getColors("bullet color")).perform();
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().applyBullet();
-        globalHelper().changeFontSize(tinyMCE().p1FontSize);
+        globalHelper().applyBullet(0, 1);
         String pageViewValue = variables().getBulletColor_P1_PageView();
         Assert.assertEquals(newValue, pageViewValue);
         Assert.assertEquals(pageViewValue, paletteColorValue);
@@ -195,8 +191,7 @@ public class GlobalStyles_ParagraphTest {
         String newValue = variables().getBulletSize_P1_OverView();
         Assert.assertEquals(supportMethod().asInt(defaultValue)-3, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().applyBullet();
-        globalHelper().changeFontSize(tinyMCE().p1FontSize);
+        globalHelper().applyBullet(0, 1);
         Assert.assertEquals(newValue, variables().getBulletSize_P1_PageView());
     }
     @Test
@@ -210,8 +205,7 @@ public class GlobalStyles_ParagraphTest {
         String newValue = variables().getNumberBulletColor_P1_OverView();
         action.click(globalHelper().getColors("number color")).perform();
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().applyNumberBullet();
-        globalHelper().changeFontSize(tinyMCE().p1FontSize);
+        globalHelper().applyNumberBullet(0, 1);
         String pageViewValue = variables().getNumberBulletColor_P1_PageView();
         Assert.assertEquals(newValue, pageViewValue);
     }
@@ -226,8 +220,7 @@ public class GlobalStyles_ParagraphTest {
         String newValue = variables().getNumberBulletColor_P1_OverView();
         action.click(globalHelper().getColors("number color")).perform();
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().applyNumberBullet();
-        globalHelper().changeFontSize(tinyMCE().p1FontSize);
+        globalHelper().applyNumberBullet(0, 1);
         String pageViewValue = variables().getNumberBulletColor_P1_PageView();
         Assert.assertEquals(newValue, pageViewValue);
         Assert.assertEquals(pageViewValue, paletteColorValue);
@@ -240,8 +233,7 @@ public class GlobalStyles_ParagraphTest {
         String newValue = variables().getNumberBulletSize_P1_OverView();
         Assert.assertEquals(supportMethod().asInt(defaultValue)-3, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().applyNumberBullet();
-        globalHelper().changeFontSize(tinyMCE().p1FontSize);
+        globalHelper().applyNumberBullet(0, 1);
         Assert.assertEquals(newValue, variables().getNumberBulletSize_P1_PageView());
     }
 
@@ -271,8 +263,7 @@ public class GlobalStyles_ParagraphTest {
         String newValue = globalHelper().getParagraphGlobalValue(2, "font size");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().p2FontSize);
-        Assert.assertEquals(newValue, variables().getFontSize_PageView());
+        Assert.assertEquals(newValue, variables().getParagraphFontSize_PageView(2));
     }
     @Test
     public void stageB3_changeLineHeight_P2(){
@@ -284,8 +275,7 @@ public class GlobalStyles_ParagraphTest {
         String newValue = globalHelper().getParagraphGlobalValue(2,"line height");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().p2FontSize);
-        Assert.assertEquals(newValue, variables().getLineHeight_PageView());
+        Assert.assertEquals(newValue, variables().getParagraphLineHeight_PageView(2));
     }
     @Test
     public void stageB4_changLetterSpacing_P2(){
@@ -296,7 +286,7 @@ public class GlobalStyles_ParagraphTest {
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p2Item, "letter-spacing","1px"));
         String newValue = globalHelper().getParagraphGlobalValue(2, "letter spacing");
         Assert.assertEquals(String.valueOf(supportMethod().asDouble(defaultValue)-0.5), String.valueOf(supportMethod().asDouble(newValue)));
-        globalHelper().checkInPageViewMode(tinyMCE().p2FontSize, newValue,variables().getLetterSpacing_PageView());
+        globalHelper().checkInPageViewMode(newValue,variables().getParagraphLetterSpacing_PageView(2));
     }
     @Test
     public void stageB5_changeParagraphSpacing_P2(){
@@ -307,7 +297,7 @@ public class GlobalStyles_ParagraphTest {
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p2Item,"padding-bottom","41px"));
         String newValue = globalHelper().getParagraphGlobalValue(2,"paragraph spacing");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
-        globalHelper().checkInPageViewMode(tinyMCE().p2FontSize, newValue,variables().getParagraphSpacing_ol());
+        globalHelper().checkInPageViewMode(newValue,variables().getParagraphSpacing_ol(2));
     }
     @Test
     public void stageB6_changeFontColor_P2() throws InterruptedException {
@@ -319,7 +309,6 @@ public class GlobalStyles_ParagraphTest {
         String newValue = globalHelper().getParagraphGlobalValue(2, "dark color");
         action.click(globalHelper().getColors("dark color")).perform();
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().p1FontSize);
         String pageViewValue = globalHelper().getParagraphGlobalValue(2, "dark color");
         Assert.assertEquals(newValue, pageViewValue);
     }
@@ -333,9 +322,8 @@ public class GlobalStyles_ParagraphTest {
         String newValue = globalHelper().getParagraphGlobalValue(2,"bullet spacing");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().applyBullet();
-        globalHelper().changeFontSize(tinyMCE().p2FontSize);
-        Assert.assertEquals(newValue, variables().getBulletSpacing_PageView());
+        globalHelper().applyBullet(1,2);
+        Assert.assertEquals(newValue, variables().getParagraphBulletSpacing_PageView(2));
     }
     @Test
     public void stageB8_changeBulletColor_P2() throws InterruptedException {
@@ -347,8 +335,7 @@ public class GlobalStyles_ParagraphTest {
         String newValue = variables().getBulletColor_P2_OverView();
         action.click(globalHelper().getColors("bullet color")).perform();
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().applyBullet();
-        globalHelper().changeFontSize(tinyMCE().p2FontSize);
+        globalHelper().applyBullet(1, 2);
         String pageViewValue = variables().getBulletColor_P2_PageView();
         Assert.assertEquals(newValue, pageViewValue);
     }
@@ -363,8 +350,7 @@ public class GlobalStyles_ParagraphTest {
         String newValue = variables().getBulletColor_P2_OverView();
         action.click(globalHelper().getColors("bullet color")).perform();
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().applyBullet();
-        globalHelper().changeFontSize(tinyMCE().p2FontSize);
+        globalHelper().applyBullet(1, 2);
         String pageViewValue = variables().getBulletColor_P2_PageView();
         Assert.assertEquals(newValue, pageViewValue);
         Assert.assertEquals(pageViewValue, paletteColorValue);
@@ -377,8 +363,7 @@ public class GlobalStyles_ParagraphTest {
         String newValue = variables().getBulletSize_P2_OverView();
         Assert.assertEquals(supportMethod().asInt(defaultValue)-3, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().applyBullet();
-        globalHelper().changeFontSize(tinyMCE().p2FontSize);
+        globalHelper().applyBullet(1, 2);
         Assert.assertEquals(newValue, variables().getBulletSize_P2_PageView());
     }
     @Test
@@ -392,8 +377,7 @@ public class GlobalStyles_ParagraphTest {
         String newValue = variables().getNumberBulletColor_P2_OverView();
         action.click(globalHelper().getColors("number color")).perform();
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().applyNumberBullet();
-        globalHelper().changeFontSize(tinyMCE().p2FontSize);
+        globalHelper().applyNumberBullet(1, 2);
         String pageViewValue = variables().getNumberBulletColor_P2_PageView();
         Assert.assertEquals(newValue, pageViewValue);
     }
@@ -408,8 +392,7 @@ public class GlobalStyles_ParagraphTest {
         String newValue = variables().getNumberBulletColor_P2_OverView();
         action.click(globalHelper().getColors("number color")).perform();
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().applyNumberBullet();
-        globalHelper().changeFontSize(tinyMCE().p2FontSize);
+        globalHelper().applyNumberBullet(1, 2);
         String pageViewValue = variables().getNumberBulletColor_P2_PageView();
         Assert.assertEquals(newValue, pageViewValue);
         Assert.assertEquals(pageViewValue, paletteColorValue);
@@ -423,8 +406,7 @@ public class GlobalStyles_ParagraphTest {
         String newValue = variables().getNumberBulletSize_P2_OverView();
         Assert.assertEquals(supportMethod().asInt(defaultValue)-3, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().applyNumberBullet();
-        globalHelper().changeFontSize(tinyMCE().p2FontSize);
+        globalHelper().applyNumberBullet(1, 2);
         Assert.assertEquals(newValue, variables().getNumberBulletSize_P2_PageView());
     }
 
@@ -454,8 +436,7 @@ public class GlobalStyles_ParagraphTest {
         String newValue = globalHelper().getParagraphGlobalValue(3, "font size");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().p3FontSize);
-        Assert.assertEquals(newValue, variables().getFontSize_PageView());
+        Assert.assertEquals(newValue, variables().getParagraphFontSize_PageView(3));
     }
     @Test
     public void stageC3_changeLineHeight_P3(){
@@ -467,8 +448,7 @@ public class GlobalStyles_ParagraphTest {
         String newValue = globalHelper().getParagraphGlobalValue(3,"line height");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().p3FontSize);
-        Assert.assertEquals(newValue, variables().getLineHeight_PageView());
+        Assert.assertEquals(newValue, variables().getParagraphLineHeight_PageView(3));
     }
     @Test
     public void stageC4_changLetterSpacing_P3(){
@@ -479,7 +459,7 @@ public class GlobalStyles_ParagraphTest {
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p3Item, "letter-spacing","1px"));
         String newValue = globalHelper().getParagraphGlobalValue(3, "letter spacing");
         Assert.assertEquals(String.valueOf(supportMethod().asDouble(defaultValue)-0.5), String.valueOf(supportMethod().asDouble(newValue)));
-        globalHelper().checkInPageViewMode(tinyMCE().p3FontSize, newValue,variables().getLetterSpacing_PageView());
+        globalHelper().checkInPageViewMode(newValue, variables().getParagraphLetterSpacing_PageView(3));
     }
     @Test
     public void stageC5_changeParagraphSpacing_P3(){
@@ -490,7 +470,7 @@ public class GlobalStyles_ParagraphTest {
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p3Item,"padding-bottom","41px"));
         String newValue = globalHelper().getParagraphGlobalValue(3,"paragraph spacing");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
-        globalHelper().checkInPageViewMode(tinyMCE().p3FontSize, newValue,variables().getParagraphSpacing_ol());
+        globalHelper().checkInPageViewMode(newValue, variables().getParagraphSpacing_ol(3));
     }
     @Test
     public void stageC6_changeFontColor_P3() throws InterruptedException {
@@ -502,7 +482,6 @@ public class GlobalStyles_ParagraphTest {
         String newValue = globalHelper().getParagraphGlobalValue(3, "dark color");
         action.click(globalHelper().getColors("dark color")).perform();
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().changeFontSize(tinyMCE().p3FontSize);
         String pageViewValue = globalHelper().getParagraphGlobalValue(3, "dark color");
         Assert.assertEquals(newValue, pageViewValue);
     }
@@ -516,10 +495,8 @@ public class GlobalStyles_ParagraphTest {
         String newValue = globalHelper().getParagraphGlobalValue(3,"bullet spacing");
         Assert.assertEquals(supportMethod().asInt(defaultValue)-9, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().applyBullet();
-        globalHelper().changeFontSize(tinyMCE().p3FontSize);
-        Assert.assertEquals(newValue, variables().getBulletSpacing_PageView());
-        supportMethod().waitAndClick(globalStyles().overViewMode);
+        globalHelper().applyBullet(2,3);
+        Assert.assertEquals(newValue, variables().getParagraphBulletSpacing_PageView(3));
     }
     @Test
     public void stageC8_changeBulletColor_P3() throws InterruptedException {
@@ -531,8 +508,7 @@ public class GlobalStyles_ParagraphTest {
         String newValue = variables().getBulletColor_P3_OverView();
         action.click(globalHelper().getColors("bullet color")).perform();
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().applyBullet();
-        globalHelper().changeFontSize(tinyMCE().p3FontSize);
+        globalHelper().applyBullet(2,3);
         String pageViewValue = variables().getBulletColor_P3_PageView();
         Assert.assertEquals(newValue, pageViewValue);
     }
@@ -547,8 +523,7 @@ public class GlobalStyles_ParagraphTest {
         String newValue = variables().getBulletColor_P3_OverView();
         action.click(globalHelper().getColors("bullet color")).perform();
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().applyBullet();
-        globalHelper().changeFontSize(tinyMCE().p3FontSize);
+        globalHelper().applyBullet(2,3);
         String pageViewValue = variables().getBulletColor_P3_PageView();
         Assert.assertEquals(newValue, pageViewValue);
         Assert.assertEquals(pageViewValue, paletteColorValue);
@@ -561,8 +536,7 @@ public class GlobalStyles_ParagraphTest {
         String newValue = variables().getBulletSize_P3_OverView();
         Assert.assertEquals(supportMethod().asInt(defaultValue)-3, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().applyBullet();
-        globalHelper().changeFontSize(tinyMCE().p3FontSize);
+        globalHelper().applyBullet(2,3);
         Assert.assertEquals(newValue, variables().getBulletSize_P3_PageView());
         supportMethod().waitAndClick(globalStyles().overViewMode);
     }
@@ -577,8 +551,7 @@ public class GlobalStyles_ParagraphTest {
         String newValue = variables().getNumberBulletColor_P3_OverView();
         action.click(globalHelper().getColors("number color")).perform();
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().applyNumberBullet();
-        globalHelper().changeFontSize(tinyMCE().p3FontSize);
+        globalHelper().applyNumberBullet(2,3);
         String pageViewValue = variables().getNumberBulletColor_P3_PageView();
         Assert.assertEquals(newValue, pageViewValue);
     }
@@ -593,8 +566,7 @@ public class GlobalStyles_ParagraphTest {
         String newValue = variables().getNumberBulletColor_P3_OverView();
         action.click(globalHelper().getColors("number color")).perform();
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().applyNumberBullet();
-        globalHelper().changeFontSize(tinyMCE().p3FontSize);
+        globalHelper().applyNumberBullet(2,3);
         String pageViewValue = variables().getNumberBulletColor_P3_PageView();
         Assert.assertEquals(newValue, pageViewValue);
         Assert.assertEquals(pageViewValue, paletteColorValue);
@@ -608,13 +580,12 @@ public class GlobalStyles_ParagraphTest {
         String newValue = variables().getNumberBulletSize_P3_OverView();
         Assert.assertEquals(supportMethod().asInt(defaultValue)-3, supportMethod().asInt(newValue));
         supportMethod().waitAndClick(globalStyles().pageViewMode);
-        globalHelper().applyNumberBullet();
-        globalHelper().changeFontSize(tinyMCE().p3FontSize);
+        globalHelper().applyNumberBullet(2,3);
         Assert.assertEquals(newValue, variables().getNumberBulletSize_P3_PageView());
     }
 
     @After
-    public void beforeTests(){
+    public void afterTests(){
         supportMethod().waitAndClick(globalStyles().overViewMode);
     }
     @AfterClass
