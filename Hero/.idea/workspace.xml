@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="daac950a-f094-4f7b-af61-213e310a5c46" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="421014300">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="13" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="13" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="15" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="15" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="138" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="138" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Tests/GlobalStyles/GlobalStyles_ParagraphTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-221">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/exp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Init.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Components/EditorPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Components/GlobalStyles.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Components/LoginPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Components/Sidebar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="40" column="34" lean-forward="true" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2772#2773#0" expanded="true" />
+                <element signature="e#2864#2865#0" expanded="true" />
+                <element signature="e#2957#2958#0" expanded="true" />
+                <element signature="e#3045#3046#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Tests/TinyMCE/TinyMCE_ParagraphTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1088">
+              <caret line="76" column="12" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>changeFontSizeWith</find>
+      <find>BACK</find>
+      <find>4</find>
+      <find>5</find>
+      <find>fontsize</find>
+      <find>fontsize_</find>
+      <find>syste</find>
+      <find>waitAndClick(globalStyles().globalH</find>
+      <find>changLetterSpac</find>
+      <find>changeParagraphSpacing_H</find>
+      <find>system</find>
+      <find>close</find>
+      <find>globalP</find>
+      <find>changeCol</find>
+      <find>setDef</find>
+      <find>changeCapa</find>
+      <find>changeCapacity</find>
+      <find>globalHelper</find>
+      <find>//div[contains(@id,'rect-tinymce')]//span</find>
+      <find>setDefa</find>
+      <find>globalStyles_Paragraph_part</find>
+      <find>changeColorW</find>
+      <find>setDefaultC</find>
+      <find>changeFontS</find>
+      <find>large</find>
+      <find>selectedLargeFieldSInput</find>
+      <find>medium</find>
+      <find>insertLinkToUserPage</find>
+      <find>io.qameta.allure</find>
+      <find>groupId</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>selectedLargeFieldInput</replace>
+      <replace>Small</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/test/java/TinyMCE/TinyMCE_ParagraphTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Pages/TinyMCE.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Pages/GlobalStyles.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Pages/Factory.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Pages/Sidebar.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Components/LoginPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Components/TinyMCE.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestClass.java" />
+        <option value="$PROJECT_DIR$/src/test/java/InitTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests/GlobalStyles/GlobalStyles_Field_PageViewTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SupportClasses/FieldGroup.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SupportClasses/Fiels.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SupportClasses/Fields.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SimpleClass.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SupportClasses/Variables.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SupportClasses/GlobalHelper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SupportClasses/Constants.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Init.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests/GlobalStyles/StringUtilsJUnit3TestSuite.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests/GlobalStyles/TestSuite.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests/GlobalStyles/TestSuiteTwo.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SupportClasses/SupportMethod.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ReadEmail.java" />
+        <option value="$PROJECT_DIR$/src/main/java/MailReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GmailUtilities.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ReceiveEmail.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CheckingMails.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GetPOPMails.java" />
+        <option value="$PROJECT_DIR$/testng.xml" />
+        <option value="$PROJECT_DIR$/Testng1.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/exp.java" />
+        <option value="$PROJECT_DIR$/Testng.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/TestRunner.java" />
+        <option value="$PROJECT_DIR$/SuiteofSuites" />
+        <option value="$PROJECT_DIR$/src/test/resources/testng.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests/GlobalStyles/GlobalStyles_HeadlineTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests/GlobalStyles/GlobalStyles_ParagraphTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Components/EditorPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests/GlobalStyles/GlobalStyles_FieldsTest.java" />
+        <option value="$PROJECT_DIR$/TestSuite.xml" />
+        <option value="$PROJECT_DIR$/target/allure-results/environment.properties" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests/TinyMCE/TinyMCE_ParagraphTest.java" />
+        <option value="$PROJECT_DIR$/target/allure-results/fe76ad88-1b20-44d2-b089-837f072986fe-result.json" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests/TinyMCE/TinyMCE_HeadlineTest.java" />
+        <option value="$PROJECT_DIR$/target/allure-results/environment.xml" />
+        <option value="$PROJECT_DIR$/target/allure-results/history/history-trend.json" />
+        <option value="$PROJECT_DIR$/src/test/java/SupportClasses/TinymceHelper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Components/GlobalStyles.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Components/Sidebar.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="480" />
+    <option name="y" value="343" />
+    <option name="width" value="1304" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <autoscrollFromSource ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="heroic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="heroic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="heroic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="heroic" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="heroic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="heroic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="heroic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="heroic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="heroic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="heroic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="heroic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="heroic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="heroic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="heroic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="heroic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="heroic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="SupportClasses" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="heroic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="heroic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="heroic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="heroic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Tests" type="462c0819:PsiDirectoryNode" />
+              <item name="GlobalStyles" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535646612314" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Git/Heroic" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Pavel\IdeaProjects\Heroic\target\Temp" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="SupportClasses" />
+      <recent name="TinyMCE" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Pavel\IdeaProjects\Heroic\target\allure-results" />
+      <recent name="C:\Users\Pavel\IdeaProjects\Heroic\src\Temp" />
+      <recent name="C:\Users\Pavel\IdeaProjects\Heroic\src\Temp\history" />
+      <recent name="C:\Users\Pavel\IdeaProjects\Heroic\target" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.GlobalStyles_ParagraphTest.stageA1_changeFontFamily_P1">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GlobalStyles_ParagraphTest.stageA1_changeFontFamily_P1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="heroic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.GlobalStyles.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests.GlobalStyles" />
+      <option name="MAIN_CLASS_NAME" value="Tests.GlobalStyles.GlobalStyles_ParagraphTest" />
+      <option name="METHOD_NAME" value="stageA1_changeFontFamily_P1" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TinyMCE_HeadlineTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Heroic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.TinyMCE.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests.TinyMCE" />
+      <option name="MAIN_CLASS_NAME" value="Tests.TinyMCE.TinyMCE_HeadlineTest" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TinyMCE_ParagraphTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Heroic" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.TinyMCE.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests.TinyMCE" />
+      <option name="MAIN_CLASS_NAME" value="Tests.TinyMCE.TinyMCE_ParagraphTest" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.TinyMCE_HeadlineTest" />
+      <item itemvalue="JUnit.TinyMCE_ParagraphTest" />
+      <item itemvalue="JUnit.GlobalStyles_ParagraphTest.stageA1_changeFontFamily_P1" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.GlobalStyles_ParagraphTest.stageA1_changeFontFamily_P1" />
+        <item itemvalue="JUnit.TinyMCE_HeadlineTest" />
+        <item itemvalue="JUnit.TinyMCE_ParagraphTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Pavel\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="daac950a-f094-4f7b-af61-213e310a5c46" name="Default" comment="" />
+      <created>1528986229898</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1528986229898</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="TinyMCE_HeadlineTest - 2018.08.28 at 10h 25m 23s.xml">
+      <configuration name="TinyMCE_HeadlineTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TinyMCE_HeadlineTest - 2018.08.28 at 10h 26m 55s.xml">
+      <configuration name="TinyMCE_HeadlineTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TinyMCE_HeadlineTest_insertLink_boid_italic_underline_quote_Headline_part - 2018.08.28 at 10h 28m 07s.xml">
+      <configuration name="TinyMCE_HeadlineTest.insertLink_boid_italic_underline_quote_Headline_part" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TinyMCE_HeadlineTest_insertLink_boid_italic_underline_quote_Headline_part - 2018.08.28 at 10h 29m 30s.xml">
+      <configuration name="TinyMCE_HeadlineTest.insertLink_boid_italic_underline_quote_Headline_part" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TinyMCE_HeadlineTest_boid_Headline_part - 2018.08.28 at 10h 30m 45s.xml">
+      <configuration name="TinyMCE_HeadlineTest.boid_Headline_part" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TinyMCE_ParagraphTest - 2018.08.28 at 11h 14m 53s.xml">
+      <configuration name="TinyMCE_ParagraphTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TinyMCE_ParagraphTest - 2018.08.28 at 11h 19m 47s.xml">
+      <configuration name="TinyMCE_ParagraphTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TinyMCE_ParagraphTest - 2018.08.28 at 11h 44m 32s.xml">
+      <configuration name="TinyMCE_ParagraphTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TinyMCE_HeadlineTest - 2018.08.28 at 12h 06m 15s.xml">
+      <configuration name="TinyMCE_HeadlineTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TinyMCE_HeadlineTest - 2018.08.28 at 14h 47m 52s.xml">
+      <configuration name="TinyMCE_HeadlineTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1784" height="968" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Learn" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25580046" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32946146" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32946146" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39915523" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32946146" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32814372" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="Heroic" type="b2602c69:ProjectViewProjectNode" />
+        <item name="Heroic" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/GlobalStyles/GlobalStyles_HeadlineTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4860">
+          <caret line="300" column="9" selection-start-line="300" selection-start-column="9" selection-end-line="300" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Components/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/GlobalStyles/GlobalStyles_FieldsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/ClassLoader.java" />
+    <entry file="file://$PROJECT_DIR$/TestSuite.xml" />
+    <entry file="file://$PROJECT_DIR$/target/surefire-reports/testng-reports.js" />
+    <entry file="file://$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" />
+    <entry file="file://$PROJECT_DIR$/target/surefire-reports/testng-results.xml" />
+    <entry file="file://$PROJECT_DIR$/target/surefire-reports/bullet_point.png" />
+    <entry file="file://$PROJECT_DIR$/target/surefire-reports/collapseall.gif" />
+    <entry file="file://$PROJECT_DIR$/target/surefire-reports/emailable-report.html" />
+    <entry file="file://$PROJECT_DIR$/target/allure-results/environment.properties" />
+    <entry file="file://$PROJECT_DIR$/target/allure-results/GetPOPMails.class" />
+    <entry file="file://$PROJECT_DIR$/target/allure-results/SimpleClass.class" />
+    <entry file="file://$PROJECT_DIR$/target/allure-results/000dc0d0-c2e9-4785-9ba3-1b03638ae9d9-result.json" />
+    <entry file="file://$PROJECT_DIR$/target/Temp/db8d62d0-6791-4729-83d6-bc4063008eb4-result.json" />
+    <entry file="file://$PROJECT_DIR$/target/Temp/d842d4cf-4f9a-4562-9823-cacbb5c1634b-result.json" />
+    <entry file="file://$PROJECT_DIR$/target/Temp/6fd4548c-26d1-48ef-9fb3-1cff86d477d3-result.json" />
+    <entry file="file://$PROJECT_DIR$/target/Temp/fe76ad88-1b20-44d2-b089-837f072986fe-result.json" />
+    <entry file="file://$PROJECT_DIR$/target/allure-results/9d1af0db-bd86-43fd-98dd-1d1809b9dfe4-result.json" />
+    <entry file="file://$PROJECT_DIR$/target/Temp/0c72c970-f9ca-4ce8-a774-cd544d2f6035-result.json" />
+    <entry file="file://$PROJECT_DIR$/target/allure-results/0c72c970-f9ca-4ce8-a774-cd544d2f6035-result.json" />
+    <entry file="file://$PROJECT_DIR$/target/site/allure-maven-plugin/history/history.json" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/Components/TinyMCE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="121" column="55" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GetPOPMails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="78" column="58" lean-forward="true" selection-start-line="78" selection-start-column="58" selection-end-line="78" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/allure-results/4fca5af9-095b-439c-b6f3-9a2a7e55fc7a-result.json" />
+    <entry file="file://$PROJECT_DIR$/target/allure-results/f5f72438-c062-45fc-9fe9-520898718c3a-result.json" />
+    <entry file="file://$PROJECT_DIR$/target/allure-results/environment.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Temp/history/history/history.json" />
+    <entry file="file://$PROJECT_DIR$/src/Temp/history/history-trend.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/allure-results/0e2d6deb-47f3-43a8-b049-f2df763bd893-result.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Temp/history/history.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20540">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-support/3.14.0/selenium-support-3.14.0.jar!/org/openqa/selenium/support/ui/WebDriverWait.class" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/TinyMCE/TinyMCE_HeadlineTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/allure-results/history/history-trend.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/site/allure-maven-plugin/history/history-trend.json" />
+    <entry file="file://$PROJECT_DIR$/target/allure-results/history/history.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/TinymceHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="17" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/SupportMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/GlobalHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="22" column="43" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="43" />
+          <folding>
+            <element signature="e#1320#1407#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/Variables.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="51" column="71" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/exp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Init.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Components/EditorPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Components/GlobalStyles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Components/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/TinyMCE/TinyMCE_ParagraphTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="76" column="12" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SupportClasses/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="138" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/GlobalStyles/GlobalStyles_ParagraphTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Components/Sidebar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="40" column="34" lean-forward="true" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2772#2773#0" expanded="true" />
+            <element signature="e#2864#2865#0" expanded="true" />
+            <element signature="e#2957#2958#0" expanded="true" />
+            <element signature="e#3045#3046#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Detection</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Heroic</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: cglib:cglib-nodep:2.2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
