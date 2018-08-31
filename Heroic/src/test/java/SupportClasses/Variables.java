@@ -74,6 +74,8 @@ public class Variables {
     public static String pageView_P2FontFamilyAssert = "//div[contains(@class,'fontfamily-Abril-Fatface-P2')]";
     public static String pageView_P3FontFamilyAssert = "//div[contains(@class,'fontfamily-Abril-Fatface-P3')]";
 
+    public static String largeField_PageView = ".field-size-large";
+
     public String getParagraphFontSize_PageView(int paragraphType){
         return  webDriver.findElement(By.xpath("//div[contains(@class,'text-element-p"+paragraphType+"')]//div[contains(@class,'font-size-element-style')]")).getCssValue("font-size");
     }

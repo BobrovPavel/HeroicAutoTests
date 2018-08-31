@@ -2,6 +2,14 @@ import java.util.ArrayList;
 
 public class SimpleClass {
     public static void main(String[] args) {
-        System.out.println(".editorSectionsWripper .headline-h"+1+".dark-color h"+1);
+
+        String element = ".field-size-large";
+        String state = "focus";
+        String cssValue = "background-color";
+
+        System.out.println("return window.getComputedStyle(document.querySelector('"+element+"'),':"+state+"').getPropertyValue('"+cssValue+"')");
+
     }
+
 }
+

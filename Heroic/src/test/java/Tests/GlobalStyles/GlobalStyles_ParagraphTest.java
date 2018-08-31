@@ -4,14 +4,14 @@ import Components.*;
 import SupportClasses.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
-import org.junit.runners.MethodSorters;
+//import org.junit.runners.MethodSorters;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+//@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class GlobalStyles_ParagraphTest {
     private static WebDriver webDriver;
     private static WebDriverWait wait;

@@ -11,14 +11,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GlobalHelper {
-    private WebDriver webDriver;
-    private Actions action;
-    private WebDriverWait wait;
+    private static WebDriver webDriver;
+    private static Actions action;
+    private static WebDriverWait wait;
+    private static JavascriptExecutor js;
 
     public GlobalHelper (WebDriver driver){
         webDriver = driver;
         action = new Actions(webDriver);
         wait = new WebDriverWait(webDriver,10,300);
+        js = (JavascriptExecutor)webDriver;
         PageFactory.initElements(webDriver, this);
     }
     private LoginPage loginPage(){
@@ -45,6 +47,29 @@ public class GlobalHelper {
     private Variables variables(){;
         return new Variables(webDriver);
     }
+
+
+    public static String getElementCss (String element, String state, String cssValue){
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('"+element+"'),':"+state+"').getPropertyValue('"+cssValue+"')");
+    }
+    public static String getLargeFieldFocusCss (String cssValue){
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.field-size-large'),':focus').getPropertyValue('"+cssValue+"')");
+    }
+    public static String getMediumFieldFocusCss( String cssValue){
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.field-size-medium'),':focus').getPropertyValue('"+cssValue+"')");
+    }
+    public static String getSmallFieldFocusCss( String cssValue){
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.field-size-small'),':focus').getPropertyValue('"+cssValue+"')");
+    }
+
+
+
+
+
+
+
+
+
 
     public List<WebElement> getSliderRoles(){
         return webDriver.findElements(By.xpath("//div[@class='accordion-panel__inner accordion-panel__inner_open']//div[@role='slider']"));
@@ -148,6 +173,7 @@ public class GlobalHelper {
             wait.until(ExpectedConditions.elementToBeClickable(globalStyles().colorInput)).click();
             globalStyles().colorInput.sendKeys(Keys.chord(Keys.CONTROL,"a"));
             globalStyles().colorInput.sendKeys("#00000");
+            wait.until(ExpectedConditions.attributeToBe(globalStyles().colorInput, "value", Constants.DEFAULT_INPUT_VALUE));
             Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -233,10 +259,11 @@ public class GlobalHelper {
         Actions action = new Actions(webDriver);
         try {
             Thread.sleep(500);
+            action.moveToElement(tinyMCE().colorpicker,-30, 60).click().perform();
+            Thread.sleep(500);
         }catch (InterruptedException ignored){
 
         }
-        action.moveToElement(tinyMCE().colorpicker,-30, 60).click().perform();
     }
 
     public void changeColorWithPalette(){
@@ -335,8 +362,6 @@ public class GlobalHelper {
 
 
     public void createElements (String element, int quantity){
-        WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
-        JavascriptExecutor js = (JavascriptExecutor)webDriver;
         try {
             js.executeScript("document.querySelector('.button-add-element').click()");
             wait.until(ExpectedConditions.elementToBeClickable(editorPage().blankCanvas)).click();

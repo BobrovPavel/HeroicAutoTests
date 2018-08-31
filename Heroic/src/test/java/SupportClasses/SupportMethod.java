@@ -13,10 +13,11 @@ import java.util.List;
 
 public class SupportMethod {
 
-    private WebDriver webDriver;
-    private WebDriverWait wait;
-    private Actions action;
-    private JavascriptExecutor js;
+    private static WebDriver webDriver;
+    private static WebDriverWait wait;
+    private static Actions action;
+    private static JavascriptExecutor js;
+    private static StringBuilder builder;
 
     public SupportMethod(WebDriver driver){
         webDriver = driver;
@@ -187,7 +188,8 @@ public class SupportMethod {
         wait.until(ExpectedConditions.elementToBeClickable(editorPage().fullWidthSection)).click();
         editorPage().threeColumnRowClick();
         for(int i = 0; i < 3; i++){
-            wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+            wait.until(ExpectedConditions.elementToBeClickable(editorPage().elementHeader));
+            action.moveToElement(element).click().perform();
         }
     }
     public void createThreeColumnRowAndAddElements_anySection(WebElement element, int index) throws InterruptedException {
@@ -200,5 +202,45 @@ public class SupportMethod {
 //            wait.until(ExpectedConditions.elementToBeClickable(element));
             action.moveToElement(element).click().perform();
         }
+    }
+    public void goToLargeFieldSettings(){
+        waitAndClick(sidebar().globalStyles);
+        waitAndClick(sidebar().fieldStyles);
+        waitAndClick(sidebar().largeFieldsSettings);
+    }
+    public void goToMediumFieldSettings(){
+        waitAndClick(sidebar().globalStyles);
+        waitAndClick(sidebar().fieldStyles);
+        waitAndClick(sidebar().mediumFieldsSettings);
+    }
+    public void goToSmallFieldSettings(){
+        waitAndClick(sidebar().globalStyles);
+        waitAndClick(sidebar().fieldStyles);
+        waitAndClick(sidebar().smallFieldsSettings);
+    }
+    public void focus(WebElement element){
+        waitAndClick(element);
+    }
+
+    public String toRGBA(String value){
+        int first = value.indexOf("b");
+        int last = value.indexOf(")");
+        builder = new StringBuilder(value);
+        builder.insert(first+1,"a").insert(last+1, ", 1");
+        return builder.toString();
+    }
+    public String toRGBA(String value, int alpha){
+        int first = value.indexOf("b");
+        int last = value.indexOf(")");
+        builder = new StringBuilder(value);
+        builder.insert(first+1,"a").insert(last+1, ", " +alpha);
+        return builder.toString();
+    }
+    public static void removeItemFromLocalStorage(String item) {
+        js.executeScript(String.format(
+                "window.localStorage.removeItem('%s');", item));
+    }
+    public static void clearLocalStorage() {
+        js.executeScript(String.format("window.localStorage.clear();"));
     }
 }

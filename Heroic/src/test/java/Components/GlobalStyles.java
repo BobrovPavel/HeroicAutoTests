@@ -1,6 +1,5 @@
 package Components;
 
-import com.sun.org.apache.regexp.internal.RE;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -147,6 +146,7 @@ public class GlobalStyles {
     @FindBy (xpath = "//div[contains(@class,'accordion-panel__inner_open')]//button[contains(text(),'Edit Hover')]")
     public WebElement editHover;
 
+
     @FindBy (xpath = "//h4[contains(text(),'Large Field')]/parent::*//span[contains(text(),'Normal')]/parent::*")
     public WebElement normalLargeField;
     @FindBy (xpath = "//h4[contains(text(),'Large Field')]/parent::*//span[contains(text(),'Normal')]/parent::*//input")
@@ -154,7 +154,45 @@ public class GlobalStyles {
     @FindBy (xpath = "//h4[contains(text(),'Large Field')]/parent::*//span[contains(text(),'Selected')]/parent::*")
     public WebElement selectedLargeField;
     @FindBy (xpath = "//h4[contains(text(),'Large Field')]/parent::*//span[contains(text(),'Selected')]/parent::*//input")
-    public WebElement selectedLargeFieldSInput;
+    public WebElement selectedLargeFieldInput;
+    @FindBy (xpath = "//h4[contains(text(),'Medium Field')]/parent::*//span[contains(text(),'Normal')]/parent::*")
+    public WebElement normalMediumField;
+    @FindBy (xpath = "//h4[contains(text(),'Medium Field')]/parent::*//span[contains(text(),'Normal')]/parent::*//input")
+    public WebElement normalMediumFieldInput;
+    @FindBy (xpath = "//h4[contains(text(),'Medium Field')]/parent::*//span[contains(text(),'Selected')]/parent::*")
+    public WebElement selectedMediumField;
+    @FindBy (xpath = "//h4[contains(text(),'Medium Field')]/parent::*//span[contains(text(),'Selected')]/parent::*//input")
+    public WebElement selectedMediumFieldInput;
+    @FindBy (xpath = "//h4[contains(text(),'Small Field')]/parent::*//span[contains(text(),'Normal')]/parent::*")
+    public WebElement normalSmallField;
+    @FindBy (xpath = "//h4[contains(text(),'Small Field')]/parent::*//span[contains(text(),'Normal')]/parent::*//input")
+    public WebElement normalSmallFieldInput;
+    @FindBy (xpath = "//h4[contains(text(),'Small Field')]/parent::*//span[contains(text(),'Selected')]/parent::*")
+    public WebElement selectedSmallField;
+    @FindBy (xpath = "//h4[contains(text(),'Small Field')]/parent::*//span[contains(text(),'Selected')]/parent::*//input")
+    public WebElement selectedSmallFieldInput;
+
+
+
+    @FindBy (css = ".field-size-large")
+    public WebElement largeField;
+    @FindBy (css = ".field-size-medium")
+    public WebElement mediumField;
+    @FindBy (css = ".field-size-small")
+    public WebElement smallField;
+
+    @FindBy (xpath = "//div[contains(@class,'tmp_input')]//div[contains(@class,'input-wrapper-i1')]")
+    public WebElement largeField_PageView;
+    @FindBy (xpath = "//input[contains(@class,'input-i1')]")
+    public WebElement largeFieldInput_PageView;
+    @FindBy (xpath = "//div[contains(@class,'tmp_input')]//div[contains(@class,'input-wrapper-i2')]")
+    public WebElement mediumField_PageView;
+    @FindBy (xpath = "//input[contains(@class,'input-i2')]")
+    public WebElement mediumFieldInput_PageView;
+    @FindBy (xpath = "//div[contains(@class,'tmp_input')]//div[contains(@class,'input-wrapper-i3')]")
+    public WebElement smallField_PageView;
+    @FindBy (xpath = "//input[contains(@class,'input-i3')]")
+    public WebElement smallFieldInput_PageView;
 
     public List<WebElement> getInputElements(){
         return webDriver.findElements(By.xpath("//div[contains(@class,'de-input-block')]"));

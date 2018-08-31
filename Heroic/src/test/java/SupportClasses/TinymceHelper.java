@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TinymceHelper {
-    WebDriver webDriver;
+    private WebDriver webDriver;
 
 
     public TinymceHelper(WebDriver driver){

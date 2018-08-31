@@ -4,7 +4,7 @@ import Components.*;
 import SupportClasses.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
-import org.junit.runners.MethodSorters;
+//import org.junit.runners.MethodSorters;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+//@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class GlobalStyles_HeadlineTest {
 
     private static WebDriver webDriver;
@@ -56,7 +56,7 @@ public class GlobalStyles_HeadlineTest {
         webDriver.manage().window().maximize();
         wait = new WebDriverWait(webDriver, 45, 300);
         action = new Actions(webDriver);
-        webDriver.get(constants().QA_GLOBALSTYLES_HEADLINE);
+        webDriver.get(Constants.QA_GLOBALSTYLES_HEADLINE);
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("logger")));
         supportMethod().createElements("header",6);
         supportMethod().changeFontSize(variables().getHeadlineFontSize());
