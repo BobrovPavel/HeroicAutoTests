@@ -62,6 +62,18 @@ public class Variables {
     public static String fontFamilyAssert1 = "//span[@class='fontfamily-BioRhyme-Regular']";
     public static String startColorValue = "color: rgb(0, 0, 0);";
     public static String colorPalette = "//div[@class='color-picker-item__palette']//i";
+    public static String sizeDropDown = "//div[@class ='sidebarElement sidebarElement__select']//div[@class ='select-panel-list__header-button']";
+    public static String elementsColumn = "//div[contains(@class,'column-col')]//div[contains(@class,'element-filter')]";
+
+    public static String leftAlign = "//div[contains(@id,'rect-tinymce')]//*[@class='mce-left-aligment']";
+    public static String centerAlign = "//div[contains(@id,'rect-tinymce')]//*[@class='mce-center-aligment']";
+    public static String rightAlign = "//div[contains(@id,'rect-tinymce')]//*[@class='mce-right-aligment']";
+    public static String fullAlign  = "//div[contains(@id,'rect-tinymce')]//*[@class='mce-full-aligment']";
+
+    public static String leftAlignActive = "//div[@class='tinymce-item-text-align__icon active ']//i[contains(@class,'mce-ico mce-i-alignleft')]";
+    public static String centerAlignActive = "//div[@class='tinymce-item-text-align__icon active ']//i[contains(@class,'mce-ico mce-i-aligncenter')]";
+    public static String rightAlignActive = "//div[@class='tinymce-item-text-align__icon active ']//i[contains(@class,'mce-ico mce-i-alignright')]";
+    public static String fullAlignActive = "//div[@class='tinymce-item-text-align__icon active ']//i[contains(@class,'mce-ico mce-i-alignjusti')]";
 
     public static String pageView_H1fontFamilyAssert = "//div[contains(@class,'fontfamily-Abril-Fatface-H1')]";
     public static String pageView_H2fontFamilyAssert = "//div[contains(@class,'fontfamily-Abril-Fatface-H2')]";
@@ -83,7 +95,7 @@ public class Variables {
         return  webDriver.findElement(By.xpath("//div[contains(@class,'text-element-p"+paragraphType+"')]//div[@class='line-height-element-style']")).getCssValue("font-size");
     }
     public String getParagraphBulletSpacing_PageView(int paragraphType){
-        return  webDriver.findElement(By.xpath("//div[contains(@class,'text-element-p"+paragraphType+"')]//ul//li")).getCssValue("padding-bottom");
+        return  webDriver.findElement(By.xpath("//div[contains(@class,'text-element-p"+paragraphType+"')]//ul")).getCssValue("padding-bottom");
     }
     public String getParagraphLetterSpacing_PageView(int paragraphType){
         return webDriver.findElement(By.xpath("//div[contains(@class,'text-element-p"+paragraphType+"')]")).getCssValue("letter-spacing");

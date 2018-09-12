@@ -48,10 +48,12 @@ public class GlobalHelper {
         return new Variables(webDriver);
     }
 
-
     public static String getElementCss (String element, String state, String cssValue){
         return (String) js.executeScript("return window.getComputedStyle(document.querySelector('"+element+"'),':"+state+"').getPropertyValue('"+cssValue+"')");
     }
+
+
+
     public static String getLargeFieldFocusCss (String cssValue){
         return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.field-size-large'),':focus').getPropertyValue('"+cssValue+"')");
     }
@@ -60,6 +62,50 @@ public class GlobalHelper {
     }
     public static String getSmallFieldFocusCss( String cssValue){
         return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.field-size-small'),':focus').getPropertyValue('"+cssValue+"')");
+    }
+
+
+    public static String getLargeTextAreaFocusCss (String cssValue){
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.textarea-size-large'),':focus').getPropertyValue('"+cssValue+"')");
+    }
+    public static String getMediumTextAreaFocusCss( String cssValue){
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.textarea-size-medium'),':focus').getPropertyValue('"+cssValue+"')");
+    }
+    public static String getSmallTextAreaFocusCss( String cssValue){
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.textarea-size-small'),':focus').getPropertyValue('"+cssValue+"')");
+    }
+
+
+    public static String getLargeDropListFocusCss (String cssValue){
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.selectElement__inner .field-size-large'),':focus').getPropertyValue('"+cssValue+"')");
+    }
+    public static String getMediumDropListFocusCss( String cssValue){
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.selectElement__inner .field-size-medium'),':focus').getPropertyValue('"+cssValue+"')");
+    }
+    public static String getSmallDropListFocusCss( String cssValue){
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.selectElement__inner .field-size-small'),':focus').getPropertyValue('"+cssValue+"')");
+    }
+
+
+    public static String getLargeCheckBoxFocusCss (String cssValue){
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.field-size-large.checkboxElementDot'),':focus').getPropertyValue('"+cssValue+"')");
+    }
+    public static String getMediumCheckBoxFocusCss( String cssValue){
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.field-size-medium.checkboxElementDot'),':focus').getPropertyValue('"+cssValue+"')");
+    }
+    public static String getSmallCheckBoxFocusCss( String cssValue){
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.field-size-small.checkboxElementDot'),':focus').getPropertyValue('"+cssValue+"')");
+    }
+
+
+    public static String getLargeRadioBoxFocusCss (String cssValue){
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.radioElementDot.field-size-large'),':focus').getPropertyValue('"+cssValue+"')");
+    }
+    public static String getMediumRadioBoxFocusCss( String cssValue){
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.radioElementDot.field-size-medium'),':focus').getPropertyValue('"+cssValue+"')");
+    }
+    public static String getSmallRadioBoxFocusCss( String cssValue){
+        return (String) js.executeScript("return window.getComputedStyle(document.querySelector('.radioElementDot.field-size-small'),':focus').getPropertyValue('"+cssValue+"')");
     }
 
 
@@ -88,17 +134,14 @@ public class GlobalHelper {
         List<WebElement> colors = webDriver.findElements(By.xpath("//div[contains(@class,'accordion-panel__inner_open')]//span[@class='select-color-section__color']"));
         WebElement element = null;
         switch (value.toLowerCase()){
-            case "light color":
+            case "dark color":
                 element = colors.get(0);
                 break;
-            case "dark color":
+            case "bullet color":
                 element = colors.get(1);
                 break;
-            case "bullet color":
-                element = colors.get(2);
-                break;
             case "number color":
-                element = colors.get(3);
+                element = colors.get(2);
                 break;
         }
         return element;
@@ -172,7 +215,8 @@ public class GlobalHelper {
             action.moveToElement(globalStyles().colorInput,0,-100).perform();
             wait.until(ExpectedConditions.elementToBeClickable(globalStyles().colorInput)).click();
             globalStyles().colorInput.sendKeys(Keys.chord(Keys.CONTROL,"a"));
-            globalStyles().colorInput.sendKeys("#00000");
+            globalStyles().colorInput.sendKeys("#000000");
+            supportMethod().waitAndClick(globalStyles().colorInput);
             wait.until(ExpectedConditions.attributeToBe(globalStyles().colorInput, "value", Constants.DEFAULT_INPUT_VALUE));
             Thread.sleep(500);
         } catch (InterruptedException e) {
@@ -193,13 +237,13 @@ public class GlobalHelper {
     public String getHeadlineGlobalValue(int headlineType, String value){
         String result = null;
         switch (value.toLowerCase()){
-            case "font family":
+            case "font-family":
                 result = webDriver.findElement(By.xpath("//h"+headlineType+"[@class='headline-item']")).getCssValue("font-family");
                 break;
-            case "font size":
+            case "font-size":
                 result = webDriver.findElement(By.xpath("//h"+headlineType+"[@class='headline-item']")).getCssValue("font-size");
                 break;
-            case "line height":
+            case "line-height":
                 result = webDriver.findElement(By.cssSelector(".editorSectionsWripper .handle-size-headline-h"+headlineType+" .line-height-element-style:not(.not-global-element)")).getCssValue("font-size");
                 break;
             case "letter spacing":
@@ -319,6 +363,16 @@ public class GlobalHelper {
     public void setSmall_fromDropDown(){
         supportMethod().waitAndClick(sidebar().sizeDropDown);
         supportMethod().waitAndClick(sidebar().smallSize);
+    }
+
+    public List<WebElement> getInputElements(){
+        List<WebElement> list = new ArrayList<>();
+        list.add(editorPage().elementInput);
+        list.add(editorPage().elementTextArea);
+        list.add(editorPage().elementDroplist);
+        list.add(editorPage().elementCheckbox);
+        list.add(editorPage().elementRadiobox);
+        return list;
     }
 
     public void setElementsType(){

@@ -3,15 +3,17 @@ package Tests.GlobalStyles;
 import Components.*;
 import SupportClasses.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import jdk.internal.org.objectweb.asm.commons.Method;
 import org.junit.*;
 //import org.junit.runners.MethodSorters;
+import org.junit.runners.MethodSorters;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-//@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class GlobalStyles_ParagraphTest {
     private static WebDriver webDriver;
     private static WebDriverWait wait;
@@ -57,7 +59,7 @@ public class GlobalStyles_ParagraphTest {
         wait = new WebDriverWait(webDriver, 45, 300);
         action = new Actions(webDriver);
 //        webDriver.get("https://stg.heroicnow.com/?token=d84dbc4913dc05e5071342c3bee4fb6e5ffe443e");
-        webDriver.get("https://app.heroicnow.com/?token=934bcf42fe93b2bef4da86bbcecd98d854231e8b");
+        webDriver.get(Constants.QA_GLOBALSTYLES_PARAGRAPH);
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("logger")));
         supportMethod().createElements("paragraph",3);
         supportMethod().enterText();
@@ -84,6 +86,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageA2_changeFontSize_P1(){
+        supportMethod().waitAndClick(globalStyles().globalP1);
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(0), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p1Item,"font-size","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(0).getAttribute("value");
@@ -95,6 +98,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageA3_changeLineHeight_P1(){
+        supportMethod().waitAndClick(globalStyles().globalP1);
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(1), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p1LineHeight, "font-size","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(1).getAttribute("value");
@@ -106,6 +110,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageA4_changLetterSpacing_P1(){
+        supportMethod().waitAndClick(globalStyles().globalP1);
         Actions action = new Actions(webDriver);
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(2), "1.5");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p1Item, "letter-spacing","1.5px"));
@@ -118,6 +123,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageA5_changeParagraphSpacing_P1(){
+        supportMethod().waitAndClick(globalStyles().globalP1);
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(3), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p1Item,"padding-bottom","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(3).getAttribute("value");
@@ -129,9 +135,11 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageA6_changeFontColor_P1() throws InterruptedException {
+        supportMethod().waitAndClick(globalStyles().globalP1);
         supportMethod().waitAndClick(globalHelper().getColors("dark color"));
         globalHelper().setDefaultColorValue();
-        wait.until(ExpectedConditions.attributeToBe(globalStyles().darkColor_p1,"color", constants().DEFAULT_COLOR_VALUE));
+        System.out.println(globalStyles().darkColor_p1.getCssValue("color"));
+        wait.until(ExpectedConditions.attributeToBe(globalStyles().darkColor_p1,"color", Constants.DEFAULT_COLOR_VALUE));
         globalHelper().changeColorWithColorPicker();
         Thread.sleep(500);
         String newValue = globalHelper().getParagraphGlobalValue(1, "dark color");
@@ -142,6 +150,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageA7_changeBulletSpacing_P1(){
+        supportMethod().waitAndClick(globalStyles().globalP1);
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(4), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p1bullet,"padding-bottom","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(4).getAttribute("value");
@@ -155,6 +164,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageA8_changeBulletColor_P1() throws InterruptedException {
+        supportMethod().waitAndClick(globalStyles().globalP1);
         supportMethod().waitAndClick(globalHelper().getColors("bullet color"));
         globalHelper().setDefaultColorValue();
         Thread.sleep(500);
@@ -169,6 +179,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageA9_changeBulletColorWithPalette_P1() throws InterruptedException {
+        supportMethod().waitAndClick(globalStyles().globalP1);
         supportMethod().waitAndClick(globalHelper().getColors("bullet color"));
         globalHelper().setDefaultColorValue();
         Thread.sleep(500);
@@ -185,6 +196,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageAB1_changeBulletSize_P1(){
+        supportMethod().waitAndClick(globalStyles().globalP1);
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(5), "20");
         String defaultValue = variables().getBulletSize_P1_OverView();
         action.clickAndHold(globalHelper().getSliderRoles().get(5)).moveByOffset(-19,0).release().perform();
@@ -196,6 +208,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageAB2_changeNumberBulletColor_P1() throws InterruptedException {
+        supportMethod().waitAndClick(globalStyles().globalP1);
         supportMethod().waitAndClick(globalHelper().getColors("number color"));
         action.moveToElement(sidebar().sidebarBottom).perform();
         globalHelper().setDefaultColorValue();
@@ -211,6 +224,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageAB3_changeNumberBulletColorWithPalette_P2() throws InterruptedException {
+        supportMethod().waitAndClick(globalStyles().globalP1);
         supportMethod().waitAndClick(globalHelper().getColors("number color"));
         globalHelper().setDefaultColorValue();
         Thread.sleep(500);
@@ -227,6 +241,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageAB4_changeNumberBulletSize_P1(){
+        supportMethod().waitAndClick(globalStyles().globalP1);
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(6), "20");
         String defaultValue = variables().getNumberBulletSize_P1_OverView();
         action.clickAndHold(globalHelper().getSliderRoles().get(6)).moveByOffset(-20,0).release().perform();
@@ -255,6 +270,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageB2_changeFontSize_P2(){
+        supportMethod().waitAndClick(globalStyles().globalP2);
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(0), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p2Item,"font-size","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(0).getAttribute("value");
@@ -267,6 +283,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageB3_changeLineHeight_P2(){
+        supportMethod().waitAndClick(globalStyles().globalP2);
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(1), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p2LineHeight, "font-size","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(1).getAttribute("value");
@@ -279,6 +296,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageB4_changLetterSpacing_P2(){
+        supportMethod().waitAndClick(globalStyles().globalP2);
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(2), "1.5");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p2Item, "letter-spacing","1.5px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(2).getAttribute("value");
@@ -290,6 +308,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageB5_changeParagraphSpacing_P2(){
+        supportMethod().waitAndClick(globalStyles().globalP2);
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(3), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p2Item,"padding-bottom","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(3).getAttribute("value");
@@ -301,9 +320,10 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageB6_changeFontColor_P2() throws InterruptedException {
+        supportMethod().waitAndClick(globalStyles().globalP2);
         supportMethod().waitAndClick(globalHelper().getColors("dark color"));
         globalHelper().setDefaultColorValue();
-        wait.until(ExpectedConditions.attributeToBe(globalStyles().darkColor_p2,"color",constants().DEFAULT_COLOR_VALUE));
+        wait.until(ExpectedConditions.attributeToBe(globalStyles().darkColor_p2,"color", Constants.DEFAULT_COLOR_VALUE));
         globalHelper().changeColorWithColorPicker();
         Thread.sleep(500);
         String newValue = globalHelper().getParagraphGlobalValue(2, "dark color");
@@ -314,6 +334,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageB7_changeBulletSpacing_P2(){
+        supportMethod().waitAndClick(globalStyles().globalP2);
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(4), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p2bullet,"padding-bottom","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(4).getAttribute("value");
@@ -327,6 +348,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageB8_changeBulletColor_P2() throws InterruptedException {
+        supportMethod().waitAndClick(globalStyles().globalP2);
         supportMethod().waitAndClick(globalHelper().getColors("bullet color"));
         globalHelper().setDefaultColorValue();
         Thread.sleep(500);
@@ -341,6 +363,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageB9_changeBulletColorWithPalette_P2() throws InterruptedException {
+        supportMethod().waitAndClick(globalStyles().globalP2);
         supportMethod().waitAndClick(globalHelper().getColors("bullet color"));
         globalHelper().setDefaultColorValue();
         Thread.sleep(500);
@@ -357,6 +380,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageBC1_changeBulletSize_P2(){
+        supportMethod().waitAndClick(globalStyles().globalP2);
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(5), "20");
         String defaultValue = variables().getBulletSize_P2_OverView();
         action.clickAndHold(globalHelper().getSliderRoles().get(5)).moveByOffset(-20,0).release().perform();
@@ -368,6 +392,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageBC2_changeNumberBulletColor_P1() throws InterruptedException {
+        supportMethod().waitAndClick(globalStyles().globalP2);
         supportMethod().waitAndClick(globalHelper().getColors("number color"));
         action.moveToElement(globalStyles().globalP3).perform();
         globalHelper().setDefaultColorValue();
@@ -383,6 +408,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageBC3_changeNumberBulletColorWithPalette_P2() throws InterruptedException {
+        supportMethod().waitAndClick(globalStyles().globalP2);
         supportMethod().waitAndClick(globalHelper().getColors("number color"));
         globalHelper().setDefaultColorValue();
         Thread.sleep(500);
@@ -399,6 +425,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageBC4_changeNumberBulletSize_P2(){
+        supportMethod().waitAndClick(globalStyles().globalP2);
         action.moveToElement(globalHelper().getInputGlobalStyles().get(6)).perform();
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(6), "20");
         String defaultValue = variables().getNumberBulletSize_P2_OverView();
@@ -428,6 +455,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageC2_changeFontSize_P3(){
+        supportMethod().waitAndClick(globalStyles().globalP3);
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(0), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p3Item,"font-size","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(0).getAttribute("value");
@@ -440,6 +468,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageC3_changeLineHeight_P3(){
+        supportMethod().waitAndClick(globalStyles().globalP3);
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(1), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p3LineHeight, "font-size","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(1).getAttribute("value");
@@ -452,6 +481,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageC4_changLetterSpacing_P3(){
+        supportMethod().waitAndClick(globalStyles().globalP3);
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(2), "1.5");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p3Item, "letter-spacing","1.5px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(2).getAttribute("value");
@@ -463,6 +493,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageC5_changeParagraphSpacing_P3(){
+        supportMethod().waitAndClick(globalStyles().globalP3);
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(3), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p3Item,"padding-bottom","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(3).getAttribute("value");
@@ -474,9 +505,10 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageC6_changeFontColor_P3() throws InterruptedException {
+        supportMethod().waitAndClick(globalStyles().globalP3);
         supportMethod().waitAndClick(globalHelper().getColors("dark color"));
         globalHelper().setDefaultColorValue();
-        wait.until(ExpectedConditions.attributeToBe(globalStyles().darkColor_p3,"color",constants().DEFAULT_COLOR_VALUE));
+        wait.until(ExpectedConditions.attributeToBe(globalStyles().darkColor_p3,"color", Constants.DEFAULT_COLOR_VALUE));
         globalHelper().changeColorWithColorPicker();
         Thread.sleep(500);
         String newValue = globalHelper().getParagraphGlobalValue(3, "dark color");
@@ -487,6 +519,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageC7_changeBulletSpacing_P3(){
+        supportMethod().waitAndClick(globalStyles().globalP3);
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(4), "50");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().p3bullet,"padding-bottom","50px"));
         String defaultValue = globalHelper().getInputGlobalStyles().get(4).getAttribute("value");
@@ -500,6 +533,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageC8_changeBulletColor_P3() throws InterruptedException {
+        supportMethod().waitAndClick(globalStyles().globalP3);
         supportMethod().waitAndClick(globalHelper().getColors("bullet color"));
         globalHelper().setDefaultColorValue();
         Thread.sleep(500);
@@ -514,6 +548,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageC9_changeBulletColorWithPalette_P3() throws InterruptedException {
+        supportMethod().waitAndClick(globalStyles().globalP3);
         supportMethod().waitAndClick(globalHelper().getColors("bullet color"));
         globalHelper().setDefaultColorValue();
         Thread.sleep(500);
@@ -530,6 +565,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageCD1_changeBulletSize_P3(){
+        supportMethod().waitAndClick(globalStyles().globalP3);
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(5), "20");
         String defaultValue = variables().getBulletSize_P3_OverView();
         action.clickAndHold(globalHelper().getSliderRoles().get(5)).moveByOffset(-20,0).release().perform();
@@ -542,6 +578,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageCD2_changeNumberBulletColor_P1() throws InterruptedException {
+        supportMethod().waitAndClick(globalStyles().globalP3);
         supportMethod().waitAndClick(globalHelper().getColors("number color"));
         action.moveToElement(sidebar().sidebarBottom).perform();
         globalHelper().setDefaultColorValue();
@@ -557,6 +594,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageCD3_changeNumberBulletColorWithPalette_P3() throws InterruptedException {
+        supportMethod().waitAndClick(globalStyles().globalP3);
         supportMethod().waitAndClick(globalHelper().getColors("number color"));
         globalHelper().setDefaultColorValue();
         Thread.sleep(500);
@@ -573,6 +611,7 @@ public class GlobalStyles_ParagraphTest {
     }
     @Test
     public void stageCD4_changeNumberBulletSize_P3(){
+        supportMethod().waitAndClick(globalStyles().globalP3);
         action.moveToElement(globalHelper().getInputGlobalStyles().get(6)).perform();
         globalHelper().setDefaultValue(globalHelper().getInputGlobalStyles().get(6), "20");
         String defaultValue = variables().getNumberBulletSize_P3_OverView();
@@ -586,6 +625,7 @@ public class GlobalStyles_ParagraphTest {
 
     @After
     public void afterTests(){
+        supportMethod().gotToParagraphSettings();
         supportMethod().waitAndClick(globalStyles().overViewMode);
     }
     @AfterClass

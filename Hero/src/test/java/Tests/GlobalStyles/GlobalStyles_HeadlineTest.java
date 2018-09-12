@@ -5,6 +5,7 @@ import SupportClasses.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
 //import org.junit.runners.MethodSorters;
+import org.junit.runners.MethodSorters;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,7 +15,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
-//@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class GlobalStyles_HeadlineTest {
 
     private static WebDriver webDriver;
@@ -137,7 +138,7 @@ public class GlobalStyles_HeadlineTest {
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h2Item,"font-family", "Asap"));
         supportMethod().waitAndClick((WebElement) globalHelper().getFontFamilyDropdown().get(1));
         supportMethod().waitAndClick(globalStyles().abril_Fatface_font);
-        String newFontFamily = globalHelper().getHeadlineGlobalValue(2,"font family");
+        String newFontFamily = globalHelper().getHeadlineGlobalValue(2,"z");
         wait.until(ExpectedConditions.attributeToBe(globalStyles().h2Item,"font-family", "\"Abril Fatface\""));
         Assert.assertEquals("\"Abril Fatface\"", newFontFamily);
         Assert.assertEquals(2, webDriver.findElements(By.xpath(Variables.pageView_H2fontFamilyAssert)).size());

@@ -117,7 +117,7 @@ public class TinyMCE {
     public WebElement italicAssert;
     @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//blockquote")
     public WebElement quoteAssert;
-    @FindBy (xpath = "//span[contains(@style,'text-decoration: underline;')]")
+    @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//span[contains(@style,'text-decoration: underline;')]")
     public WebElement underLineAssert;
     @FindBy (xpath = "//div[@class='mce-left-aligment']")
     public WebElement leftAlignmentAssert;
@@ -132,13 +132,15 @@ public class TinyMCE {
     @FindBy (css = ".text-element-p3")
     public WebElement p3GlobalAssert;
 
-    @FindBy (xpath = "//p[@class='mce-left-aligment']")
+
+
+    @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//p[@class='mce-left-aligment']")
     public WebElement leftAlignmentAssert_p;
-    @FindBy (xpath = "//p[@class='mce-center-aligment']")
+    @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//p[@class='mce-center-aligment']")
     public WebElement centerAlignmentAssert_p;
-    @FindBy (xpath = "//p[@class='mce-right-aligment']")
+    @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//p[@class='mce-right-aligment']")
     public WebElement rightAlignmentAssert_p;
-    @FindBy (xpath = "//p[@class='mce-full-aligment']")
+    @FindBy (xpath = "//div[contains(@id,'rect-tinymce')]//p[@class='mce-full-aligment']")
     public WebElement fullAlignmentAssert_p;
     @FindBy (xpath = "//div[@class='custom-color-picker__color']")
     public WebElement colorpicker;

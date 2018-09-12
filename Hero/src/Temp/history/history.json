@@ -4,27 +4,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "51b701109d9d3d66",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464586999,
-        "stop" : 1535464590768,
-        "duration" : 3769
-      }
-    }, {
-      "uid" : "960513dc1c1fc5ad",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464586999,
-        "stop" : 1535464590768,
-        "duration" : 3769
-      }
-    }, {
       "uid" : "f90a756034478443",
       "status" : "passed",
       "time" : {
@@ -55,27 +39,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "f078ceae043b30db",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464585049,
-        "stop" : 1535464595787,
-        "duration" : 10738
-      }
-    }, {
-      "uid" : "68373c941650abcd",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464585049,
-        "stop" : 1535464595787,
-        "duration" : 10738
-      }
-    }, {
       "uid" : "bfe2e00a2be707bf",
       "status" : "passed",
       "time" : {
@@ -106,27 +74,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "19b433df81bcca88",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464523530,
-        "stop" : 1535464528792,
-        "duration" : 5262
-      }
-    }, {
-      "uid" : "472f7dbbf4594f82",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464523530,
-        "stop" : 1535464528792,
-        "duration" : 5262
-      }
-    }, {
       "uid" : "dabfad5edb6894b",
       "status" : "passed",
       "time" : {
@@ -157,27 +109,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "490e5ac4ca2b4e2e",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464507032,
-        "stop" : 1535464511945,
-        "duration" : 4913
-      }
-    }, {
-      "uid" : "978bea44175ba424",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464507032,
-        "stop" : 1535464511945,
-        "duration" : 4913
-      }
-    }, {
       "uid" : "59ba7803f643248e",
       "status" : "passed",
       "time" : {
@@ -208,27 +144,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "d039ac4c2b92d7c8",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464515996,
-        "stop" : 1535464520313,
-        "duration" : 4317
-      }
-    }, {
-      "uid" : "d66a7acc2cae8827",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464515996,
-        "stop" : 1535464520313,
-        "duration" : 4317
-      }
-    }, {
       "uid" : "919767e78d7e765a",
       "status" : "passed",
       "time" : {
@@ -259,27 +179,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "485ca99ed499e506",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464618141,
-        "stop" : 1535464624224,
-        "duration" : 6083
-      }
-    }, {
-      "uid" : "5b9854e33f5c289d",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464618141,
-        "stop" : 1535464624224,
-        "duration" : 6083
-      }
-    }, {
       "uid" : "eb90c6cfdce68abf",
       "status" : "passed",
       "time" : {
@@ -310,27 +214,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "62b81c3ae136da81",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464499100,
-        "stop" : 1535464505060,
-        "duration" : 5960
-      }
-    }, {
-      "uid" : "284cdf6498c1c0fd",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464499100,
-        "stop" : 1535464505060,
-        "duration" : 5960
-      }
-    }, {
       "uid" : "f6be2aa1986992b",
       "status" : "passed",
       "time" : {
@@ -361,27 +249,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 4,
+      "passed" : 2,
       "unknown" : 0,
-      "total" : 4
+      "total" : 2
     },
     "items" : [ {
-      "uid" : "c1fec82b04395c79",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464523838,
-        "stop" : 1535464530680,
-        "duration" : 6842
-      }
-    }, {
-      "uid" : "be187a808f82029a",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464523838,
-        "stop" : 1535464530680,
-        "duration" : 6842
-      }
-    }, {
       "uid" : "8571ff6ae2d45164",
       "status" : "passed",
       "time" : {
@@ -404,27 +276,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "648e764ae61e446d",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464590793,
-        "stop" : 1535464594213,
-        "duration" : 3420
-      }
-    }, {
-      "uid" : "494b7ef4f31e341b",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464590793,
-        "stop" : 1535464594213,
-        "duration" : 3420
-      }
-    }, {
       "uid" : "d655193a44ef2065",
       "status" : "passed",
       "time" : {
@@ -455,27 +311,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "98386df059a356fa",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464551262,
-        "stop" : 1535464555789,
-        "duration" : 4527
-      }
-    }, {
-      "uid" : "5953ea7322069f74",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464551262,
-        "stop" : 1535464555789,
-        "duration" : 4527
-      }
-    }, {
       "uid" : "2c7fd70289000555",
       "status" : "passed",
       "time" : {
@@ -506,27 +346,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "557f1a456fadbd13",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464594217,
-        "stop" : 1535464599856,
-        "duration" : 5639
-      }
-    }, {
-      "uid" : "3b9827c44f71609f",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464594217,
-        "stop" : 1535464599856,
-        "duration" : 5639
-      }
-    }, {
       "uid" : "f10b7ee1cd4cdf13",
       "status" : "passed",
       "time" : {
@@ -557,27 +381,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "db4985c50ea44025",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464511950,
-        "stop" : 1535464515990,
-        "duration" : 4040
-      }
-    }, {
-      "uid" : "88a7af6ca1ca840f",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464511950,
-        "stop" : 1535464515990,
-        "duration" : 4040
-      }
-    }, {
       "uid" : "c1e5a802df0df97",
       "status" : "passed",
       "time" : {
@@ -608,27 +416,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "e5450981ef4fa64c",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464608091,
-        "stop" : 1535464612046,
-        "duration" : 3955
-      }
-    }, {
-      "uid" : "2a2ba20530c48671",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464608091,
-        "stop" : 1535464612046,
-        "duration" : 3955
-      }
-    }, {
       "uid" : "8fadd84eeb4e320b",
       "status" : "passed",
       "time" : {
@@ -659,27 +451,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "f9dc5f864757f2b5",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464528797,
-        "stop" : 1535464533656,
-        "duration" : 4859
-      }
-    }, {
-      "uid" : "169760e99e5b8a01",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464528797,
-        "stop" : 1535464533656,
-        "duration" : 4859
-      }
-    }, {
       "uid" : "bb4e7cdb729d6a81",
       "status" : "passed",
       "time" : {
@@ -710,27 +486,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "46c20e9112d48f18",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464536435,
-        "stop" : 1535464545073,
-        "duration" : 8638
-      }
-    }, {
-      "uid" : "2a2e6c5fd17a390a",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464536435,
-        "stop" : 1535464545073,
-        "duration" : 8638
-      }
-    }, {
       "uid" : "399ae9d22cc82b20",
       "status" : "passed",
       "time" : {
@@ -761,27 +521,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "eea235d9dc8a1ac1",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464568400,
-        "stop" : 1535464575801,
-        "duration" : 7401
-      }
-    }, {
-      "uid" : "80431fbbc75d7d41",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464568400,
-        "stop" : 1535464575801,
-        "duration" : 7401
-      }
-    }, {
       "uid" : "8cd1955f532e9afc",
       "status" : "passed",
       "time" : {
@@ -812,27 +556,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "7344a8428e1c42cd",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464541382,
-        "stop" : 1535464545455,
-        "duration" : 4073
-      }
-    }, {
-      "uid" : "4740a2c1f59da275",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464541382,
-        "stop" : 1535464545455,
-        "duration" : 4073
-      }
-    }, {
       "uid" : "cbdc3f6d21f32a6b",
       "status" : "passed",
       "time" : {
@@ -863,27 +591,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "4410381a67d186c4",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464520318,
-        "stop" : 1535464523525,
-        "duration" : 3207
-      }
-    }, {
-      "uid" : "968b44cdaebd5f48",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464520318,
-        "stop" : 1535464523525,
-        "duration" : 3207
-      }
-    }, {
       "uid" : "1a942e9f33f08fdd",
       "status" : "passed",
       "time" : {
@@ -914,27 +626,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "a01020e7cf585f26",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464555794,
-        "stop" : 1535464559596,
-        "duration" : 3802
-      }
-    }, {
-      "uid" : "3657febcbe69bb40",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464555794,
-        "stop" : 1535464559596,
-        "duration" : 3802
-      }
-    }, {
       "uid" : "dc14e5b3195531b5",
       "status" : "passed",
       "time" : {
@@ -965,27 +661,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "62eb014c0d728271",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464612050,
-        "stop" : 1535464618136,
-        "duration" : 6086
-      }
-    }, {
-      "uid" : "f29f22015109f0f",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464612050,
-        "stop" : 1535464618136,
-        "duration" : 6086
-      }
-    }, {
       "uid" : "265a922c317cf9db",
       "status" : "passed",
       "time" : {
@@ -1016,27 +696,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "1acb515de5202fc3",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464533661,
-        "stop" : 1535464537966,
-        "duration" : 4305
-      }
-    }, {
-      "uid" : "50e90f8ed8ed2aeb",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464533661,
-        "stop" : 1535464537966,
-        "duration" : 4305
-      }
-    }, {
       "uid" : "3df8efcdc2e33d1d",
       "status" : "passed",
       "time" : {
@@ -1067,27 +731,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "592e444052828c00",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464499871,
-        "stop" : 1535464506790,
-        "duration" : 6919
-      }
-    }, {
-      "uid" : "485b2efa5aa5059",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464499871,
-        "stop" : 1535464506790,
-        "duration" : 6919
-      }
-    }, {
       "uid" : "c9852e8ef57d29d7",
       "status" : "passed",
       "time" : {
@@ -1118,27 +766,11 @@
       "failed" : 0,
       "broken" : 1,
       "skipped" : 0,
-      "passed" : 4,
+      "passed" : 2,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "d573ac9b243029b8",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464516741,
-        "stop" : 1535464523832,
-        "duration" : 7091
-      }
-    }, {
-      "uid" : "74e65a216d29c9db",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464516741,
-        "stop" : 1535464523832,
-        "duration" : 7091
-      }
-    }, {
       "uid" : "ac7e09ce05aabc4d",
       "status" : "passed",
       "time" : {
@@ -1170,27 +802,11 @@
       "failed" : 0,
       "broken" : 1,
       "skipped" : 0,
-      "passed" : 4,
+      "passed" : 2,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "7018e0e80d8802b1",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464575806,
-        "stop" : 1535464586994,
-        "duration" : 11188
-      }
-    }, {
-      "uid" : "8695fa229aeba2fb",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464575806,
-        "stop" : 1535464586994,
-        "duration" : 11188
-      }
-    }, {
       "uid" : "c5206e66aacba67e",
       "status" : "passed",
       "time" : {
@@ -1222,27 +838,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "682d4842ee842fa4",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464545078,
-        "stop" : 1535464551776,
-        "duration" : 6698
-      }
-    }, {
-      "uid" : "82e328808c5234dc",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464545078,
-        "stop" : 1535464551776,
-        "duration" : 6698
-      }
-    }, {
       "uid" : "8637dc996ce572de",
       "status" : "passed",
       "time" : {
@@ -1273,27 +873,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "3841ec641bd2728d",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464603946,
-        "stop" : 1535464608087,
-        "duration" : 4141
-      }
-    }, {
-      "uid" : "6ef98cb3da3feb28",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464603946,
-        "stop" : 1535464608087,
-        "duration" : 4141
-      }
-    }, {
       "uid" : "96a9b6f6dc04ae2d",
       "status" : "passed",
       "time" : {
@@ -1324,27 +908,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "a7a4ab2214410ced",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464551781,
-        "stop" : 1535464563403,
-        "duration" : 11622
-      }
-    }, {
-      "uid" : "7113d7e3dd893575",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464551781,
-        "stop" : 1535464563403,
-        "duration" : 11622
-      }
-    }, {
       "uid" : "43a79221e0421d63",
       "status" : "passed",
       "time" : {
@@ -1375,27 +943,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "aee252ea8938b5b",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464545482,
-        "stop" : 1535464551256,
-        "duration" : 5774
-      }
-    }, {
-      "uid" : "3bd9a331c9800a2f",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464545482,
-        "stop" : 1535464551256,
-        "duration" : 5774
-      }
-    }, {
       "uid" : "3ff19db1cf1381f7",
       "status" : "passed",
       "time" : {
@@ -1424,31 +976,13 @@
   "3b2c51ad0b7e77b97fccfd1e9e55bca6" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 4,
+      "broken" : 2,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 4
+      "total" : 2
     },
     "items" : [ {
-      "uid" : "e156b2f15fe53f97",
-      "status" : "broken",
-      "statusDetails" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on XP (b4b9ce25cbf6b9b7ae9bb5a01c33c028)] -> xpath: //div[@class='mce-left-aligment']] (tried for 5 second(s) with 300 milliseconds interval)\nBuild info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'\nSystem info: host: 'ECLIPSE', ip: '192.168.163.2', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_171'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031..., userDataDir: C:\\Users\\Pavel\\AppData\\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:8293}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 68.0.3440.106, webStorageEnabled: true}\nSession ID: b4b9ce25cbf6b9b7ae9bb5a01c33c028",
-      "time" : {
-        "start" : 1535464563408,
-        "stop" : 1535464575154,
-        "duration" : 11746
-      }
-    }, {
-      "uid" : "e9e4d8f765ee7b10",
-      "status" : "broken",
-      "statusDetails" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on XP (b4b9ce25cbf6b9b7ae9bb5a01c33c028)] -> xpath: //div[@class='mce-left-aligment']] (tried for 5 second(s) with 300 milliseconds interval)\nBuild info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'\nSystem info: host: 'ECLIPSE', ip: '192.168.163.2', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_171'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031..., userDataDir: C:\\Users\\Pavel\\AppData\\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:8293}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 68.0.3440.106, webStorageEnabled: true}\nSession ID: b4b9ce25cbf6b9b7ae9bb5a01c33c028",
-      "time" : {
-        "start" : 1535464563408,
-        "stop" : 1535464575154,
-        "duration" : 11746
-      }
-    }, {
       "uid" : "33c8289c7d04bf71",
       "status" : "broken",
       "statusDetails" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on XP (40ed404b560554b59e2cd852a4430e60)] -> xpath: //div[@class='mce-left-aligment']] (tried for 5 second(s) with 300 milliseconds interval)\nBuild info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'\nSystem info: host: 'ECLIPSE', ip: '192.168.163.2', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_171'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031..., userDataDir: C:\\Users\\Pavel\\AppData\\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:6938}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 68.0.3440.106, webStorageEnabled: true}\nSession ID: 40ed404b560554b59e2cd852a4430e60",
@@ -1473,27 +1007,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "315dfbe1e54aaa27",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464530686,
-        "stop" : 1535464536427,
-        "duration" : 5741
-      }
-    }, {
-      "uid" : "6faddc40dee81a23",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464530686,
-        "stop" : 1535464536427,
-        "duration" : 5741
-      }
-    }, {
       "uid" : "b8a27e86ae17a6e",
       "status" : "passed",
       "time" : {
@@ -1524,27 +1042,11 @@
       "failed" : 0,
       "broken" : 1,
       "skipped" : 0,
-      "passed" : 2,
+      "passed" : 0,
       "unknown" : 0,
-      "total" : 3
+      "total" : 1
     },
     "items" : [ {
-      "uid" : "20974d298d92d256",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464575162,
-        "stop" : 1535464585045,
-        "duration" : 9883
-      }
-    }, {
-      "uid" : "a5aabe7d206ce8a4",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464575162,
-        "stop" : 1535464585045,
-        "duration" : 9883
-      }
-    }, {
       "uid" : "f39c9583e676b3f1",
       "status" : "broken",
       "statusDetails" : "Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@class='modal-extra__btn-close']' (tried for 5 second(s) with 300 milliseconds interval)",
@@ -1560,27 +1062,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "88f9c0139e6a6d5c",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464511211,
-        "stop" : 1535464516736,
-        "duration" : 5525
-      }
-    }, {
-      "uid" : "55b4e2ebe75abce5",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464511211,
-        "stop" : 1535464516736,
-        "duration" : 5525
-      }
-    }, {
       "uid" : "7e5cfeeb0c44c37a",
       "status" : "passed",
       "time" : {
@@ -1611,27 +1097,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "f62dbf3e946f96c0",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464538010,
-        "stop" : 1535464541378,
-        "duration" : 3368
-      }
-    }, {
-      "uid" : "7b2868550b0dde28",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464538010,
-        "stop" : 1535464541378,
-        "duration" : 3368
-      }
-    }, {
       "uid" : "b27d0e591a7dde48",
       "status" : "passed",
       "time" : {
@@ -1662,27 +1132,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "ddcefdd4b8379ac8",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464505354,
-        "stop" : 1535464511205,
-        "duration" : 5851
-      }
-    }, {
-      "uid" : "71c984ce0c4ecec0",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464505354,
-        "stop" : 1535464511205,
-        "duration" : 5851
-      }
-    }, {
       "uid" : "7ade701b5c76449",
       "status" : "passed",
       "time" : {
@@ -1711,31 +1165,13 @@
   "f75fe138a2174e38cc11526c5025c06b" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 5,
+      "broken" : 3,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "49c262334760e920",
-      "status" : "broken",
-      "statusDetails" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on XP (ed6f0f847d07dc2db77d8a5c760c8d06)] -> xpath: //p[@class='mce-left-aligment']] (tried for 5 second(s) with 300 milliseconds interval)\nBuild info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'\nSystem info: host: 'ECLIPSE', ip: '192.168.163.2', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_171'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031..., userDataDir: C:\\Users\\Pavel\\AppData\\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:8292}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 68.0.3440.106, webStorageEnabled: true}\nSession ID: ed6f0f847d07dc2db77d8a5c760c8d06",
-      "time" : {
-        "start" : 1535464559601,
-        "stop" : 1535464568392,
-        "duration" : 8791
-      }
-    }, {
-      "uid" : "91b4ee86ee395bf5",
-      "status" : "broken",
-      "statusDetails" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on XP (ed6f0f847d07dc2db77d8a5c760c8d06)] -> xpath: //p[@class='mce-left-aligment']] (tried for 5 second(s) with 300 milliseconds interval)\nBuild info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'\nSystem info: host: 'ECLIPSE', ip: '192.168.163.2', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_171'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031..., userDataDir: C:\\Users\\Pavel\\AppData\\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:8292}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 68.0.3440.106, webStorageEnabled: true}\nSession ID: ed6f0f847d07dc2db77d8a5c760c8d06",
-      "time" : {
-        "start" : 1535464559601,
-        "stop" : 1535464568392,
-        "duration" : 8791
-      }
-    }, {
       "uid" : "3b86c02abaec14e6",
       "status" : "broken",
       "statusDetails" : "Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on XP (7f8f306ef2e7a907fd2f92dc288498a4)] -> xpath: //p[@class='mce-left-aligment']] (tried for 5 second(s) with 300 milliseconds interval)\nBuild info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'\nSystem info: host: 'ECLIPSE', ip: '192.168.163.2', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_171'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031..., userDataDir: C:\\Users\\Pavel\\AppData\\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:6945}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 68.0.3440.106, webStorageEnabled: true}\nSession ID: 7f8f306ef2e7a907fd2f92dc288498a4",
@@ -1769,27 +1205,11 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 5,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 5
+      "total" : 3
     },
     "items" : [ {
-      "uid" : "4b470c3f1c42144e",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464599861,
-        "stop" : 1535464603943,
-        "duration" : 4082
-      }
-    }, {
-      "uid" : "7c497801f8e59609",
-      "status" : "passed",
-      "time" : {
-        "start" : 1535464599861,
-        "stop" : 1535464603943,
-        "duration" : 4082
-      }
-    }, {
       "uid" : "96d24b74ac9c2164",
       "status" : "passed",
       "time" : {

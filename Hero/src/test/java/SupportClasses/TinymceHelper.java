@@ -19,10 +19,12 @@ import java.util.List;
 
 public class TinymceHelper {
     private WebDriver webDriver;
+    private WebDriverWait wait;
 
 
     public TinymceHelper(WebDriver driver){
         webDriver = driver;
+        wait = new WebDriverWait(webDriver, 45, 300);
         PageFactory.initElements(webDriver, this);
     }
     public LoginPage loginPage(){
@@ -43,7 +45,6 @@ public class TinymceHelper {
 
 
     public void changeFontSizeWithSlider(){
-        WebDriverWait wait = new WebDriverWait(webDriver, 45, 300);
         Actions action = new Actions(webDriver);
         try {
             wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
@@ -152,6 +153,50 @@ public class TinymceHelper {
             Thread.sleep(500);
             supportMethod().waitAndClick(colors.get(1));
         }catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void applyAlignLeft(){
+        try {
+            Thread.sleep(500);
+            if(webDriver.findElements(By.xpath(Variables.leftAlignActive)).size()==0) {
+                wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignmentLeft)).click();
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void applyAlignCenter(){
+        try {
+            Thread.sleep(500);
+            if(webDriver.findElements(By.xpath(Variables.centerAlignActive)).size()==0) {
+                wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignCenter)).click();
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void applyAlignRight(){
+        try {
+            Thread.sleep(500);
+            if(webDriver.findElements(By.xpath(Variables.rightAlignActive)).size()==0) {
+                wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignRight)).click();
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void applyAlignFull(){
+        try {
+            Thread.sleep(500);
+            if(webDriver.findElements(By.xpath(Variables.fullAlignActive)).size()==0) {
+                wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignJustify)).click();
+            }
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }

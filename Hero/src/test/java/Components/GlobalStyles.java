@@ -1,11 +1,13 @@
 package Components;
 
+import com.sun.org.apache.xml.internal.security.utils.XalanXPathAPI;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GlobalStyles {
@@ -193,6 +195,60 @@ public class GlobalStyles {
     public WebElement smallField_PageView;
     @FindBy (xpath = "//input[contains(@class,'input-i3')]")
     public WebElement smallFieldInput_PageView;
+
+    @FindBy (xpath = "//div[contains(@class,'tmp_text')]//div[contains(@class,'input-wrapper-i1')]")
+    public WebElement largeTextArea_PageView;
+    @FindBy (xpath = "//textarea[contains(@class,'input-i1')]")
+    public WebElement largeTextAreaInput_PageView;
+    @FindBy (xpath = "//div[contains(@class,'tmp_text')]//div[contains(@class,'input-wrapper-i2')]")
+    public WebElement mediumTextArea_PageView;
+    @FindBy (xpath = "//textarea[contains(@class,'input-i2')]")
+    public WebElement mediumTextAreaInput_PageView;
+    @FindBy (xpath = "//div[contains(@class,'tmp_text')]//div[contains(@class,'input-wrapper-i3')]")
+    public WebElement smallTextArea_PageView;
+    @FindBy (xpath = "//textarea[contains(@class,'input-i3')]")
+    public WebElement smallTextAreaInput_PageView;
+
+    @FindBy (xpath = "//div[contains(@class,'tmp_droplist')]//div[contains(@class,'input-wrapper-i1')]")
+    public WebElement largeDropList_PageView;
+    @FindBy (xpath = "//select[contains(@class,'input-i1')]")
+    public WebElement largeDropListInput_PageView;
+    @FindBy (xpath = "//div[contains(@class,'tmp_droplist')]//div[contains(@class,'input-wrapper-i2')]")
+    public WebElement mediumDropList_PageView;
+    @FindBy (xpath = "//select[contains(@class,'input-i2')]")
+    public WebElement mediumDropListInput_PageView;
+    @FindBy (xpath = "//div[contains(@class,'tmp_droplist')]//div[contains(@class,'input-wrapper-i3')]")
+    public WebElement smallDropList_PageView;
+    @FindBy (xpath = "//select[contains(@class,'input-i3')]")
+    public WebElement smallDropListInput_PageView;
+
+    @FindBy (xpath = "//div[contains(@class,'tmp_checkbox')]//div[contains(@class,'input-wrapper-i1')]")
+    public WebElement largeCheckBox_PageView;
+    @FindBy (xpath = "//div[contains(@id,'tmp_checkbox')]//span[contains(@class,'input-i1')]")
+    public WebElement largeCheckBoxInput_PageView;
+    @FindBy (xpath = "//div[contains(@class,'tmp_checkbox')]//div[contains(@class,'input-wrapper-i2')]")
+    public WebElement mediumCheckBox_PageView;
+    @FindBy (xpath = "//div[contains(@id,'tmp_checkbox')]//span[contains(@class,'input-i2')]")
+    public WebElement mediumCheckBoxInput_PageView;
+    @FindBy (xpath = "//div[contains(@class,'tmp_checkbox')]//div[contains(@class,'input-wrapper-i3')]")
+    public WebElement smallCheckBox_PageView;
+    @FindBy (xpath = "//div[contains(@id,'tmp_checkbox')]//span[contains(@class,'input-i3')]")
+    public WebElement smallCheckBoxInput_PageView;
+
+    @FindBy (xpath = "//div[contains(@class,'tmp_radiobox')]//div[contains(@class,'input-wrapper-i1')]")
+    public WebElement largeRadioBox_PageView;
+    @FindBy (xpath = "//div[contains(@id,'tmp_radiobox')]//span[contains(@class,'input-i1')]")
+    public WebElement largeRadioBoxInput_PageView;
+    @FindBy (xpath = "//div[contains(@class,'tmp_radiobox')]//div[contains(@class,'input-wrapper-i2')]")
+    public WebElement mediumRadioBox_PageView;
+    @FindBy (xpath = "//div[contains(@id,'tmp_radiobox')]//span[contains(@class,'input-i2')]")
+    public WebElement mediumRadioBoxInput_PageView;
+    @FindBy (xpath = "//div[contains(@class,'tmp_radiobox')]//div[contains(@class,'input-wrapper-i3')]")
+    public WebElement smallRadioBox_PageView;
+    @FindBy (xpath = "//div[contains(@id,'tmp_radiobox')]//span[contains(@class,'input-i3')]")
+    public WebElement smallRadioBoxInput_PageView;
+
+
 
     public List<WebElement> getInputElements(){
         return webDriver.findElements(By.xpath("//div[contains(@class,'de-input-block')]"));

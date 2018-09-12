@@ -20,6 +20,10 @@ public class Sidebar {
         PageFactory.initElements(webDriver, this);
     }
 
+
+    @FindBy (xpath = "//*[contains(@class,'icon-svg-pages')]/parent::*")
+    public WebElement pages;
+
     @FindBy (xpath = "//div[@class='animationSidebar']//button[@class='button-add-element']")
     public WebElement newPageButton;
     @FindBy (css = ".page-menu-dropdown")

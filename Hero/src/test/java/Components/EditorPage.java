@@ -37,6 +37,8 @@ public class EditorPage {
     public WebElement fullWidthColumn;
     @FindBy (xpath = "//span[@class='dropdown-modal__item-title'][contains(text(),'3 Column Row')]")
     public WebElement threeColumnRow;
+    @FindBy (xpath = "//span[@class='dropdown-modal__item-title'][contains(text(),'6 Columns')]")
+    public WebElement sixColumnRow;
     @FindBy (xpath = "//span[@class='dropdown-modal__item-title'][contains(text(),'8 Columns')]")
     public WebElement eightColumnRow;
 
@@ -95,7 +97,10 @@ public class EditorPage {
     public void threeColumnRowClick(){
         wait.until(ExpectedConditions.elementToBeClickable(fullWidthColumn));
         action.moveToElement(threeColumnRow).click().perform();
-//        wait.until(ExpectedConditions.elementToBeClickable(threeColumnRow)).click();
+    }
+    public void sixColumnRowClick(){
+        wait.until(ExpectedConditions.elementToBeClickable(fullWidthColumn));
+        action.moveToElement(sixColumnRow).click().perform();
     }
     public void elementHeaderClick(){
         action.moveToElement(elementHeader).perform();

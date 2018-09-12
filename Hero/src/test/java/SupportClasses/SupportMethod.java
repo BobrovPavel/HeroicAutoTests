@@ -41,8 +41,13 @@ public class SupportMethod {
     public Variables variables(){
         return new Variables(webDriver);
     }
+    public GlobalHelper globalHelper(){
+        return new GlobalHelper(webDriver);
+    }
 
-
+    public void openSidebar(){
+        waitAndClick(sidebar().pages);
+    }
     public void createElement (String element){
         js.executeScript("document.querySelector('.button-add-element').click()");
         wait.until(ExpectedConditions.elementToBeClickable(editorPage().blankCanvas)).click();
@@ -203,10 +208,19 @@ public class SupportMethod {
             action.moveToElement(element).click().perform();
         }
     }
+    public void gotToParagraphSettings(){
+        waitAndClick(sidebar().globalStyles);
+        waitAndClick(sidebar().paragraphStyles);
+    }
     public void goToLargeFieldSettings(){
         waitAndClick(sidebar().globalStyles);
         waitAndClick(sidebar().fieldStyles);
         waitAndClick(sidebar().largeFieldsSettings);
+    }
+    public void goToMediumFieldSettings(){
+        waitAndClick(sidebar().globalStyles);
+        waitAndClick(sidebar().fieldStyles);
+        waitAndClick(sidebar().mediumFieldsSettings);
     }
     public void goToSmallFieldSettings(){
         waitAndClick(sidebar().globalStyles);
@@ -237,5 +251,61 @@ public class SupportMethod {
     }
     public static void clearLocalStorage() {
         js.executeScript(String.format("window.localStorage.clear();"));
+    }
+
+    public void addInputElements(String inputSize) throws InterruptedException {
+        wait.until(ExpectedConditions.elementToBeClickable(webDriver.findElement(By.xpath("//button[contains(@class,'sidebar-main-menu__button')]"))));
+        js.executeScript("document.querySelector('.button-add-element').click()");
+        wait.until(ExpectedConditions.elementToBeClickable(editorPage().blankCanvas)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(editorPage().addSectionPlus)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(editorPage().fullWidthSection)).click();
+        editorPage().sixColumnRowClick();
+        for(int i = 0; i < globalHelper().getInputElements().size(); i++){
+            Thread.sleep(500);
+            wait.until(ExpectedConditions.elementToBeClickable(editorPage().elementHeader));
+            action.moveToElement(globalHelper().getInputElements().get(i)).click().perform();
+        }
+        openSidebar();
+        List<WebElement> list = webDriver.findElements(By.xpath(Variables.elementsColumn));
+        for (WebElement aList : list) {
+            Thread.sleep(500);
+            aList.click();
+            changeInputElementSize(inputSize);
+        }
+    }
+
+    public void changeInputElementSize(String size){
+        WebElement element = null;
+        wait = new WebDriverWait(webDriver, 2, 300);
+        switch (size.toLowerCase()){
+            case "large":
+                if(webDriver.findElements(By.xpath(Variables.sizeDropDown)).size() == 0){
+                    waitAndClick(sidebar().designTab);
+                    waitAndClick(sidebar().largeField);
+                }else{
+                    waitAndClick(sidebar().sizeDropDown);
+                    waitAndClick(sidebar().largeSize);
+                }
+                break;
+            case "medium":
+                if(webDriver.findElements(By.xpath(Variables.sizeDropDown)).size() == 0){
+                    waitAndClick(sidebar().designTab);
+                    waitAndClick(sidebar().mediumField);
+                }else{
+                    waitAndClick(sidebar().sizeDropDown);
+                    waitAndClick(sidebar().mediumSize);
+                }
+                break;
+            case "small":
+                if(webDriver.findElements(By.xpath(Variables.sizeDropDown)).size() == 0){
+                    waitAndClick(sidebar().designTab);
+                    waitAndClick(sidebar().smallField);
+                }else{
+                    waitAndClick(sidebar().sizeDropDown);
+                    waitAndClick(sidebar().smallSize);
+                }
+                break;
+
+        }
     }
 }

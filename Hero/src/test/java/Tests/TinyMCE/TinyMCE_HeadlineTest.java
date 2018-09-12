@@ -89,22 +89,18 @@ public class TinyMCE_HeadlineTest {
     @Test
     public void alignment_Headline() throws InterruptedException {
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignment)).click();
-        Thread.sleep(500);
-        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignmentLeft)).click();
-        wait.until(ExpectedConditions.visibilityOf(tinyMCE().leftAlignmentAssert));
-        Assert.assertTrue(tinyMCE().leftAlignmentAssert.isDisplayed());
-        Thread.sleep(500);
-        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignCenter)).click();
-        wait.until(ExpectedConditions.visibilityOf(tinyMCE().centerAlignmentAssert));
-        Assert.assertTrue(tinyMCE().centerAlignmentAssert.isDisplayed());
-        Thread.sleep(500);
-        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignRight)).click();
-        wait.until(ExpectedConditions.visibilityOf(tinyMCE().rightAlignmentAssert));
-        Assert.assertTrue(tinyMCE().rightAlignmentAssert.isDisplayed());
-        Thread.sleep(500);
-        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignJustify)).click();
-        wait.until(ExpectedConditions.visibilityOf(tinyMCE().fullAlignmentAssert));
-        Assert.assertTrue(tinyMCE().fullAlignmentAssert.isDisplayed());
+        tinymceHelper().applyAlignLeft();
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath(Variables.leftAlign),0));
+        Assert.assertTrue(webDriver.findElements(By.xpath(Variables.leftAlign)).size() > 0);
+        tinymceHelper().applyAlignCenter();
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath(Variables.centerAlign), 0));
+        Assert.assertTrue(webDriver.findElements(By.xpath(Variables.centerAlign)).size() > 0);
+        tinymceHelper().applyAlignRight();
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath(Variables.rightAlign), 0));
+        Assert.assertTrue(webDriver.findElements(By.xpath(Variables.rightAlign)).size() > 0);
+        tinymceHelper().applyAlignFull();
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath(Variables.fullAlign), 0));
+        Assert.assertTrue(webDriver.findElements(By.xpath(Variables.fullAlign)).size() > 0);
         Thread.sleep(500);
         wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignClose)).click();
     }
@@ -189,939 +185,934 @@ public class TinyMCE_HeadlineTest {
         Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
         Assert.assertTrue(result.contains(Variables.fontSizeWithSliderAssert_h));
     }
-//    @Test
-//    public void boid_italic_Headline(){
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
-//        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
-//    }
-//    @Test
-//    public void boid_italic_underline_Headline(){
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
-//        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
-//    }
-//    @Test
-//    public void boid_italic_underline_quote_Headline(){
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
-//        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
-//    }
-//    @Test
-//    public void boid_italic_underline_quote_color_Headline() throws InterruptedException {
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().color)).click();
-//        Thread.sleep(500);
-//        List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
-//        tinymceHelper().colorAssert(colors);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(webDriver.findElements(By.xpath(Variables.elementSpan))));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
-//        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
-//        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style").contains("underline"));
-//        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
-//    }
-//    @Test
-//    public void boid_italic_underline_quote_color_font_family_Headline() throws InterruptedException {
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(webDriver.findElements(By.xpath(Variables.elementSpan))));
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().color)).click();
-//        List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
-//        tinymceHelper().colorAssert(colors);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
-//        Thread.sleep(500);
-//        action.click(tinyMCE().fontFamily1);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().fontFamily1)).click();
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
-//        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
-//        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style").contains("underline"));
-//        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().fontFamilyAssert.isDisplayed());
-//    }
-//    @Test
-//    public void insertLink_Headline(){
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
-//        tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
-//        tinyMCE().pasteLink.sendKeys("https://www.google.com/");
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().saveLink)).click();
-//        String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
-//        Assert.assertEquals("https://www.google.com/", hrefResult);
-//        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(tinymceHelper().getRemovelinkSelector()))).click();
-//        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.href)).size());
-//    }
-//    @Test
-//    public void insertLinkToUserPage_applyAllStyles_Headline(){
-//        supportMethod().waitAndClick(tinyMCE().bold);
-//        supportMethod().waitAndClick(tinyMCE().italic);
-//        supportMethod().waitAndClick(tinyMCE().underLine);
-//        supportMethod().waitAndClick(tinyMCE().quote);
-//        supportMethod().waitAndClick(tinyMCE().insertLink);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().selectLinkPage)).click();
-//        tinyMCE().dropDownBlankPageClick();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(webDriver.findElements(By.xpath(Variables.elementSpan))));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
-//        String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
-//        Assert.assertTrue(hrefResult.contains("/blank-canvas"));
-//    }
-//    @Test
-//    public void insertLink_changeFontSizeWithSlider_Headline(){
-//        tinymceHelper().insertLink();
-//        tinymceHelper().changeFontSizeWithSlider();
-//        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
-//        String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
-//        Assert.assertEquals(Variables.fontSizeWithSliderAssert_h, result);
-//        Assert.assertEquals("https://www.google.com/", hrefResult);
-//    }
-//    @Test
-//    public void globalStyles_Headline() throws InterruptedException {
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().color)).click();
-//        Thread.sleep(500);
-//        List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().h2FontSize)).click();
-//        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.boidAssert)).size());
-//        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.italicAssert)).size());
-//        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.underLineAssert)).size());
-//        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.elementStyle)).size());
-//    }
-//    @Test
-//    public void openInNewWindow_Headline(){
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
-//        tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
-//        tinyMCE().pasteLink.sendKeys("https://www.google.com/");
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().openInNewWindow)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().saveLink)).click();
-//        Assert.assertEquals(webDriver.findElement(By.xpath(Variables.href)).getAttribute("target"), "_blank");
-//        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(tinymceHelper().getRemovelinkSelector()))).click();
-//        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.href)).size());
-//    }
-//    @Test
-//    public void changeColorWithColorPicker_Headline() throws InterruptedException {
-//        Actions action = new Actions(webDriver);
-//        supportMethod().waitAndClick(tinyMCE().color);
-//        action.moveToElement(tinyMCE().colorpicker,-30, 60).click().perform();
-//        Thread.sleep(500);
-//        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
-//        Assert.assertTrue(!Variables.startColorValue.equals(result));
-//    }
-//    @Test
-//    public void changeColorWithSlider_Headline(){
-//        Actions action = new Actions(webDriver);
-//        supportMethod().waitAndClick(tinyMCE().color);
-//        action.moveToElement(tinyMCE().colorpicker,-25, 60).click().perform();
-//        wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).click();
-//        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
-//        Assert.assertTrue(!result.equals("color: rgb(0, 0, 0);"));
-//    }
-//    @Test
-//    public void changeCapacityWithSlider_Headline() throws InterruptedException {
-//        Actions action = new Actions(webDriver);
-//        supportMethod().waitAndClick(tinyMCE().color);
-//        globalHelper().setDefaultColorValue();
-//        Thread.sleep(500);
-//        action.moveToElement(tinyMCE().colorpicker,-2, 60).click().perform();
-//        Thread.sleep(500);
-//        String finish = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("data-mce-style");
-//        Assert.assertEquals("color: rgba(0, 0, 0, 0.46);", finish);
-//    }
-//    @Test
-//    public void changeColorWithPaletAndCapacity_Headline(){
-//        tinymceHelper().changeColorWithPalet();
-//        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
-//        int first = result.lastIndexOf("(");
-//        int last = result.lastIndexOf(")");
-//        String res = result.substring(first,last);
-//        supportMethod().waitAndClick(tinyMCE().color);
-//        tinymceHelper().changeCapacity();
-//        String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
-//        Assert.assertEquals(finish, "color: rgba"+res+", 0.46);");
-//    }
-//    @Test
-//    public void boid_italic_underline_quote_changeColorWithColorPicher_changeCapacity_Headline() throws InterruptedException {
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
-//        Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
-//        tinymceHelper().changeColorWithColorPicker();
-//        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
-//        int first = result.lastIndexOf("(");
-//        int last = result.lastIndexOf(")");
-//        String res = result.substring(first,last);
-//        supportMethod().waitAndClick(tinyMCE().color);
-//        tinymceHelper().changeCapacity();
-//        String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
-//        Assert.assertEquals(finish, "text-decoration: underline; color: rgba"+res+", 0.46);");
-//        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
-//    }
-//    @Test
-//    public void insertLink_boid_italic_underline_quote_Headline(){
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
-//        tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
-//        tinyMCE().pasteLink.sendKeys("https://www.google.com/");
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().saveLink)).click();
-//        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
-//        String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
-//        Assert.assertEquals("https://www.google.com/", hrefResult);
-//    }
-//
-//
-//    @Test
-//    public void changeFontSize_Headline_Div_Br() throws InterruptedException {
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
-//        for(int i = 0; i < tinymceHelper().getFontSize_H().size();i++){
-//            wait.until(ExpectedConditions.elementToBeClickable((WebElement) tinymceHelper().getFontSize_H().get(i))).click();
-//            Assert.assertTrue(webDriver.findElement(By.xpath((String) tinymceHelper().getAssertForFontSize_H().get(i))).isDisplayed());
-//        }
-//        wait.until(ExpectedConditions.elementToBeClickable((WebElement) tinymceHelper().getFontSize_H().get(0))).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
-//        Thread.sleep(1000);
-//    }
-//    @Test
-//    public void changeFontFamily_Headline_Div_Br() throws InterruptedException {
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
-//        Thread.sleep(1000);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().fontFamily1)).click();
-//        wait.until(ExpectedConditions.visibilityOf(webDriver.findElement(By.xpath(Variables.fontFamilyAssert1))));
-//        Assert.assertEquals(3, webDriver.findElements(By.xpath(Variables.fontFamilyAssert1)).size());
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
-//    }
-//    @Test
-//    public void color_Headline_Div_Br() throws InterruptedException {
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().color)).click();
-//        Thread.sleep(500);
-//        List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
-//        String palet = colors.get(1).getAttribute("style");
-//        WebElement element = webDriver.findElement(By.xpath(Variables.elementSpan));
-//        int first = palet.lastIndexOf("(");
-//        int last = palet.lastIndexOf(")");
-//        String result = "color: rgb"+palet.substring(first,last+1)+";";
-//        wait.until(ExpectedConditions.attributeToBe(element, "style", result));
-//        Assert.assertEquals(palet.substring(first, last + 1), palet.substring(first, last + 1));
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
-//    }
-//    @Test
-//    public void alignment_Headline_Div_Br() throws InterruptedException {
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignment)).click();
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignmentLeft)).click();
-//        wait.until(ExpectedConditions.visibilityOf(tinyMCE().leftAlignmentAssert));
-//        Assert.assertTrue(tinyMCE().leftAlignmentAssert.isDisplayed());
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignCenter)).click();
-//        wait.until(ExpectedConditions.visibilityOf(tinyMCE().centerAlignmentAssert));
-//        Assert.assertTrue(tinyMCE().centerAlignmentAssert.isDisplayed());
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignRight)).click();
-//        wait.until(ExpectedConditions.visibilityOf(tinyMCE().rightAlignmentAssert));
-//        Assert.assertTrue(tinyMCE().rightAlignmentAssert.isDisplayed());
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignJustify)).click();
-//        wait.until(ExpectedConditions.visibilityOf(tinyMCE().fullAlignmentAssert));
-//        Assert.assertTrue(tinyMCE().fullAlignmentAssert.isDisplayed());
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignClose)).click();
-//    }
-//    @Test
-//    public void quote_Headline_Div_Br(){
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
-//        wait.until(ExpectedConditions.visibilityOf(tinyMCE().quoteAssert));
-//        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
-//    }
-//    @Test
-//    public void underline_Headline_Div_Br(){
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
-//        wait.until(ExpectedConditions.visibilityOf(tinyMCE().underLineAssert));
-//        Assert.assertEquals(3, webDriver.findElements(By.xpath(Variables.underLineAssert)).size());
-//    }
-//    @Test
-//    public void itaclic_Headline_Div_Br(){
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
-//        Assert.assertEquals(3, webDriver.findElements(By.xpath(Variables.italicAssert)).size());
-//    }
-//    @Test
-//    public void bold_Headline_Div_Br() throws InterruptedException {
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
-//        Assert.assertEquals(3, webDriver.findElements(By.xpath(Variables.boidAssert)).size());
-//    }
-//    @Test
-//    public void insertLink_Headline_Div_Br(){
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
-//        tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
-//        tinyMCE().pasteLink.sendKeys("https://www.google.com/");
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().saveLink)).click();
-//        String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
-//        Assert.assertEquals("https://www.google.com/", hrefResult);
-//        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(tinymceHelper().getRemovelinkSelector()))).click();
-//        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.href)).size());
-//    }
-//    @Test
-//    public void insertLinkToUserPage_applyAllStyles_Headline_Dib_Br(){
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        supportMethod().waitAndClick(tinyMCE().bold);
-//        supportMethod().waitAndClick(tinyMCE().italic);
-//        supportMethod().waitAndClick(tinyMCE().underLine);
-//        supportMethod().waitAndClick(tinyMCE().quote);
-//        supportMethod().waitAndClick(tinyMCE().insertLink);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().selectLinkPage)).click();
-//        tinyMCE().dropDownBlankPageClick();
-//        String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
-//        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.quoteAssert)).isDisplayed());
-//        Assert.assertTrue(hrefResult.contains("/blank-canvas"));
-//        Assert.assertEquals(3, webDriver.findElements(By.xpath(Variables.href)).size());
-//        Assert.assertEquals(3, webDriver.findElements(By.xpath(Variables.boidAssert)).size());
-//        Assert.assertEquals(3, webDriver.findElements(By.xpath(Variables.italicAssert)).size());
-//        Assert.assertEquals(3, webDriver.findElements(By.xpath(Variables.underLineAssert)).size());
-//    }
-//    @Test
-//    public void changeFontSizeWithSlider_Headline_Div_Br(){
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        tinymceHelper().changeFontSizeWithSlider();
-//        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
-//        Assert.assertEquals(Variables.fontSizeWithSliderAssert_h, result);
-//        Assert.assertEquals(3 , webDriver.findElements(By.xpath("//span[contains(text(),'"+Variables.oneLine+"')]")).size() );
-//    }
-//    @Test
-//    public void changeFontSizeWithSlider_And_H1_Headline_Div_Br() throws InterruptedException {
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        tinymceHelper().changeFontSizeWithSlider();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().h2FontSize)).click();
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
-//        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.assert_h2)).getText().contains(Variables.severalLinesAssert));
-//        tinymceHelper().changeFontSizeWithSlider();
-//        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
-//        Assert.assertEquals("font-size: 35px;", result);
-//        Assert.assertEquals(3 , webDriver.findElements(By.xpath("//span[contains(text(),'"+Variables.oneLine+"')]")).size() );
-//    }
-//    @Test
-//    public void boid_italic_Headline_Div_Br() throws InterruptedException {
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
-//        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
-//    }
-//    @Test
-//    public void boid_italic_underline_Headline_Div_Br(){
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
-//        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
-//    }
-//    @Test
-//    public void boid_italic_underline_quote_Headline_Div_Br(){
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
-//        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
-//    }
-//    @Test
-//    public void boid_italic_underline_quote_color_Headline_Div_Br() throws InterruptedException {
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().color)).click();
-//        Thread.sleep(500);
-//        List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
-//        tinymceHelper().colorAssert(colors);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(webDriver.findElements(By.xpath(Variables.elementSpan))));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
-//        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
-//        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style").contains("underline"));
-//        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
-//    }
-//    @Test
-//    public void boid_italic_underline_quote_color_font_family_Headline_Div_Br() throws InterruptedException {
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        Thread.sleep(500);
-//        supportMethod().waitAndClick(tinyMCE().bold);
-//        supportMethod().waitAndClick(tinyMCE().italic);
-//        supportMethod().waitAndClick(tinyMCE().underLine);
-//        supportMethod().waitAndClick(tinyMCE().quote);
-//        supportMethod().waitAndClick(tinyMCE().color);
-//        Thread.sleep(500);
-//        List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
-//        tinymceHelper().colorAssert(colors);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().fontFamily1)).click();
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(webDriver.findElements(By.xpath(Variables.elementSpan))));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
-//        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
-//        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style").contains("underline"));
-//        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().fontFamilyAssert.isDisplayed());
-//    }
-//    @Test
-//    public void globalStyles_Headline_Div_Br() throws InterruptedException {
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        supportMethod().waitAndClick(tinyMCE().bold);
-//        supportMethod().waitAndClick(tinyMCE().italic);
-//        supportMethod().waitAndClick(tinyMCE().underLine);
-//        supportMethod().waitAndClick(tinyMCE().quote);
-//        supportMethod().waitAndClick(tinyMCE().color);
-//        Thread.sleep(1000);
-//        List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().h2FontSize)).click();
-//        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.boidAssert)).size());
-//        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.italicAssert)).size());
-//        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.underLineAssert)).size());
-//        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.elementStyle)).size());
-//    }
-//    @Test
-//    public void openInNewWindow_Headline_Div_Br(){
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
-//        tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
-//        tinyMCE().pasteLink.sendKeys("https://www.google.com/");
-//        supportMethod().waitAndClick(tinyMCE().openInNewWindow);
-//        supportMethod().waitAndClick(tinyMCE().saveLink);
-//        Assert.assertEquals(webDriver.findElement(By.xpath(Variables.href)).getAttribute("target"), "_blank");
-//        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(tinymceHelper().getRemovelinkSelector()))).click();
-//        supportMethod().waitAndClickByxpath(tinymceHelper().getRemovelinkSelector());
-//        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.href)).size());
-//    }
-//    @Test
-//    public void insertLinkAndApplyGlobalStyle_Headline_Div_Br(){
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
-//        tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
-//        tinyMCE().pasteLink.sendKeys("https://www.google.com/");
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().saveLink)).click();
-//        String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
-//        supportMethod().waitAndClick(tinyMCE().size);
-//        supportMethod().waitAndClick(tinyMCE().h2FontSize);
-//        Assert.assertTrue(tinyMCE().h2GlobalAssert.isDisplayed());
-//        Assert.assertEquals("https://www.google.com/", hrefResult);
-//    }
-//    @Test
-//    public void changeColorWithColorPicker_Headline_Div_Br(){
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        tinymceHelper().changeColorWithColorPicker();
-//        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
-//        Assert.assertTrue(!Variables.startColorValue.equals(result));
-//    }
-//    @Test
-//    public void changeColorWithSlider_Headline_Div_Br() throws InterruptedException {
-//        Actions action = new Actions(webDriver);
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        Thread.sleep(500);
-//        supportMethod().waitAndClick(tinyMCE().color);
-//        action.moveToElement(tinyMCE().colorpicker,-25, 60).click().perform();
-//        wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).click();
-//        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
-//        Assert.assertTrue(!result.equals("color: rgb(0, 0, 0);"));
-//    }
-//    @Test
-//    public void changeCapacity_Headline_Div_Br() throws InterruptedException {
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        supportMethod().waitAndClick(tinyMCE().color);
-//        globalHelper().setDefaultColorValue();
-//        Thread.sleep(2000);
-//        globalHelper().changeCapacity();
-//        String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
-//        Assert.assertEquals(finish,"color: rgba(0, 0, 0, 0.46);");
-//    }
-//    @Test
-//    public void changeColorWithPaletAndCapacity_Headline_Div_Br(){
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        tinymceHelper().changeColorWithPalet();
-//        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
-//        int first = result.lastIndexOf("(");
-//        int last = result.lastIndexOf(")");
-//        String res = result.substring(first,last);
-//        supportMethod().waitAndClick(tinyMCE().color);
-//        tinymceHelper().changeCapacity();
-//        String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
-//        Assert.assertEquals(finish, "color: rgba"+res+", 0.46);");
-//    }
-//    @Test
-//    public void boid_italic_underline_quote_changeColorWithColorPicher_changeCapacity_Headline_Div_Br() throws InterruptedException {
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
-//        Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
-//        tinymceHelper().changeColorWithColorPicker();
-//        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
-//        int first = result.lastIndexOf("(");
-//        int last = result.lastIndexOf(")");
-//        String res = result.substring(first,last);
-//        supportMethod().waitAndClick(tinyMCE().color);
-//        tinymceHelper().changeCapacity();
-//        String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
-//        Assert.assertEquals(finish, "text-decoration: underline; color: rgba"+res+", 0.46);");
-//        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
-//    }
-//    @Test
-//    public void insertLink_boid_italic_underline_quote_Headline_Div_Br(){
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
-//        tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
-//        tinyMCE().pasteLink.sendKeys("https://www.google.com/");
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().saveLink)).click();
-//        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
-//        String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
-//        Assert.assertEquals("https://www.google.com/", hrefResult);
-//    }
-//    @Test
-//    public void insertEmptyLink_boid_italic_underline_quote_Headline_Div_Br(){
-//        supportMethod().createThreeLine();
-//        supportMethod().selectAllText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
-//        tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
-//        tinyMCE().pasteLink.sendKeys("");
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().saveLink)).click();
-//        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
-//        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
-//        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.href)).size());
-//    }
-//
-//
-//    @Test
-//    public void boid_Headline_part(){
-//        supportMethod().selectPartText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        Assert.assertTrue(tinyMCE().boidAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
-//    }
-//    @Test
-//    public void italic_Headline_part(){
-//        supportMethod().selectPartText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        Assert.assertTrue(tinyMCE().italicAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
-//    }
-//    @Test
-//    public void quote_Headline_part(){
-//        supportMethod().selectPartText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
-//        Assert.assertTrue(tinyMCE().quoteAssert.getText().contains(Variables.textValue));
-//    }
-//    @Test
-//    public void underline_Headline_part(){
-//        supportMethod().selectPartText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
-//        Assert.assertTrue(tinyMCE().underLineAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
-//    }
-//    @Test
-//    public void alignment_Headline_part() throws InterruptedException {
-//        supportMethod().selectPartText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignment)).click();
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignmentLeft)).click();
-//        wait.until(ExpectedConditions.visibilityOf(tinyMCE().leftAlignmentAssert));
-//        Assert.assertTrue(tinyMCE().leftAlignmentAssert.getText().contains(Variables.textValue));
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignCenter)).click();
-//        wait.until(ExpectedConditions.visibilityOf(tinyMCE().centerAlignmentAssert));
-//        Assert.assertTrue(tinyMCE().centerAlignmentAssert.getText().contains(Variables.textValue));
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignRight)).click();
-//        wait.until(ExpectedConditions.visibilityOf(tinyMCE().rightAlignmentAssert));
-//        Assert.assertTrue(tinyMCE().rightAlignmentAssert.getText().contains(Variables.textValue));
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignJustify)).click();
-//        wait.until(ExpectedConditions.visibilityOf(tinyMCE().fullAlignmentAssert));
-//        Assert.assertTrue(tinyMCE().fullAlignmentAssert.getText().contains(Variables.textValue));
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignClose)).click();
-//    }
-//    @Test
-//    public void color_Headline_part() throws InterruptedException {
-//        supportMethod().selectPartText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().color)).click();
-//        List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
-//        WebElement element = webDriver.findElement(By.xpath(Variables.elementSpan));
-//        String palet = colors.get(1).getAttribute("style");
-//        String finish = webDriver.findElement(By.xpath(Variables.threePart)).getAttribute("style");
-//        int first = palet.lastIndexOf("(");
-//        int last = palet.lastIndexOf(")");
-//        String expected = "color: rgb"+palet.substring(first,last+1)+";";
-//        wait.until(ExpectedConditions.attributeToBe(element, "style", expected));
-//        Assert.assertEquals(expected, finish);
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
-//    }
-//    @Test
-//    public void changeFontFamily_Headline_part() throws InterruptedException {
-//        supportMethod().selectPartText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().fontFamily1)).click();
-//        Assert.assertTrue(tinyMCE().fontFamilyAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
-//    }
-//    @Test
-//    public void changeFontSize_Headline_part(){
-//        supportMethod().selectPartText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
-//        for(int i = 0; i < tinymceHelper().getFontSize_H().size();i++){
-//            wait.until(ExpectedConditions.elementToBeClickable((WebElement) tinymceHelper().getFontSize_H().get(i))).click();
-//            Assert.assertTrue(webDriver.findElement(By.xpath((String) tinymceHelper().getAssertForFontSize_H().get(i))).getText().contains(Variables.textValue));
-//        }
-//        wait.until(ExpectedConditions.elementToBeClickable((WebElement) tinymceHelper().getFontSize_H().get(0))).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
-//    }
-//    @Test
-//    public void changeFontSizeWithSlider_Headline_part(){
-//        supportMethod().selectPartText();
-//        tinymceHelper().changeFontSizeWithSlider();
-//        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
-//        Assert.assertEquals(Variables.fontSizeWithSliderAssert_h, result);
-//        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getText().contains(Variables.THREE_SIMPLE_TEXT));
-//    }
-//    @Test
-//    public void changeFontSizeWithSlider_And_H1_Headline_part() throws InterruptedException {
-//        supportMethod().selectPartText();
-//        tinymceHelper().changeFontSizeWithSlider();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().h2FontSize)).click();
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
-//        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.assert_h2)).getText().contains(Variables.THREE_SIMPLE_TEXT));
-//        tinymceHelper().changeFontSizeWithSlider();
-//        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
-//        Assert.assertEquals("font-size: 35px;", result);
-//        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getText().contains(Variables.THREE_SIMPLE_TEXT));
-//    }
-//    @Test
-//    public void boid_italic_underline_quote_Headline_part(){
-//        supportMethod().selectPartText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
-//        Assert.assertTrue(tinyMCE().boidAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
-//        Assert.assertTrue(tinyMCE().italicAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
-//        Assert.assertTrue(tinyMCE().underLineAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
-//        Assert.assertTrue(tinyMCE().quoteAssert.getText().contains(Variables.textValue));
-//    }
-//    @Test
-//    public void boid_italic_underline_quote_color_Headline_part() throws InterruptedException {
-//        supportMethod().selectPartText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().color)).click();
-//        Thread.sleep(500);
-//        List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
-//        tinymceHelper().colorAssert(colors);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(webDriver.findElements(By.xpath(Variables.elementSpan))));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
-//        Assert.assertTrue(tinyMCE().boidAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
-//        Assert.assertTrue(tinyMCE().italicAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
-//        Assert.assertTrue(tinyMCE().underLineAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
-//        Assert.assertTrue(tinyMCE().quoteAssert.getText().contains(Variables.textValue));
-//        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getText().contains(Variables.THREE_SIMPLE_TEXT));
-//    }
-//    @Test
-//    public void boid_italic_underline_quote_color_font_family_Headline_part() throws InterruptedException {
-//        supportMethod().selectPartText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().color)).click();
-//        Thread.sleep(500);
-//        List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
-//        tinymceHelper().colorAssert(colors);
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().fontFamily1)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(webDriver.findElements(By.xpath(Variables.elementSpan))));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
-//        Assert.assertTrue(tinyMCE().boidAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
-//        Assert.assertTrue(tinyMCE().italicAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
-//        Assert.assertTrue(tinyMCE().underLineAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
-//        Assert.assertTrue(tinyMCE().quoteAssert.getText().contains(Variables.textValue));
-//        Assert.assertTrue(tinyMCE().fontFamilyAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
-//    }
-//    @Test
-//    public void boid_italic_underline_quote_capacity_Headline_part(){
-//        supportMethod().selectPartText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
-//        supportMethod().waitAndClick(tinyMCE().color);
-//        globalHelper().setDefaultColorValue();
-//        globalHelper().changeCapacity();
-//        String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
-//        Assert.assertEquals(Variables.THREE_SIMPLE_TEXT, tinyMCE().boidAssert.getText());
-//        Assert.assertEquals(Variables.THREE_SIMPLE_TEXT, tinyMCE().italicAssert.getText());
-//        Assert.assertEquals(Variables.THREE_SIMPLE_TEXT, tinyMCE().underLineAssert.getText());
-//        Assert.assertEquals(Variables.textValue, tinyMCE().quoteAssert.getText());
-//        Assert.assertEquals(Variables.THREE_SIMPLE_TEXT, tinyMCE().elementSpan.getText());
-//        Assert.assertTrue(finish.contains("color: rgba(0, 0, 0, 0.46);"));
-//    }
-//    @Test
-//    public void inserAndDeleteLink_Headline_part(){
-//        supportMethod().selectPartText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
-//        tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
-//        tinyMCE().pasteLink.sendKeys("https://www.google.com/");
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().saveLink)).click();
-//        String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
-//        Assert.assertEquals("https://www.google.com/", hrefResult);
-//        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.href)).getText().contains(Variables.THREE_SIMPLE_TEXT));
-//        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(tinymceHelper().getRemovelinkSelector()))).click();
-//        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.href)).size());
-//    }
-//    @Test
-//    public void insertLinkToUserPage_applyAllStyles_Headline_part(){
-//        supportMethod().selectPartText();
-//        supportMethod().waitAndClick(tinyMCE().bold);
-//        supportMethod().waitAndClick(tinyMCE().italic);
-//        supportMethod().waitAndClick(tinyMCE().underLine);
-//        supportMethod().waitAndClick(tinyMCE().quote);
-//        supportMethod().waitAndClick(tinyMCE().insertLink);
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().selectLinkPage)).click();
-//        tinyMCE().dropDownBlankPageClick();
-//        String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
-//        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.quoteAssert)).isDisplayed());
-//        Assert.assertTrue(hrefResult.contains("/blank-canvas"));
-//        Assert.assertEquals(Variables.textPart, webDriver.findElement(By.xpath(Variables.href)).getText());
-//        Assert.assertEquals(Variables.textPart, webDriver.findElement(By.xpath(Variables.boidAssert)).getText());
-//        Assert.assertEquals(Variables.textPart, webDriver.findElement(By.xpath(Variables.italicAssert)).getText());
-//        Assert.assertEquals(Variables.textPart, webDriver.findElement(By.xpath(Variables.underLineAssert)).getText());
-//    }
-//    @Test
-//    public void globalStyles_Paragraph_part() throws InterruptedException {
-//        supportMethod().selectPartText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().color)).click();
-//        Thread.sleep(500);
-//        List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
-//        Thread.sleep(500);
-//        wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
-//        Assert.assertTrue(tinyMCE().boidAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
-//        Assert.assertTrue(tinyMCE().italicAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
-//        Assert.assertTrue(tinyMCE().underLineAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
-//        Assert.assertTrue(tinyMCE().quoteAssert.getText().contains(Variables.textValue));
-//        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getText().contains(Variables.THREE_SIMPLE_TEXT));
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().h2FontSize)).click();
-//        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.boidAssert)).size());
-//        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.italicAssert)).size());
-//        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.underLineAssert)).size());
-//        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.elementStyle)).size());
-//    }
-//    @Test
-//    public void insertLink_boid_italic_underline_quote_Headline_part(){
-//        supportMethod().selectPartText();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
-//        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
-//        tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
-//        tinyMCE().pasteLink.sendKeys("https://www.google.com/");
-//        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().saveLink)).click();
-//        Assert.assertTrue(tinyMCE().boidAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
-//        Assert.assertTrue(tinyMCE().italicAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
-//        Assert.assertTrue(tinyMCE().underLineAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
-//        Assert.assertTrue(tinyMCE().quoteAssert.getText().contains(Variables.textValue));
-//        String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
-//        Assert.assertEquals("https://www.google.com/", hrefResult);
-//    }
+    @Test
+    public void boid_italic_Headline(){
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
+        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
+    }
+    @Test
+    public void boid_italic_underline_Headline(){
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
+        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
+    }
+    @Test
+    public void boid_italic_underline_quote_Headline(){
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
+        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
+    }
+    @Test
+    public void boid_italic_underline_quote_color_Headline() throws InterruptedException {
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().color)).click();
+        Thread.sleep(500);
+        List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
+        tinymceHelper().colorAssert(colors);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(webDriver.findElements(By.xpath(Variables.elementSpan))));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
+        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
+        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style").contains("underline"));
+        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
+    }
+    @Test
+    public void boid_italic_underline_quote_color_font_family_Headline() throws InterruptedException {
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(webDriver.findElements(By.xpath(Variables.elementSpan))));
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().color)).click();
+        List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
+        tinymceHelper().colorAssert(colors);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
+        Thread.sleep(500);
+        action.click(tinyMCE().fontFamily1);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().fontFamily1)).click();
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
+        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
+        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style").contains("underline"));
+        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().fontFamilyAssert.isDisplayed());
+    }
+    @Test
+    public void insertLink_Headline(){
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
+        tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
+        tinyMCE().pasteLink.sendKeys("https://www.google.com/");
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().saveLink)).click();
+        String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
+        Assert.assertEquals("https://www.google.com/", hrefResult);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(tinymceHelper().getRemovelinkSelector()))).click();
+        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.href)).size());
+    }
+    @Test
+    public void insertLinkToUserPage_applyAllStyles_Headline(){
+        supportMethod().waitAndClick(tinyMCE().bold);
+        supportMethod().waitAndClick(tinyMCE().italic);
+        supportMethod().waitAndClick(tinyMCE().underLine);
+        supportMethod().waitAndClick(tinyMCE().quote);
+        supportMethod().waitAndClick(tinyMCE().insertLink);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().selectLinkPage)).click();
+        tinyMCE().dropDownBlankPageClick();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(webDriver.findElements(By.xpath(Variables.elementSpan))));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
+        String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
+        Assert.assertTrue(hrefResult.contains("/blank-canvas"));
+    }
+    @Test
+    public void insertLink_changeFontSizeWithSlider_Headline(){
+        tinymceHelper().insertLink();
+        tinymceHelper().changeFontSizeWithSlider();
+        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
+        String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
+        Assert.assertEquals(Variables.fontSizeWithSliderAssert_h, result);
+        Assert.assertEquals("https://www.google.com/", hrefResult);
+    }
+    @Test
+    public void globalStyles_Headline() throws InterruptedException {
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().color)).click();
+        Thread.sleep(500);
+        List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().h2FontSize)).click();
+        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.boidAssert)).size());
+        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.italicAssert)).size());
+        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.underLineAssert)).size());
+        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.elementStyle)).size());
+    }
+    @Test
+    public void openInNewWindow_Headline(){
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
+        tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
+        tinyMCE().pasteLink.sendKeys("https://www.google.com/");
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().openInNewWindow)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().saveLink)).click();
+        Assert.assertEquals(webDriver.findElement(By.xpath(Variables.href)).getAttribute("target"), "_blank");
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(tinymceHelper().getRemovelinkSelector()))).click();
+        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.href)).size());
+    }
+    @Test
+    public void changeColorWithColorPicker_Headline() throws InterruptedException {
+        Actions action = new Actions(webDriver);
+        supportMethod().waitAndClick(tinyMCE().color);
+        action.moveToElement(tinyMCE().colorpicker,-30, 60).click().perform();
+        Thread.sleep(500);
+        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
+        Assert.assertTrue(!Variables.startColorValue.equals(result));
+    }
+    @Test
+    public void changeColorWithSlider_Headline(){
+        Actions action = new Actions(webDriver);
+        supportMethod().waitAndClick(tinyMCE().color);
+        action.moveToElement(tinyMCE().colorpicker,-25, 60).click().perform();
+        wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).click();
+        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
+        Assert.assertTrue(!result.equals("color: rgb(0, 0, 0);"));
+    }
+    @Test
+    public void changeCapacityWithSlider_Headline() throws InterruptedException {
+        Actions action = new Actions(webDriver);
+        supportMethod().waitAndClick(tinyMCE().color);
+        globalHelper().setDefaultColorValue();
+        Thread.sleep(500);
+        action.moveToElement(tinyMCE().colorpicker,-2, 60).click().perform();
+        Thread.sleep(500);
+        String finish = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("data-mce-style");
+        Assert.assertTrue(finish.contains("0.46"));
+    }
+    @Test
+    public void changeColorWithPaletAndCapacity_Headline(){
+        tinymceHelper().changeColorWithPalet();
+        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
+        int first = result.lastIndexOf("(");
+        int last = result.lastIndexOf(")");
+        String res = result.substring(first,last);
+        supportMethod().waitAndClick(tinyMCE().color);
+        tinymceHelper().changeCapacity();
+        String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
+        Assert.assertEquals(finish, "color: rgba"+res+", 0.46);");
+    }
+    @Test
+    public void boid_italic_underline_quote_changeColorWithColorPicher_changeCapacity_Headline() throws InterruptedException {
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
+        Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
+        tinymceHelper().changeColorWithColorPicker();
+        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
+        int first = result.lastIndexOf("(");
+        int last = result.lastIndexOf(")");
+        String res = result.substring(first,last);
+        supportMethod().waitAndClick(tinyMCE().color);
+        tinymceHelper().changeCapacity();
+        String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
+        Assert.assertEquals(finish, "text-decoration: underline; color: rgba"+res+", 0.46);");
+        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
+    }
+    @Test
+    public void insertLink_boid_italic_underline_quote_Headline(){
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
+        tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
+        tinyMCE().pasteLink.sendKeys("https://www.google.com/");
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().saveLink)).click();
+        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
+        String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
+        Assert.assertEquals("https://www.google.com/", hrefResult);
+    }
+
+
+    @Test
+    public void changeFontSize_Headline_Div_Br() throws InterruptedException {
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
+        for(int i = 0; i < tinymceHelper().getFontSize_H().size();i++){
+            wait.until(ExpectedConditions.elementToBeClickable((WebElement) tinymceHelper().getFontSize_H().get(i))).click();
+            Assert.assertTrue(webDriver.findElement(By.xpath((String) tinymceHelper().getAssertForFontSize_H().get(i))).isDisplayed());
+        }
+        wait.until(ExpectedConditions.elementToBeClickable((WebElement) tinymceHelper().getFontSize_H().get(0))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
+    }
+    @Test
+    public void changeFontFamily_Headline_Div_Br() throws InterruptedException {
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().fontFamily1)).click();
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath(Variables.fontFamilyAssert1), 0));
+        Assert.assertTrue(webDriver.findElements(By.xpath(Variables.fontFamilyAssert1)).size() > 0);
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
+    }
+    @Test
+    public void color_Headline_Div_Br() throws InterruptedException {
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().color)).click();
+        Thread.sleep(500);
+        List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
+        String palet = colors.get(1).getAttribute("style");
+        WebElement element = webDriver.findElement(By.xpath(Variables.elementSpan));
+        int first = palet.lastIndexOf("(");
+        int last = palet.lastIndexOf(")");
+        String result = "color: rgb"+palet.substring(first,last+1)+";";
+        wait.until(ExpectedConditions.attributeToBe(element, "style", result));
+        Assert.assertEquals(palet.substring(first, last + 1), palet.substring(first, last + 1));
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
+    }
+    @Test
+    public void alignment_Headline_Div_Br() throws InterruptedException {
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignment)).click();
+        tinymceHelper().applyAlignLeft();
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath(Variables.leftAlign),0));
+        Assert.assertTrue(webDriver.findElements(By.xpath(Variables.leftAlign)).size() > 0);
+        tinymceHelper().applyAlignCenter();
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath(Variables.centerAlign), 0));
+        Assert.assertTrue(webDriver.findElements(By.xpath(Variables.centerAlign)).size() > 0);
+        tinymceHelper().applyAlignRight();
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath(Variables.rightAlign), 0));
+        Assert.assertTrue(webDriver.findElements(By.xpath(Variables.rightAlign)).size() > 0);
+        tinymceHelper().applyAlignFull();
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath(Variables.fullAlign), 0));
+        Assert.assertTrue(webDriver.findElements(By.xpath(Variables.fullAlign)).size() > 0);
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignClose)).click();
+    }
+    @Test
+    public void quote_Headline_Div_Br(){
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
+        wait.until(ExpectedConditions.visibilityOf(tinyMCE().quoteAssert));
+        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
+    }
+    @Test
+    public void underline_Headline_Div_Br(){
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
+        wait.until(ExpectedConditions.visibilityOf(tinyMCE().underLineAssert));
+        Assert.assertEquals(3, webDriver.findElements(By.xpath(Variables.underLineAssert)).size());
+    }
+    @Test
+    public void itaclic_Headline_Div_Br(){
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
+        Assert.assertEquals(3, webDriver.findElements(By.xpath(Variables.italicAssert)).size());
+    }
+    @Test
+    public void bold_Headline_Div_Br() throws InterruptedException {
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
+        Assert.assertEquals(3, webDriver.findElements(By.xpath(Variables.boidAssert)).size());
+    }
+    @Test
+    public void insertLink_Headline_Div_Br(){
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
+        tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
+        tinyMCE().pasteLink.sendKeys("https://www.google.com/");
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().saveLink)).click();
+        String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
+        Assert.assertEquals("https://www.google.com/", hrefResult);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(tinymceHelper().getRemovelinkSelector()))).click();
+        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.href)).size());
+    }
+    @Test
+    public void insertLinkToUserPage_applyAllStyles_Headline_Dib_Br(){
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        supportMethod().waitAndClick(tinyMCE().bold);
+        supportMethod().waitAndClick(tinyMCE().italic);
+        supportMethod().waitAndClick(tinyMCE().underLine);
+        supportMethod().waitAndClick(tinyMCE().quote);
+        supportMethod().waitAndClick(tinyMCE().insertLink);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().selectLinkPage)).click();
+        tinyMCE().dropDownBlankPageClick();
+        String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
+        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.quoteAssert)).isDisplayed());
+        Assert.assertTrue(hrefResult.contains("/blank-canvas"));
+        Assert.assertEquals(3, webDriver.findElements(By.xpath(Variables.href)).size());
+        Assert.assertEquals(3, webDriver.findElements(By.xpath(Variables.boidAssert)).size());
+        Assert.assertEquals(3, webDriver.findElements(By.xpath(Variables.italicAssert)).size());
+        Assert.assertEquals(3, webDriver.findElements(By.xpath(Variables.underLineAssert)).size());
+    }
+    @Test
+    public void changeFontSizeWithSlider_Headline_Div_Br(){
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        tinymceHelper().changeFontSizeWithSlider();
+        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
+        Assert.assertEquals(Variables.fontSizeWithSliderAssert_h, result);
+        Assert.assertTrue(webDriver.findElements(By.xpath("//span[contains(text(),'"+Variables.oneLine+"')]")).size() >= 3);
+    }
+    @Test
+    public void changeFontSizeWithSlider_And_H1_Headline_Div_Br() throws InterruptedException {
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        tinymceHelper().changeFontSizeWithSlider();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().h2FontSize)).click();
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
+        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.assert_h2)).getText().contains(Variables.severalLinesAssert));
+        tinymceHelper().changeFontSizeWithSlider();
+        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
+        Assert.assertEquals("font-size: 35px;", result);
+        Assert.assertTrue(webDriver.findElements(By.xpath("//span[contains(text(),'"+Variables.oneLine+"')]")).size() >= 3);
+    }
+    @Test
+    public void boid_italic_Headline_Div_Br() throws InterruptedException {
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
+        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
+    }
+    @Test
+    public void boid_italic_underline_Headline_Div_Br(){
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
+        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
+    }
+    @Test
+    public void boid_italic_underline_quote_Headline_Div_Br(){
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
+        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
+    }
+    @Test
+    public void boid_italic_underline_quote_color_Headline_Div_Br() throws InterruptedException {
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().color)).click();
+        Thread.sleep(500);
+        List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
+        tinymceHelper().colorAssert(colors);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(webDriver.findElements(By.xpath(Variables.elementSpan))));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
+        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
+        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style").contains("underline"));
+        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
+    }
+    @Test
+    public void boid_italic_underline_quote_color_font_family_Headline_Div_Br() throws InterruptedException {
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        Thread.sleep(500);
+        supportMethod().waitAndClick(tinyMCE().bold);
+        supportMethod().waitAndClick(tinyMCE().italic);
+        supportMethod().waitAndClick(tinyMCE().underLine);
+        supportMethod().waitAndClick(tinyMCE().quote);
+        supportMethod().waitAndClick(tinyMCE().color);
+        Thread.sleep(500);
+        List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
+        tinymceHelper().colorAssert(colors);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().fontFamily1)).click();
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(webDriver.findElements(By.xpath(Variables.elementSpan))));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
+        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
+        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style").contains("underline"));
+        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().fontFamilyAssert.isDisplayed());
+    }
+    @Test
+    public void globalStyles_Headline_Div_Br() throws InterruptedException {
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        supportMethod().waitAndClick(tinyMCE().bold);
+        supportMethod().waitAndClick(tinyMCE().italic);
+        supportMethod().waitAndClick(tinyMCE().underLine);
+        supportMethod().waitAndClick(tinyMCE().quote);
+        supportMethod().waitAndClick(tinyMCE().color);
+        Thread.sleep(1000);
+        List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().h2FontSize)).click();
+        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.boidAssert)).size());
+        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.italicAssert)).size());
+        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.underLineAssert)).size());
+        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.elementStyle)).size());
+    }
+    @Test
+    public void openInNewWindow_Headline_Div_Br(){
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
+        tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
+        tinyMCE().pasteLink.sendKeys("https://www.google.com/");
+        supportMethod().waitAndClick(tinyMCE().openInNewWindow);
+        supportMethod().waitAndClick(tinyMCE().saveLink);
+        Assert.assertEquals(webDriver.findElement(By.xpath(Variables.href)).getAttribute("target"), "_blank");
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(tinymceHelper().getRemovelinkSelector()))).click();
+        supportMethod().waitAndClickByxpath(tinymceHelper().getRemovelinkSelector());
+        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.href)).size());
+    }
+    @Test
+    public void insertLinkAndApplyGlobalStyle_Headline_Div_Br(){
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
+        tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
+        tinyMCE().pasteLink.sendKeys("https://www.google.com/");
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().saveLink)).click();
+        String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
+        supportMethod().waitAndClick(tinyMCE().size);
+        supportMethod().waitAndClick(tinyMCE().h2FontSize);
+        Assert.assertTrue(tinyMCE().h2GlobalAssert.isDisplayed());
+        Assert.assertEquals("https://www.google.com/", hrefResult);
+    }
+    @Test
+    public void changeColorWithColorPicker_Headline_Div_Br(){
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        tinymceHelper().changeColorWithColorPicker();
+        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
+        Assert.assertTrue(!Variables.startColorValue.equals(result));
+    }
+    @Test
+    public void changeColorWithSlider_Headline_Div_Br() throws InterruptedException {
+        Actions action = new Actions(webDriver);
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        Thread.sleep(500);
+        supportMethod().waitAndClick(tinyMCE().color);
+        action.moveToElement(tinyMCE().colorpicker,-25, 60).click().perform();
+        wait.until(ExpectedConditions.elementToBeClickable(editorPage().headerText)).click();
+        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
+        Assert.assertTrue(!result.equals("color: rgb(0, 0, 0);"));
+    }
+    @Test
+    public void changeCapacity_Headline_Div_Br() throws InterruptedException {
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        supportMethod().waitAndClick(tinyMCE().color);
+        globalHelper().setDefaultColorValue();
+        Thread.sleep(2000);
+        globalHelper().changeCapacity();
+        String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
+        Assert.assertTrue(finish.contains("0.46"));
+    }
+    @Test
+    public void changeColorWithPaletAndCapacity_Headline_Div_Br(){
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        tinymceHelper().changeColorWithPalet();
+        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
+        int first = result.lastIndexOf("(");
+        int last = result.lastIndexOf(")");
+        String res = result.substring(first,last);
+        supportMethod().waitAndClick(tinyMCE().color);
+        tinymceHelper().changeCapacity();
+        String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
+        Assert.assertEquals(finish, "color: rgba"+res+", 0.46);");
+    }
+    @Test
+    public void boid_italic_underline_quote_changeColorWithColorPicher_changeCapacity_Headline_Div_Br() throws InterruptedException {
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
+        Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
+        tinymceHelper().changeColorWithColorPicker();
+        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
+        int first = result.lastIndexOf("(");
+        int last = result.lastIndexOf(")");
+        String res = result.substring(first,last);
+        supportMethod().waitAndClick(tinyMCE().color);
+        tinymceHelper().changeCapacity();
+        String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
+        Assert.assertEquals(finish, "text-decoration: underline; color: rgba"+res+", 0.46);");
+        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
+    }
+    @Test
+    public void insertLink_boid_italic_underline_quote_Headline_Div_Br(){
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
+        tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
+        tinyMCE().pasteLink.sendKeys("https://www.google.com/");
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().saveLink)).click();
+        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
+        String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
+        Assert.assertEquals("https://www.google.com/", hrefResult);
+    }
+    @Test
+    public void insertEmptyLink_boid_italic_underline_quote_Headline_Div_Br(){
+        supportMethod().createThreeLine();
+        supportMethod().selectAllText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
+        tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
+        tinyMCE().pasteLink.sendKeys("");
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().saveLink)).click();
+        Assert.assertTrue(tinyMCE().boidAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().italicAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().underLineAssert.isDisplayed());
+        Assert.assertTrue(tinyMCE().quoteAssert.isDisplayed());
+        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.href)).size());
+    }
+
+
+    @Test
+    public void boid_Headline_part(){
+        supportMethod().selectPartText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        Assert.assertTrue(tinyMCE().boidAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
+    }
+    @Test
+    public void italic_Headline_part(){
+        supportMethod().selectPartText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        Assert.assertTrue(tinyMCE().italicAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
+    }
+    @Test
+    public void quote_Headline_part(){
+        supportMethod().selectPartText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
+        Assert.assertTrue(tinyMCE().quoteAssert.getText().contains(Variables.textValue));
+    }
+    @Test
+    public void underline_Headline_part(){
+        supportMethod().selectPartText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
+        Assert.assertTrue(tinyMCE().underLineAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
+    }
+    @Test
+    public void alignment_Headline_part() throws InterruptedException {
+        supportMethod().selectPartText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignment)).click();
+        tinymceHelper().applyAlignLeft();
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath(Variables.leftAlign),0));
+        Assert.assertTrue(webDriver.findElements(By.xpath(Variables.leftAlign)).size() > 0);
+        Assert.assertTrue(tinyMCE().leftAlignmentAssert.getText().contains(Variables.textValue));
+        tinymceHelper().applyAlignCenter();
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath(Variables.centerAlign), 0));
+        Assert.assertTrue(webDriver.findElements(By.xpath(Variables.centerAlign)).size() > 0);
+        Assert.assertTrue(tinyMCE().centerAlignmentAssert.getText().contains(Variables.textValue));
+        tinymceHelper().applyAlignRight();
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath(Variables.rightAlign), 0));
+        Assert.assertTrue(webDriver.findElements(By.xpath(Variables.rightAlign)).size() > 0);
+        Assert.assertTrue(tinyMCE().rightAlignmentAssert.getText().contains(Variables.textValue));
+        tinymceHelper().applyAlignFull();
+        wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath(Variables.fullAlign), 0));
+        Assert.assertTrue(webDriver.findElements(By.xpath(Variables.fullAlign)).size() > 0);
+        Assert.assertTrue(tinyMCE().fullAlignmentAssert.getText().contains(Variables.textValue));
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().alignClose)).click();
+    }
+    @Test
+    public void color_Headline_part() throws InterruptedException {
+        supportMethod().selectPartText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().color)).click();
+        List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
+        WebElement element = webDriver.findElement(By.xpath(Variables.elementSpan));
+        String palet = colors.get(1).getAttribute("style");
+        String finish = webDriver.findElement(By.xpath(Variables.threePart)).getAttribute("style");
+        int first = palet.lastIndexOf("(");
+        int last = palet.lastIndexOf(")");
+        String expected = "color: rgb"+palet.substring(first,last+1)+";";
+        wait.until(ExpectedConditions.attributeToBe(element, "style", expected));
+        Assert.assertEquals(expected, finish);
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
+    }
+    @Test
+    public void changeFontFamily_Headline_part() throws InterruptedException {
+        supportMethod().selectPartText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().fontFamily1)).click();
+        Assert.assertTrue(tinyMCE().fontFamilyAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
+    }
+    @Test
+    public void changeFontSize_Headline_part(){
+        supportMethod().selectPartText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
+        for(int i = 0; i < tinymceHelper().getFontSize_H().size();i++){
+            wait.until(ExpectedConditions.elementToBeClickable((WebElement) tinymceHelper().getFontSize_H().get(i))).click();
+            Assert.assertTrue(webDriver.findElement(By.xpath((String) tinymceHelper().getAssertForFontSize_H().get(i))).getText().contains(Variables.textValue));
+        }
+        wait.until(ExpectedConditions.elementToBeClickable((WebElement) tinymceHelper().getFontSize_H().get(0))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
+    }
+    @Test
+    public void changeFontSizeWithSlider_Headline_part(){
+        supportMethod().selectPartText();
+        tinymceHelper().changeFontSizeWithSlider();
+        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
+        Assert.assertEquals(Variables.fontSizeWithSliderAssert_h, result);
+        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getText().contains(Variables.THREE_SIMPLE_TEXT));
+    }
+    @Test
+    public void changeFontSizeWithSlider_And_H1_Headline_part() throws InterruptedException {
+        supportMethod().selectPartText();
+        tinymceHelper().changeFontSizeWithSlider();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().h2FontSize)).click();
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
+        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.assert_h2)).getText().contains(Variables.THREE_SIMPLE_TEXT));
+        tinymceHelper().changeFontSizeWithSlider();
+        String result = webDriver.findElement(By.xpath(Variables.elementSpan)).getAttribute("style");
+        Assert.assertEquals("font-size: 35px;", result);
+        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getText().contains(Variables.THREE_SIMPLE_TEXT));
+    }
+    @Test
+    public void boid_italic_underline_quote_Headline_part(){
+        supportMethod().selectPartText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
+        Assert.assertTrue(tinyMCE().boidAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
+        Assert.assertTrue(tinyMCE().italicAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
+        Assert.assertTrue(tinyMCE().underLineAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
+        Assert.assertTrue(tinyMCE().quoteAssert.getText().contains(Variables.textValue));
+    }
+    @Test
+    public void boid_italic_underline_quote_color_Headline_part() throws InterruptedException {
+        supportMethod().selectPartText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().color)).click();
+        Thread.sleep(500);
+        List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
+        tinymceHelper().colorAssert(colors);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(webDriver.findElements(By.xpath(Variables.elementSpan))));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
+        Assert.assertTrue(tinyMCE().boidAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
+        Assert.assertTrue(tinyMCE().italicAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
+        Assert.assertTrue(tinyMCE().underLineAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
+        Assert.assertTrue(tinyMCE().quoteAssert.getText().contains(Variables.textValue));
+        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getText().contains(Variables.THREE_SIMPLE_TEXT));
+    }
+    @Test
+    public void boid_italic_underline_quote_color_font_family_Headline_part() throws InterruptedException {
+        supportMethod().selectPartText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().color)).click();
+        Thread.sleep(500);
+        List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
+        tinymceHelper().colorAssert(colors);
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().fontFamily1)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().closeButton)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(webDriver.findElements(By.xpath(Variables.elementSpan))));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
+        Assert.assertTrue(tinyMCE().boidAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
+        Assert.assertTrue(tinyMCE().italicAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
+        Assert.assertTrue(tinyMCE().underLineAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
+        Assert.assertTrue(tinyMCE().quoteAssert.getText().contains(Variables.textValue));
+        Assert.assertTrue(tinyMCE().fontFamilyAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
+    }
+    @Test
+    public void boid_italic_underline_quote_capacity_Headline_part(){
+        supportMethod().selectPartText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
+        supportMethod().waitAndClick(tinyMCE().color);
+        globalHelper().setDefaultColorValue();
+        globalHelper().changeCapacity();
+        String finish = webDriver.findElement(By.xpath(Variables.elementStyle)).getAttribute("data-mce-style");
+        Assert.assertEquals(Variables.THREE_SIMPLE_TEXT, tinyMCE().boidAssert.getText());
+        Assert.assertEquals(Variables.THREE_SIMPLE_TEXT, tinyMCE().italicAssert.getText());
+        Assert.assertEquals(Variables.THREE_SIMPLE_TEXT, tinyMCE().underLineAssert.getText());
+        Assert.assertEquals(Variables.textValue, tinyMCE().quoteAssert.getText());
+        Assert.assertEquals(Variables.THREE_SIMPLE_TEXT, tinyMCE().elementSpan.getText());
+        Assert.assertTrue(finish.contains("0.46"));
+    }
+    @Test
+    public void inserAndDeleteLink_Headline_part(){
+        supportMethod().selectPartText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
+        tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
+        tinyMCE().pasteLink.sendKeys("https://www.google.com/");
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().saveLink)).click();
+        String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
+        Assert.assertEquals("https://www.google.com/", hrefResult);
+        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.href)).getText().contains(Variables.THREE_SIMPLE_TEXT));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath(tinymceHelper().getRemovelinkSelector()))).click();
+        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.href)).size());
+    }
+    @Test
+    public void insertLinkToUserPage_applyAllStyles_Headline_part(){
+        supportMethod().selectPartText();
+        supportMethod().waitAndClick(tinyMCE().bold);
+        supportMethod().waitAndClick(tinyMCE().italic);
+        supportMethod().waitAndClick(tinyMCE().underLine);
+        supportMethod().waitAndClick(tinyMCE().quote);
+        supportMethod().waitAndClick(tinyMCE().insertLink);
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().selectLinkPage)).click();
+        tinyMCE().dropDownBlankPageClick();
+        String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
+        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.quoteAssert)).isDisplayed());
+        Assert.assertTrue(hrefResult.contains("/blank-canvas"));
+        Assert.assertEquals(Variables.textPart, webDriver.findElement(By.xpath(Variables.href)).getText());
+        Assert.assertEquals(Variables.textPart, webDriver.findElement(By.xpath(Variables.boidAssert)).getText());
+        Assert.assertEquals(Variables.textPart, webDriver.findElement(By.xpath(Variables.italicAssert)).getText());
+        Assert.assertEquals(Variables.textPart, webDriver.findElement(By.xpath(Variables.underLineAssert)).getText());
+    }
+    @Test
+    public void globalStyles_Paragraph_part() throws InterruptedException {
+        supportMethod().selectPartText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().color)).click();
+        Thread.sleep(500);
+        List<WebElement> colors = webDriver.findElements(By.xpath(Variables.colorsInPalette));
+        Thread.sleep(500);
+        wait.until(ExpectedConditions.elementToBeClickable(colors.get(1))).click();
+        Assert.assertTrue(tinyMCE().boidAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
+        Assert.assertTrue(tinyMCE().italicAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
+        Assert.assertTrue(tinyMCE().underLineAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
+        Assert.assertTrue(tinyMCE().quoteAssert.getText().contains(Variables.textValue));
+        Assert.assertTrue(webDriver.findElement(By.xpath(Variables.elementSpan)).getText().contains(Variables.THREE_SIMPLE_TEXT));
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().size)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().h2FontSize)).click();
+        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.boidAssert)).size());
+        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.italicAssert)).size());
+        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.underLineAssert)).size());
+        Assert.assertEquals(0, webDriver.findElements(By.xpath(Variables.elementStyle)).size());
+    }
+    @Test
+    public void insertLink_boid_italic_underline_quote_Headline_part(){
+        supportMethod().selectPartText();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().bold)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().italic)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().underLine)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().quote)).click();
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().boidAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().italicAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().underLineAssert));
+        wait.until(ExpectedConditions.visibilityOfAllElements(tinyMCE().quoteAssert));
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().insertLink)).click();
+        tinyMCE().pasteLink.sendKeys(Keys.BACK_SPACE);
+        tinyMCE().pasteLink.sendKeys("https://www.google.com/");
+        wait.until(ExpectedConditions.elementToBeClickable(tinyMCE().saveLink)).click();
+        Assert.assertTrue(tinyMCE().boidAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
+        Assert.assertTrue(tinyMCE().italicAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
+        Assert.assertTrue(tinyMCE().underLineAssert.getText().contains(Variables.THREE_SIMPLE_TEXT));
+        Assert.assertTrue(tinyMCE().quoteAssert.getText().contains(Variables.textValue));
+        String hrefResult = webDriver.findElement(By.xpath(Variables.href)).getAttribute("href");
+        Assert.assertEquals("https://www.google.com/", hrefResult);
+    }
 
 
     @After
